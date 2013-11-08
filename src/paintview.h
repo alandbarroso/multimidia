@@ -6,11 +6,14 @@
 
 #include "opencv2/core/core_c.h"
 
+#include "psmove_controller_thread.h"
+#include "game_manager.h"
+
 class PaintView : public QWidget
 {
     Q_OBJECT
 public:
-    PaintView(QWidget *parent, int width, int height);
+    PaintView(QWidget *parent, int width, int height, PSMoveControllerThread* controller);
     ~PaintView();
 
 protected:
@@ -22,6 +25,8 @@ private:
     QPoint m_cursor[2];
     QColor m_color[2];
     QImage *m_image;
+
+    GameManager gm;
 
 public slots:
     void newposition(int id, qreal scale, qreal x, qreal y, qreal trigger);

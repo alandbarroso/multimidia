@@ -24,6 +24,24 @@ class PSMoveControllerThread : public QThread
         void backup_frame();
         void restore_frame();
 
+        // Position changed
+        void position(int id, int x, int y, int z);
+
+        // Button signals
+        void move_button(int id);
+        void square_button(int id);
+        void triangle_button(int id);
+        void circle_button(int id);
+        void cross_button(int id);
+        void select_button(int id);
+        void start_button(int id);
+
+        // Trigger
+        void trigger_pressed(int id, qreal trigger);
+
+        // The camera image
+        void image(void* image);
+
     private:
         PSMoveTracker *tracker;
 

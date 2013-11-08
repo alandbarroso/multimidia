@@ -5,14 +5,16 @@
 #include <QPainter>
 
 #include "psmove_tracker.h"
+#include "psmove_controller_thread.h"
 
-PaintView::PaintView(QWidget *parent, int width, int height)
+PaintView::PaintView(QWidget *parent, int width, int height, PSMoveControllerThread* controller)
     : QWidget(parent),
       m_painting(width, height),
       m_painting_backup(m_painting.size()),
       m_cursor(),
       m_color(),
-      m_image(NULL)
+      m_image(NULL),
+      gm(controller)
 {
     resize(m_painting.size());
 
@@ -55,6 +57,8 @@ void PaintView::paintEvent(QPaintEvent *event)
         painter.drawLine(m_cursor[i]+QPointF(-10, -10), m_cursor[i]+QPoint(10, 10));
         painter.drawLine(m_cursor[i]+QPointF(10, -10), m_cursor[i]+QPoint(-10, 10));
     }
+
+    gm.paint_screen(this);
 
 }
 

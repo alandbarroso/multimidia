@@ -3,14 +3,38 @@
 
 #include <QObject>
 
+#include "game_state.h"
+#include "psmove_controller_thread.h"
+
 class GameManager : public QObject
 {
+	 Q_OBJECT
+private:
+	// The current state of the game
+	GameState* current_state;
+
+	// The thread that get the ps move controllers
+	PSMoveControllerThread* psmove_thread;
+
+	// Connects the slots and signals to the current state
+	void connect_signals();
+
+	// Disconnect all the slots and signals from the current state
+	void disconnect_signals();
+
+public:
+	// The constructor to create the states and initiate the game
+	GameManager(PSMoveControllerThread* psmove_thread);
+
+	// Called to update the game state
+	void update();
+
+	// Called to paint the screen
+	void paint_screen(QWidget* screen);
+
 public slots:
-    void newposition(int id, qreal scale, qreal x, qreal y, qreal trigger);
-    void backup_frame();
-    void restore_frame();
-    void newcolor(int id, int r, int g, int b);
-    void newimage(void *image);
+	// Change to new state
+	void change_state(GameState* state);
 };
 
 #endif

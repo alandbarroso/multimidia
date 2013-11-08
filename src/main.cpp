@@ -1,6 +1,8 @@
 #include <QtGui>
+
 #include "paintview.h"
 #include "psmove_controller_thread.h"
+#include "game_manager.h"
 
 int main(int argc, char **argv)
 {
@@ -12,7 +14,7 @@ int main(int argc, char **argv)
     int width, height;
     controller.get_size(width, height);
 
-    PaintView view(NULL, width, height);
+    PaintView view(NULL, width, height, &controller);
 
     QObject::connect(&controller, SIGNAL(newposition(int,qreal,qreal,qreal,qreal)),
             &view, SLOT(newposition(int,qreal,qreal,qreal,qreal)));
