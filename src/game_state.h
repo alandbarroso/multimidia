@@ -16,12 +16,16 @@ private:
 protected:
 	QString name; // The name of the state 
 
+	// The Width and Height of the application
+	int width;
+	int height;
+
 public:
 	// Simple constructor
-	GameState();
+	GameState(int width, int height);
 
 	// Constructor with name
-	GameState(QString name);
+	GameState(int width, int height, QString name);
 
 	// Update the game logic 
 	virtual void update() = 0;

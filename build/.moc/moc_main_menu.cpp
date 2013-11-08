@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'main_menu.h'
 **
-** Created: Fri Nov 8 01:12:57 2013
+** Created: Fri Nov 8 01:56:10 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "main_menu.h"
+#include "../../src/main_menu.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'main_menu.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63

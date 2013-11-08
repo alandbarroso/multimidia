@@ -14,7 +14,7 @@ PaintView::PaintView(QWidget *parent, int width, int height, PSMoveControllerThr
       m_cursor(),
       m_color(),
       m_image(NULL),
-      gm(controller)
+      gm(width, height, controller)
 {
     resize(m_painting.size());
 

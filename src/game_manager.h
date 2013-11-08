@@ -16,6 +16,10 @@ private:
 	// The thread that get the ps move controllers
 	PSMoveControllerThread* psmove_thread;
 
+	// Width and Height of the screen
+	int width;
+	int height;
+
 	// Connects the slots and signals to the current state
 	void connect_signals();
 
@@ -24,7 +28,7 @@ private:
 
 public:
 	// The constructor to create the states and initiate the game
-	GameManager(PSMoveControllerThread* psmove_thread);
+	GameManager(int width, int height, PSMoveControllerThread* psmove_thread);
 
 	// Called to update the game state
 	void update();

@@ -7,7 +7,7 @@
 int GameState::n = 0;
 
 // Simple constructor
-GameState::GameState()
+GameState::GameState(int width, int height)
 {
 	QString name = "State";
 
@@ -15,12 +15,18 @@ GameState::GameState()
 	n++;
 
 	set_name(name);
+
+	this->width = width;
+	this->height = height;
 }
 
 // Constructor with name
-GameState::GameState(QString name)
+GameState::GameState(int width, int height, QString name)
 {
 	set_name(name);
+
+	this->width = width;
+	this->height = height;
 }
 
 // Set the name of the state

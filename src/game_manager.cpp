@@ -4,11 +4,14 @@
 #include "game_state.h"
 #include "main_menu.h"
 
-GameManager::GameManager(PSMoveControllerThread* psmove_thread)
+GameManager::GameManager(int width, int height, PSMoveControllerThread* psmove_thread)
 {
 	this->psmove_thread = psmove_thread;
 
-	current_state = new MainMenu();
+	this->width = width;
+	this->height = height;
+
+	current_state = new MainMenu(width, height);
 
 	connect_signals();
 }

@@ -15,6 +15,10 @@ MenuButton::MenuButton(QString name)
 	this->normal = QImage(base_name);
 	this->selected = QImage(selected_name);
 
+	this->source_rect = QRectF(0, 0, this->normal.width(), this->normal.height());
+
+	this->hit_box = QRectF(0, 0, 0.75*this->normal.width(), 0.75*this->normal.height());
+
 	hovered = 0;
 }
 
@@ -30,14 +34,19 @@ QImage MenuButton::get_button()
 	}
 }
 
-void MenuButton::set_position(int x, int y)
+void MenuButton::set_center(int x, int y)
 {
-	this->point = QPoint(x, y);
+	QPoint p(x, y);
 
-	this->hit_box = QRectF(x, y, this->normal.width(), this->normal.height());
+	hit_box.moveCenter(p);
 }
 
-QPoint MenuButton::get_position()
+QRectF MenuButton::get_rect()
 {
-	return this->point;
+	return this->hit_box;
+}
+
+QRectF MenuButton::get_source_rect()
+{
+	return this->source_rect;
 }
