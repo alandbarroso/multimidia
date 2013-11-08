@@ -8,16 +8,21 @@
 MenuButton::MenuButton(QString name)
 {
 	QString dir = "../assets/";
+	dir.append(name);
 
-	QString base_name = dir.append(name.append(".png"));
-	QString selected_name = dir.append(name.append("_selected.png"));
+	QString base_name(dir);
+	QString selected_name(dir);
+
+	base_name.append(".png");
+	selected_name.append("_selected.png");
 
 	this->normal = QImage(base_name);
 	this->selected = QImage(selected_name);
 
 	this->source_rect = QRectF(0, 0, this->normal.width(), this->normal.height());
 
-	this->hit_box = QRectF(0, 0, 0.75*this->normal.width(), 0.75*this->normal.height());
+	qreal scale_factor = 0.6;
+	this->hit_box = QRectF(0, 0, scale_factor*this->normal.width(), scale_factor*this->normal.height());
 
 	hovered = 0;
 }
@@ -49,4 +54,14 @@ QRectF MenuButton::get_rect()
 QRectF MenuButton::get_source_rect()
 {
 	return this->source_rect;
+}
+
+void MenuButton::set_hovered(Cursor cursor)
+{
+	this->hovered = this->hit_box.intersects(cursor.get_rect());
+}
+
+int MenuButton::get_hovered()
+{
+	return hovered;
 }

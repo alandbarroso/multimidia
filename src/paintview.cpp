@@ -39,24 +39,7 @@ void PaintView::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event);
 
-    QPainter painter(this);
-
-    if (m_image) {
-        painter.drawImage(0, 0, m_image->rgbSwapped().mirrored(true, false));
-    }
-
-    painter.drawPixmap(0, 0, m_painting);
-
-    for (int i=0; i<2; i++) {
-        painter.setBrush(m_color[i]);
-        painter.setPen(Qt::transparent);
-        painter.drawRect(i*20, 0, 20, 20);
-
-        painter.setBrush(Qt::transparent);
-        painter.setPen(QPen(m_color[i], 2));
-        painter.drawLine(m_cursor[i]+QPointF(-10, -10), m_cursor[i]+QPoint(10, 10));
-        painter.drawLine(m_cursor[i]+QPointF(10, -10), m_cursor[i]+QPoint(-10, 10));
-    }
+    gm.update();
 
     gm.paint_screen(this);
 
@@ -121,3 +104,7 @@ PaintView::newimage(void *image)
     }
 }
 
+void PaintView::update_screen()
+{
+    update();
+}

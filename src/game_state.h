@@ -20,12 +20,17 @@ protected:
 	int width;
 	int height;
 
+	QImage *camera_image;
+
 public:
 	// Simple constructor
 	GameState(int width, int height);
 
 	// Constructor with name
 	GameState(int width, int height, QString name);
+
+	// Destructor of the class
+	~GameState();
 
 	// Update the game logic 
 	virtual void update() = 0;
@@ -56,7 +61,7 @@ public slots:
 	virtual void trigger_pressed(int id, qreal trigger);
 
 	// The camera image
-	virtual void image(void* image);
+	void image(void* image);
 };
 
 #endif

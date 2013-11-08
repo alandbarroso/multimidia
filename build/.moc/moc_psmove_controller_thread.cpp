@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'psmove_controller_thread.h'
 **
-** Created: Fri Nov 8 01:56:10 2013
+** Created: Fri Nov 8 04:35:52 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,12 +23,12 @@ static const uint qt_meta_data_PSMoveControllerThread[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      16,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      15,       // signalCount
+      16,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       45,   24,   23,   23, 0x05,
@@ -46,6 +46,7 @@ static const uint qt_meta_data_PSMoveControllerThread[] = {
      325,  209,   23,   23, 0x05,
      354,  343,   23,   23, 0x05,
      381,  121,   23,   23, 0x05,
+     394,   23,   23,   23, 0x05,
 
        0        // eod
 };
@@ -62,6 +63,7 @@ static const char qt_meta_stringdata_PSMoveControllerThread[] = {
     "cross_button(int)\0select_button(int)\0"
     "start_button(int)\0id,trigger\0"
     "trigger_pressed(int,qreal)\0image(void*)\0"
+    "update_screen()\0"
 };
 
 void PSMoveControllerThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -85,6 +87,7 @@ void PSMoveControllerThread::qt_static_metacall(QObject *_o, QMetaObject::Call _
         case 12: _t->start_button((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 13: _t->trigger_pressed((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2]))); break;
         case 14: _t->image((*reinterpret_cast< void*(*)>(_a[1]))); break;
+        case 15: _t->update_screen(); break;
         default: ;
         }
     }
@@ -122,9 +125,9 @@ int PSMoveControllerThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 16)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 16;
     }
     return _id;
 }
@@ -230,5 +233,11 @@ void PSMoveControllerThread::image(void * _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 14, _a);
+}
+
+// SIGNAL 15
+void PSMoveControllerThread::update_screen()
+{
+    QMetaObject::activate(this, &staticMetaObject, 15, 0);
 }
 QT_END_MOC_NAMESPACE

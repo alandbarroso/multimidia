@@ -42,6 +42,8 @@ class PSMoveControllerThread : public QThread
         // The camera image
         void image(void* image);
 
+        void update_screen();
+
     private:
         PSMoveTracker *tracker;
 

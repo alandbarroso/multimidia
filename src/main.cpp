@@ -26,6 +26,8 @@ int main(int argc, char **argv)
             &view, SLOT(restore_frame()));
     QObject::connect(&controller, SIGNAL(newimage(void*)),
             &view, SLOT(newimage(void*)));
+    QObject::connect(&controller, SIGNAL(update_screen()),
+            &view, SLOT(update_screen()));
 
     view.show();
 

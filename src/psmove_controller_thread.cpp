@@ -120,14 +120,15 @@ void PSMoveControllerThread::run()
 
                 float x, y, radius;
                 psmove_tracker_get_position(tracker, move, &x, &y, &radius);
-                emit newposition(i, radius, x, y,
-                        (qreal)psmove_get_trigger(move) / 255.);
+                emit position(i, x, y, 0);
+
+                emit update_screen();
             }
         } while (again);
 
         psmove_tracker_update_image(tracker);
         psmove_tracker_update(tracker, NULL);
-        emit newimage(psmove_tracker_get_frame(tracker));
+        emit image(psmove_tracker_get_frame(tracker));
     }
 
     psmove_tracker_free(tracker);

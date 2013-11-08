@@ -34,6 +34,8 @@ public slots:
     void restore_frame();
     void newcolor(int id, int r, int g, int b);
     void newimage(void *image);
+
+    void update_screen();
 };
 
 #endif

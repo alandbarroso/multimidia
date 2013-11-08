@@ -11,6 +11,9 @@ HEADERS += paintview.h
 SOURCES += psmove_controller_thread.cpp
 HEADERS += psmove_controller_thread.h
 
+SOURCES += cursor.cpp
+HEADERS += cursor.h
+
 SOURCES += menu_button.cpp
 HEADERS += menu_button.h
 

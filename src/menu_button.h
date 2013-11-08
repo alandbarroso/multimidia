@@ -5,6 +5,8 @@
 #include <QRectF>
 #include <QString>
 
+#include "cursor.h"
+
 class MenuButton
 {
 private:
@@ -20,6 +22,12 @@ public:
 
 	// Set where the button is located => The upper left point of the button
 	void set_center(int x, int y);
+
+	// Set if the cursor is over the button
+	void set_hovered(Cursor cursor);
+
+	// Get if the cursor is over the button
+	int get_hovered();
 
 	// Get the rectangle of the button
 	QRectF get_rect();
