@@ -15,44 +15,44 @@
 
 class PSMoveControllerThread : public QThread
 {
-    Q_OBJECT
+Q_OBJECT
 
-    signals:
-        void newposition(int id, qreal scale, qreal x, qreal y, qreal trigger);
-        void newcolor(int id, int r, int g, int b);
-        void newimage(void *image);
-        void backup_frame();
-        void restore_frame();
+signals:
+    // Position changed
+    void position(int id, int x, int y, int z);
 
-        // Position changed
-        void position(int id, int x, int y, int z);
+    // Button signals
+    void move_button(int id);
+    void square_button(int id);
+    void triangle_button(int id);
+    void circle_button(int id);
+    void cross_button(int id);
+    void select_button(int id);
+    void start_button(int id);
 
-        // Button signals
-        void move_button(int id);
-        void square_button(int id);
-        void triangle_button(int id);
-        void circle_button(int id);
-        void cross_button(int id);
-        void select_button(int id);
-        void start_button(int id);
+    // Trigger
+    void trigger_pressed(int id, qreal trigger);
 
-        // Trigger
-        void trigger_pressed(int id, qreal trigger);
+    // The camera image
+    void image(void* image);
 
-        // The camera image
-        void image(void* image);
+    void update_screen();
 
-        void update_screen();
+private:
+    PSMoveTracker *tracker;
 
-    private:
-        PSMoveTracker *tracker;
+    int quit;
 
-    public:
-        PSMoveControllerThread();
+public:
+    PSMoveControllerThread();
 
-        void get_size(int &width, int &height);
+    void get_size(int &width, int &height);
 
-        void run();
+    void run();
+
+public slots:
+    // The exit signal
+    void exit_signal();
 };
 
 #endif

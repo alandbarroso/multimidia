@@ -20,6 +20,9 @@ private:
 	int width;
 	int height;
 
+	// The image from the camera
+	QImage *camera_image;
+
 	// Connects the slots and signals to the current state
 	void connect_signals();
 
@@ -29,6 +32,7 @@ private:
 public:
 	// The constructor to create the states and initiate the game
 	GameManager(int width, int height, PSMoveControllerThread* psmove_thread);
+	~GameManager();
 
 	// Called to update the game state
 	void update();
@@ -39,6 +43,9 @@ public:
 public slots:
 	// Change to new state
 	void change_state(GameState* state);
+
+	// The camera image
+	void image(void* image);
 };
 
 #endif

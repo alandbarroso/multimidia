@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'game_state.h'
 **
-** Created: Fri Nov 8 04:35:52 2013
+** Created: Sat Nov 16 16:06:33 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -28,35 +28,34 @@ static const uint qt_meta_data_GameState[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       17,   11,   10,   10, 0x05,
+      42,   10,   10,   10, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      51,   42,   10,   10, 0x0a,
-      80,   77,   10,   10, 0x0a,
-      97,   77,   10,   10, 0x0a,
-     116,   77,   10,   10, 0x0a,
-     137,   77,   10,   10, 0x0a,
-     156,   77,   10,   10, 0x0a,
-     174,   77,   10,   10, 0x0a,
-     193,   77,   10,   10, 0x0a,
-     222,  211,   10,   10, 0x0a,
-     255,  249,   10,   10, 0x0a,
+      65,   56,   10,   10, 0x0a,
+      94,   91,   10,   10, 0x0a,
+     111,   91,   10,   10, 0x0a,
+     130,   91,   10,   10, 0x0a,
+     151,   91,   10,   10, 0x0a,
+     170,   91,   10,   10, 0x0a,
+     188,   91,   10,   10, 0x0a,
+     207,   91,   10,   10, 0x0a,
+     236,  225,   10,   10, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_GameState[] = {
     "GameState\0\0state\0change_state(GameState*)\0"
-    "id,x,y,z\0position(int,int,int,int)\0"
+    "exit_signal()\0id,x,y,z\0position(int,int,int,int)\0"
     "id\0move_button(int)\0square_button(int)\0"
     "triangle_button(int)\0circle_button(int)\0"
     "cross_button(int)\0select_button(int)\0"
     "start_button(int)\0id,trigger\0"
-    "trigger_pressed(int,qreal)\0image\0"
-    "image(void*)\0"
+    "trigger_pressed(int,qreal)\0"
 };
 
 void GameState::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -66,16 +65,16 @@ void GameState::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         GameState *_t = static_cast<GameState *>(_o);
         switch (_id) {
         case 0: _t->change_state((*reinterpret_cast< GameState*(*)>(_a[1]))); break;
-        case 1: _t->position((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
-        case 2: _t->move_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->square_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->triangle_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 5: _t->circle_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 6: _t->cross_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 7: _t->select_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 8: _t->start_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 9: _t->trigger_pressed((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2]))); break;
-        case 10: _t->image((*reinterpret_cast< void*(*)>(_a[1]))); break;
+        case 1: _t->exit_signal(); break;
+        case 2: _t->position((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
+        case 3: _t->move_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 4: _t->square_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 5: _t->triangle_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 6: _t->circle_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 7: _t->cross_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 8: _t->select_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: _t->start_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 10: _t->trigger_pressed((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2]))); break;
         default: ;
         }
     }
@@ -125,5 +124,11 @@ void GameState::change_state(GameState * _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void GameState::exit_signal()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, 0);
 }
 QT_END_MOC_NAMESPACE

@@ -1,20 +1,26 @@
+#include <stdio.h>
+
 #include <QPainter>
 #include <QImage>
 
 #include "main_menu.h"
+#include "single_player_menu.h"
 
 MainMenu::MainMenu(int width, int height)
 	: GameState(width, height, "Main Menu"),
-	singleplayer_button("button_base"),
-	multiplayer_button("button_base"),
-	options_button("button_base"),
-	quit_button("button_base"),
+	singleplayer_button("button_single_player"),
+	multiplayer_button("button_multiplayer"),
+	options_button("button_options"),
+	quit_button("button_quit"),
 	cursor(width, height)
 {
-	singleplayer_button.set_center(width/2, 0.4*height);
-	multiplayer_button.set_center(width/2, 0.55*height);
-	options_button.set_center(width/2, 0.70*height);
-	quit_button.set_center(width/2, 0.85*height);
+	qreal step = 0.15;
+	qreal first_button = 0.4;
+
+	singleplayer_button.set_center(width/2, (first_button + 0*step)*height);
+	multiplayer_button.set_center(width/2, (first_button + 1*step)*height);
+	options_button.set_center(width/2, (first_button + 2*step)*height);
+	quit_button.set_center(width/2, (first_button + 3*step)*height);
 
 	for(int i = 0; i < 256; i++) color_table.push_back(qRgb(i,i,i));
 }
@@ -27,16 +33,19 @@ void MainMenu::update()
 	quit_button.set_hovered(this->cursor);
 }
 
-void MainMenu::paint_screen(QWidget *screen)
+void MainMenu::paint_screen_camera(QWidget* screen, QImage* camera_image)
 {
 	QPainter painter(screen);
 
-	if (camera_image) {
-		QImage aux_image = camera_image->rgbSwapped().mirrored(true, false).convertToFormat(QImage::Format_Indexed8);
-		aux_image.setColorTable(color_table);
+	QImage aux_image = camera_image->rgbSwapped().mirrored(true, false).convertToFormat(QImage::Format_Indexed8);
+	aux_image.setColorTable(color_table);
 
-		painter.drawImage(0, 0, aux_image);
-	}
+	painter.drawImage(0, 0, aux_image);	
+}
+
+void MainMenu::paint_screen(QWidget *screen)
+{
+	QPainter painter(screen);
 
 	painter.drawImage(singleplayer_button.get_rect(), singleplayer_button.get_button(), singleplayer_button.get_source_rect());
 	painter.drawImage(multiplayer_button.get_rect(), multiplayer_button.get_button(), multiplayer_button.get_source_rect());
@@ -49,4 +58,30 @@ void MainMenu::paint_screen(QWidget *screen)
 void MainMenu::position(int id, int x, int y, int z)
 {
 	cursor.set_center(this->width - x, y);
+}
+
+void MainMenu::move_button(int id)
+{
+	if(singleplayer_button.get_hovered())
+	{
+		SinglePlayerMenu *singleplayer = new SinglePlayerMenu(width, height);
+
+		emit change_state(singleplayer);
+
+		return;
+	}
+	else if(multiplayer_button.get_hovered())
+	{
+		return;
+	}
+	else if(options_button.get_hovered())
+	{
+		return;
+	}
+	else if(quit_button.get_hovered())
+	{
+		emit exit_signal();
+
+		return;
+	}
 }

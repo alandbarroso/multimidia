@@ -14,6 +14,8 @@
 
 PSMoveControllerThread::PSMoveControllerThread() : QThread() 
 {
+    quit = 0;
+
 	tracker = psmove_tracker_new();
 }
 
@@ -34,8 +36,6 @@ void PSMoveControllerThread::run()
         moves[i] = psmove_connect_by_id(i);
         assert(moves[i] != NULL);
     }
-
-    int quit = 0;
 
     for (i=0; i<count; i++) {
         while (psmove_tracker_enable(tracker, moves[i])
@@ -67,68 +67,44 @@ void PSMoveControllerThread::run()
                 }
 
                 if (psmove_get_buttons(move) & Btn_SELECT) {
-                    emit backup_frame();
-
                     emit select_button(i);
                 }
 
                 if (psmove_get_buttons(move) & Btn_START) {
-                    emit restore_frame();
-
                     emit start_button(i);
                 }
 
                 if (psmove_get_buttons(move) & Btn_MOVE) {
-                    psmove_set_leds(move, 255, 255, 255);
-                    psmove_update_leds(move);
-                    emit newcolor(i, 255, 255, 255);
-
                     emit move_button(i);
                 }
 
                 if (psmove_get_buttons(move) & Btn_CROSS) {
-                    psmove_set_leds(move, 0, 0, 255);
-                    psmove_update_leds(move);
-                    emit newcolor(i, 0, 0, 255);
-
                     emit cross_button(i);
                 }
 
                 if (psmove_get_buttons(move) & Btn_SQUARE) {
-                    psmove_set_leds(move, 255, 255, 0);
-                    psmove_update_leds(move);
-                    emit newcolor(i, 255, 255, 0);
-
                     emit square_button(i);
                 }
 
                 if (psmove_get_buttons(move) & Btn_TRIANGLE) {
-                    psmove_set_leds(move, 0, 255, 0);
-                    psmove_update_leds(move);
-                    emit newcolor(i, 0, 255, 0);
-
                     emit triangle_button(i);
                 }
 
                 if (psmove_get_buttons(move) & Btn_CIRCLE) {
-                    psmove_set_leds(move, 255, 0, 0);
-                    psmove_update_leds(move);
-                    emit newcolor(i, 255, 0, 0);
-
                     emit circle_button(i);
                 }
 
                 float x, y, radius;
                 psmove_tracker_get_position(tracker, move, &x, &y, &radius);
                 emit position(i, x, y, 0);
-
-                emit update_screen();
             }
         } while (again);
 
         psmove_tracker_update_image(tracker);
         psmove_tracker_update(tracker, NULL);
         emit image(psmove_tracker_get_frame(tracker));
+
+        emit update_screen();
     }
 
     psmove_tracker_free(tracker);
@@ -138,4 +114,9 @@ void PSMoveControllerThread::run()
     }
 
     QApplication::quit();
+}
+
+void PSMoveControllerThread::exit_signal()
+{
+    quit = 1;
 }

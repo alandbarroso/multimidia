@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'game_manager.h'
 **
-** Created: Fri Nov 8 04:35:53 2013
+** Created: Sat Nov 16 16:06:33 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_GameManager[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,12 +32,14 @@ static const uint qt_meta_data_GameManager[] = {
 
  // slots: signature, parameters, type, tag, flags
       19,   13,   12,   12, 0x0a,
+      50,   44,   12,   12, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_GameManager[] = {
     "GameManager\0\0state\0change_state(GameState*)\0"
+    "image\0image(void*)\0"
 };
 
 void GameManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -47,6 +49,7 @@ void GameManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         GameManager *_t = static_cast<GameManager *>(_o);
         switch (_id) {
         case 0: _t->change_state((*reinterpret_cast< GameState*(*)>(_a[1]))); break;
+        case 1: _t->image((*reinterpret_cast< void*(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -84,9 +87,9 @@ int GameManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

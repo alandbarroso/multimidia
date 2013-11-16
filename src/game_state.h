@@ -20,8 +20,6 @@ protected:
 	int width;
 	int height;
 
-	QImage *camera_image;
-
 public:
 	// Simple constructor
 	GameState(int width, int height);
@@ -29,19 +27,21 @@ public:
 	// Constructor with name
 	GameState(int width, int height, QString name);
 
-	// Destructor of the class
-	~GameState();
-
 	// Update the game logic 
 	virtual void update() = 0;
+
+	// Paint the screen with the camera image
+	virtual void paint_screen_camera(QWidget* screen, QImage* camera_image) = 0;
 
 	// Paint the screen
 	virtual void paint_screen(QWidget* screen) = 0;
 
-// Signal to change the current state
 signals:
+	// Signal to change the current state 
 	void change_state(GameState* state);
 
+	// The exit signal
+	void exit_signal();
 
 // The slots are all virtual, can be implemented on each specific state
 public slots:
@@ -59,9 +59,6 @@ public slots:
 
 	// Trigger
 	virtual void trigger_pressed(int id, qreal trigger);
-
-	// The camera image
-	void image(void* image);
 };
 
 #endif

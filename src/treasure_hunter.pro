@@ -5,8 +5,8 @@ INCLUDEPATH += .
 
 SOURCES += main.cpp
 
-SOURCES += paintview.cpp
-HEADERS += paintview.h
+SOURCES += treasure_hunter_widget.cpp
+HEADERS += treasure_hunter_widget.h
 
 SOURCES += psmove_controller_thread.cpp
 HEADERS += psmove_controller_thread.h
@@ -19,6 +19,9 @@ HEADERS += menu_button.h
 
 SOURCES += main_menu.cpp
 HEADERS += main_menu.h
+
+SOURCES += single_player_menu.cpp
+HEADERS += single_player_menu.h
 
 SOURCES += game_state.cpp
 HEADERS += game_state.h
