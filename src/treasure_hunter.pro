@@ -35,6 +35,8 @@ HEADERS += game_manager.h
 DEPENDPATH += psmove_includes
 INCLUDEPATH += psmove_includes
 
+RESOURCES = treasure_hunter.qrc
+
 LIBS += -lpsmoveapi -lpsmoveapi_tracker
 
 DESTDIR = ../build

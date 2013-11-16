@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'treasure_hunter_widget.h'
 **
-** Created: Sat Nov 16 16:55:45 2013
+** Created: Sat Nov 16 17:29:01 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

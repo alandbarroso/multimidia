@@ -1,0 +1,20 @@
+ <!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+     <file>assets/button_base.png</file>
+     <file>assets/button_base_selected.png</file>
+
+     <file>assets/button_multi_player.png</file>
+     <file>assets/button_multi_player_selected.png</file>
+
+     <file>assets/button_options.png</file>
+     <file>assets/button_options_selected.png</file>
+
+     <file>assets/button_quit.png</file>
+     <file>assets/button_quit_selected.png</file>
+
+     <file>assets/button_single_player.png</file>
+     <file>assets/button_single_player_selected.png</file>
+
+     <file>assets/cursor.png</file>
+ </qresource>
+ </RCC>

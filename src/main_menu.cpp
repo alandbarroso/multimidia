@@ -9,7 +9,7 @@
 MainMenu::MainMenu(int width, int height)
 	: BaseMenu(width, height, "Main Menu"),
 	singleplayer_button("button_single_player"),
-	multiplayer_button("button_multiplayer"),
+	multiplayer_button("button_multi_player"),
 	options_button("button_options"),
 	quit_button("button_quit")
 {

@@ -18,6 +18,7 @@ private:
 
 	int hovered;
 public:
+	MenuButton();
 	MenuButton(QString name);
 
 	// Set where the button is located => The upper left point of the button

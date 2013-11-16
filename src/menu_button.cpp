@@ -5,9 +5,33 @@
 
 #include "menu_button.h"
 
+MenuButton::MenuButton()
+{
+	QString name = "button_base";
+
+	QString dir = ":/assets/";
+	dir.append(name);
+
+	QString base_name(dir);
+	QString selected_name(dir);
+
+	base_name.append(".png");
+	selected_name.append("_selected.png");
+
+	this->normal = QImage(base_name);
+	this->selected = QImage(selected_name);
+
+	this->source_rect = QRectF(0, 0, this->normal.width(), this->normal.height());
+
+	qreal scale_factor = 0.6;
+	this->hit_box = QRectF(0, 0, scale_factor*this->normal.width(), scale_factor*this->normal.height());
+
+	hovered = 0;
+}
+
 MenuButton::MenuButton(QString name)
 {
-	QString dir = "../assets/";
+	QString dir = ":/assets/";
 	dir.append(name);
 
 	QString base_name(dir);

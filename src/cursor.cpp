@@ -7,7 +7,7 @@
 
 Cursor::Cursor(int width, int height)
 {
-	QString file_name = "../assets/cursor.png";
+	QString file_name = ":/assets/cursor.png";
 
 	this->cursor = QImage(file_name);
 

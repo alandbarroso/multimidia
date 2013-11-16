@@ -6,9 +6,9 @@
 
 SinglePlayerMenu::SinglePlayerMenu(int width, int height)
 	: BaseMenu(width, height, "SinglePLayerMenu"),
-	classic_mode_button("button_base"),
-	dynamic_mode_button("button_base"),
-	barrier_mode_button("button_base")
+	classic_mode_button(),
+	dynamic_mode_button(),
+	barrier_mode_button()
 {
 	qreal step = 0.15;
 	qreal first_button = 0.4;
