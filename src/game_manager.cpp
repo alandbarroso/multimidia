@@ -72,7 +72,7 @@ void GameManager::connect_signals()
 {
 	/* Change the states */
 	QObject::connect(current_state, SIGNAL(change_state(GameState*)),
-				this, SLOT(change_state(GameState*)));	
+				this, SLOT(change_state(GameState*)));
 
 	/* Buttons */
 	QObject::connect(psmove_thread, SIGNAL(position(int, int, int, int)),

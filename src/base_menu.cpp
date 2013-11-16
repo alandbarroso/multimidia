@@ -2,6 +2,7 @@
 
 #include <QPainter>
 #include <QImage>
+#include <QMapIterator>
 
 #include "base_menu.h"
 

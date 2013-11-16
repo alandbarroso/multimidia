@@ -14,14 +14,15 @@ class BaseMenu : public GameState
 {
 	Q_OBJECT
 private:
-	QMap<QString, MenuButton*> buttons;
-
 	Cursor cursor;
 
 	QVector<QRgb> color_table;
 
+protected:
+	QMap<QString, MenuButton*> buttons;
+
 public:
-	MainMenu(int width, int height, QString name);
+	BaseMenu(int width, int height, QString name);
 
 	// Update
 	void update();

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'main_menu.h'
 **
-** Created: Sat Nov 16 16:06:32 2013
+** Created: Sat Nov 16 16:55:46 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -50,7 +50,7 @@ const QMetaObjectExtraData MainMenu::staticMetaObjectExtraData = {
 };
 
 const QMetaObject MainMenu::staticMetaObject = {
-    { &GameState::staticMetaObject, qt_meta_stringdata_MainMenu,
+    { &BaseMenu::staticMetaObject, qt_meta_stringdata_MainMenu,
       qt_meta_data_MainMenu, &staticMetaObjectExtraData }
 };
 
@@ -68,12 +68,12 @@ void *MainMenu::qt_metacast(const char *_clname)
     if (!_clname) return 0;
     if (!strcmp(_clname, qt_meta_stringdata_MainMenu))
         return static_cast<void*>(const_cast< MainMenu*>(this));
-    return GameState::qt_metacast(_clname);
+    return BaseMenu::qt_metacast(_clname);
 }
 
 int MainMenu::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = GameState::qt_metacall(_c, _id, _a);
+    _id = BaseMenu::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;

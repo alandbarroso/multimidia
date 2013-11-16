@@ -17,6 +17,9 @@ HEADERS += cursor.h
 SOURCES += menu_button.cpp
 HEADERS += menu_button.h
 
+SOURCES += base_menu.cpp
+HEADERS += base_menu.h
+
 SOURCES += main_menu.cpp
 HEADERS += main_menu.h
 

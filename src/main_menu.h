@@ -5,11 +5,11 @@
 #include <QVector>
 #include <QRgb>
 
-#include "game_state.h"
+#include "base_menu.h"
 #include "menu_button.h"
 #include "cursor.h"
 
-class MainMenu : public GameState
+class MainMenu : public BaseMenu
 {
 	Q_OBJECT
 private:
@@ -18,24 +18,8 @@ private:
 	MenuButton options_button;
 	MenuButton quit_button;
 
-	Cursor cursor;
-
-	QVector<QRgb> color_table;
-
 public:
 	MainMenu(int width, int height);
-
-	// Update
-	void update();
-
-	// Paint the screen with the camera image
-	void paint_screen_camera(QWidget* screen, QImage* camera_image);
-
-	// Paint the screen
-	void paint_screen(QWidget *screen);
-
-	// Position changed
-	void position(int id, int x, int y, int z);
 
 	// Move button pressed
 	void move_button(int id);

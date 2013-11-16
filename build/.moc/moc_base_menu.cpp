@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'single_player_menu.h'
+** Meta object code from reading C++ file 'base_menu.h'
 **
 ** Created: Sat Nov 16 16:55:46 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
@@ -7,9 +7,9 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../src/single_player_menu.h"
+#include "../../src/base_menu.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'single_player_menu.h' doesn't include <QObject>."
+#error "The header file 'base_menu.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
 #error "This file was generated using the moc from 4.8.4. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_SinglePlayerMenu[] = {
+static const uint qt_meta_data_BaseMenu[] = {
 
  // content:
        6,       // revision
@@ -33,11 +33,11 @@ static const uint qt_meta_data_SinglePlayerMenu[] = {
        0        // eod
 };
 
-static const char qt_meta_stringdata_SinglePlayerMenu[] = {
-    "SinglePlayerMenu\0"
+static const char qt_meta_stringdata_BaseMenu[] = {
+    "BaseMenu\0"
 };
 
-void SinglePlayerMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void BaseMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -45,35 +45,35 @@ void SinglePlayerMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     Q_UNUSED(_a);
 }
 
-const QMetaObjectExtraData SinglePlayerMenu::staticMetaObjectExtraData = {
+const QMetaObjectExtraData BaseMenu::staticMetaObjectExtraData = {
     0,  qt_static_metacall 
 };
 
-const QMetaObject SinglePlayerMenu::staticMetaObject = {
-    { &BaseMenu::staticMetaObject, qt_meta_stringdata_SinglePlayerMenu,
-      qt_meta_data_SinglePlayerMenu, &staticMetaObjectExtraData }
+const QMetaObject BaseMenu::staticMetaObject = {
+    { &GameState::staticMetaObject, qt_meta_stringdata_BaseMenu,
+      qt_meta_data_BaseMenu, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &SinglePlayerMenu::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &BaseMenu::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *SinglePlayerMenu::metaObject() const
+const QMetaObject *BaseMenu::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *SinglePlayerMenu::qt_metacast(const char *_clname)
+void *BaseMenu::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_SinglePlayerMenu))
-        return static_cast<void*>(const_cast< SinglePlayerMenu*>(this));
-    return BaseMenu::qt_metacast(_clname);
+    if (!strcmp(_clname, qt_meta_stringdata_BaseMenu))
+        return static_cast<void*>(const_cast< BaseMenu*>(this));
+    return GameState::qt_metacast(_clname);
 }
 
-int SinglePlayerMenu::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int BaseMenu::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = BaseMenu::qt_metacall(_c, _id, _a);
+    _id = GameState::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;
