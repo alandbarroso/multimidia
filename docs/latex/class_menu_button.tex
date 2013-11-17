@@ -1,0 +1,142 @@
+\hypertarget{class_menu_button}{\section{Menu\-Button Class Reference}
+\label{class_menu_button}\index{Menu\-Button@{Menu\-Button}}
+}
+
+
+\hyperlink{class_menu_button}{Menu\-Button} Class.  
+
+
+
+
+{\ttfamily \#include $<$menu\-\_\-button.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_menu_button_a322b34a062c93f8604b12bfb35b40073}{Menu\-Button} ()
+\item 
+\hyperlink{class_menu_button_a5775361752987f11bed0ebb7ed4ec4d6}{Menu\-Button} (Q\-String name)
+\item 
+void \hyperlink{class_menu_button_a4b94c40e8027d7ab647caeb41d5539c3}{set\-\_\-center} (int x, int y)
+\item 
+void \hyperlink{class_menu_button_a1261532f14a2d25d3d6a159b19fac922}{set\-\_\-hovered} (\hyperlink{class_cursor}{Cursor} cursor)
+\item 
+int \hyperlink{class_menu_button_a828ba16f6e7751610965e40835554126}{get\-\_\-hovered} ()
+\item 
+Q\-Rect\-F \hyperlink{class_menu_button_a229d9535dc4b9d79bd02baa8d6e19146}{get\-\_\-rect} ()
+\item 
+Q\-Rect\-F \hyperlink{class_menu_button_a5f9eff8b6107444bcc281a1eb63225a5}{get\-\_\-source\-\_\-rect} ()
+\item 
+Q\-Image \hyperlink{class_menu_button_a587ceb54e9b66e5e1eae576d085c5dc6}{get\-\_\-button} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_menu_button}{Menu\-Button} Class. 
+
+Menu button representation. \begin{DoxyAuthor}{Author}
+Alan Barroso 
+
+Ricardo Dall'Olio 
+
+Eduardo Cominetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_menu_button_a322b34a062c93f8604b12bfb35b40073}{\index{Menu\-Button@{Menu\-Button}!Menu\-Button@{Menu\-Button}}
+\index{Menu\-Button@{Menu\-Button}!MenuButton@{Menu\-Button}}
+\subsubsection[{Menu\-Button}]{\setlength{\rightskip}{0pt plus 5cm}Menu\-Button\-::\-Menu\-Button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_button_a322b34a062c93f8604b12bfb35b40073}
+Basic constructor, initalizes the button with the base button image. \hypertarget{class_menu_button_a5775361752987f11bed0ebb7ed4ec4d6}{\index{Menu\-Button@{Menu\-Button}!Menu\-Button@{Menu\-Button}}
+\index{Menu\-Button@{Menu\-Button}!MenuButton@{Menu\-Button}}
+\subsubsection[{Menu\-Button}]{\setlength{\rightskip}{0pt plus 5cm}Menu\-Button\-::\-Menu\-Button (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_menu_button_a5775361752987f11bed0ebb7ed4ec4d6}
+Initializes the button with the given name image. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_menu_button_a587ceb54e9b66e5e1eae576d085c5dc6}{\index{Menu\-Button@{Menu\-Button}!get\-\_\-button@{get\-\_\-button}}
+\index{get\-\_\-button@{get\-\_\-button}!MenuButton@{Menu\-Button}}
+\subsubsection[{get\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Image Menu\-Button\-::get\-\_\-button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_button_a587ceb54e9b66e5e1eae576d085c5dc6}
+\begin{DoxyReturn}{Returns}
+Button image\-: if hovered, return select, else normal. 
+\end{DoxyReturn}
+\hypertarget{class_menu_button_a828ba16f6e7751610965e40835554126}{\index{Menu\-Button@{Menu\-Button}!get\-\_\-hovered@{get\-\_\-hovered}}
+\index{get\-\_\-hovered@{get\-\_\-hovered}!MenuButton@{Menu\-Button}}
+\subsubsection[{get\-\_\-hovered}]{\setlength{\rightskip}{0pt plus 5cm}int Menu\-Button\-::get\-\_\-hovered (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_button_a828ba16f6e7751610965e40835554126}
+\begin{DoxyReturn}{Returns}
+The value of hovered. 
+\end{DoxyReturn}
+\hypertarget{class_menu_button_a229d9535dc4b9d79bd02baa8d6e19146}{\index{Menu\-Button@{Menu\-Button}!get\-\_\-rect@{get\-\_\-rect}}
+\index{get\-\_\-rect@{get\-\_\-rect}!MenuButton@{Menu\-Button}}
+\subsubsection[{get\-\_\-rect}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Rect\-F Menu\-Button\-::get\-\_\-rect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_button_a229d9535dc4b9d79bd02baa8d6e19146}
+\begin{DoxyReturn}{Returns}
+The hit box rectangle of the button. 
+\end{DoxyReturn}
+\hypertarget{class_menu_button_a5f9eff8b6107444bcc281a1eb63225a5}{\index{Menu\-Button@{Menu\-Button}!get\-\_\-source\-\_\-rect@{get\-\_\-source\-\_\-rect}}
+\index{get\-\_\-source\-\_\-rect@{get\-\_\-source\-\_\-rect}!MenuButton@{Menu\-Button}}
+\subsubsection[{get\-\_\-source\-\_\-rect}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Rect\-F Menu\-Button\-::get\-\_\-source\-\_\-rect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_menu_button_a5f9eff8b6107444bcc281a1eb63225a5}
+\begin{DoxyReturn}{Returns}
+The original rectangle with size of the button. 
+\end{DoxyReturn}
+\hypertarget{class_menu_button_a4b94c40e8027d7ab647caeb41d5539c3}{\index{Menu\-Button@{Menu\-Button}!set\-\_\-center@{set\-\_\-center}}
+\index{set\-\_\-center@{set\-\_\-center}!MenuButton@{Menu\-Button}}
+\subsubsection[{set\-\_\-center}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Button\-::set\-\_\-center (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_menu_button_a4b94c40e8027d7ab647caeb41d5539c3}
+Set the center of the cursor. 
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the cursor. \\
+\hline
+{\em y} & Y coordinate of the cursor. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_menu_button_a1261532f14a2d25d3d6a159b19fac922}{\index{Menu\-Button@{Menu\-Button}!set\-\_\-hovered@{set\-\_\-hovered}}
+\index{set\-\_\-hovered@{set\-\_\-hovered}!MenuButton@{Menu\-Button}}
+\subsubsection[{set\-\_\-hovered}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Button\-::set\-\_\-hovered (
+\begin{DoxyParamCaption}
+\item[{{\bf Cursor}}]{cursor}
+\end{DoxyParamCaption}
+)}}\label{class_menu_button_a1261532f14a2d25d3d6a159b19fac922}
+Verify if the button is being hovered by the cursor. 
+\begin{DoxyParams}{Parameters}
+{\em cursor} & The cursor to be checked. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/utils/menu\-\_\-button.\-h\item 
+src/utils/menu\-\_\-button.\-cpp\end{DoxyCompactItemize}

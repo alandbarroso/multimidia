@@ -1,0 +1,250 @@
+\hypertarget{class_p_s_move_controller_thread}{\section{P\-S\-Move\-Controller\-Thread Class Reference}
+\label{class_p_s_move_controller_thread}\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}}
+}
+
+
+P\-S\-Move\-Tracker Class.  
+
+
+
+
+{\ttfamily \#include $<$psmove\-\_\-controller\-\_\-thread.\-h$>$}
+
+Inheritance diagram for P\-S\-Move\-Controller\-Thread\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_s_move_controller_thread}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_p_s_move_controller_thread_a03b2e15cad0f787ecf0a29684b74df3d}{void \hyperlink{class_p_s_move_controller_thread_a03b2e15cad0f787ecf0a29684b74df3d}{exit\-\_\-signal} ()}\label{class_p_s_move_controller_thread_a03b2e15cad0f787ecf0a29684b74df3d}
+
+\begin{DoxyCompactList}\small\item\em When received, make the application quit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_p_s_move_controller_thread_a543a12ab5adceea50a94502086563dd1}{void \hyperlink{class_p_s_move_controller_thread_a543a12ab5adceea50a94502086563dd1}{calibration\-\_\-finished} ()}\label{class_p_s_move_controller_thread_a543a12ab5adceea50a94502086563dd1}
+
+\begin{DoxyCompactList}\small\item\em Sent when calibration finishes. \end{DoxyCompactList}\item 
+void \hyperlink{class_p_s_move_controller_thread_a9a13410a3629fb6ca5cd119ccccb7c61}{position} (int id, int x, int y, int z)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_a1b4b710da167b116ca9e986cd3ce3397}{move\-\_\-button} (int id)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_adba4bb0191944583061b07fd1134ca60}{square\-\_\-button} (int id)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_a28fa2a3f9460c464f4adeedd7ede23e8}{triangle\-\_\-button} (int id)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_a3ac1ef9d5418dd5e62a9936312a8d41c}{circle\-\_\-button} (int id)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_aa86dcf6486804813751d167fece01408}{cross\-\_\-button} (int id)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_afc48b722755565b9eee295042c749471}{select\-\_\-button} (int id)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_a6873796724207954595e7bc303f4600d}{start\-\_\-button} (int id)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_aaa3a2937d023c789c7a0008b1eef67d5}{trigger\-\_\-pressed} (int id, qreal trigger)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_a16c2e82e2e4ac257dcd08acd29786590}{image} (void $\ast$image)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_ac72baf21165fa2d16e2fa471d07184e2}{update\-\_\-screen} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_p_s_move_controller_thread_a5c444d32e7c355abc67015f38a243eec}{\hyperlink{class_p_s_move_controller_thread_a5c444d32e7c355abc67015f38a243eec}{P\-S\-Move\-Controller\-Thread} ()}\label{class_p_s_move_controller_thread_a5c444d32e7c355abc67015f38a243eec}
+
+\begin{DoxyCompactList}\small\item\em Basic constructor -\/ initiates the tracker. \end{DoxyCompactList}\item 
+void \hyperlink{class_p_s_move_controller_thread_aaf1c7e2261c7e423a51e43e376de3218}{get\-\_\-size} (int \&width, int \&height)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_ab3e95646bb01676f2033ea2fc398b821}{run} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-S\-Move\-Tracker Class. 
+
+Control the singals from P\-S\-Move controller. \begin{DoxyAuthor}{Author}
+Alan Barroso 
+
+Ricardo Dall'Olio 
+
+Eduardo Cominetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_p_s_move_controller_thread_a3ac1ef9d5418dd5e62a9936312a8d41c}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!circle\-\_\-button@{circle\-\_\-button}}
+\index{circle\-\_\-button@{circle\-\_\-button}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{circle\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::circle\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_a3ac1ef9d5418dd5e62a9936312a8d41c}
+Sent when the circle button is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_aa86dcf6486804813751d167fece01408}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!cross\-\_\-button@{cross\-\_\-button}}
+\index{cross\-\_\-button@{cross\-\_\-button}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{cross\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::cross\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_aa86dcf6486804813751d167fece01408}
+Sent when the cross button is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_aaf1c7e2261c7e423a51e43e376de3218}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!get\-\_\-size@{get\-\_\-size}}
+\index{get\-\_\-size@{get\-\_\-size}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{get\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::get\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{int \&}]{width, }
+\item[{int \&}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_p_s_move_controller_thread_aaf1c7e2261c7e423a51e43e376de3218}
+Returns the width and the size of the capture camera screen. 
+\begin{DoxyParams}{Parameters}
+{\em width} & Address to the width. \\
+\hline
+{\em height} & Address to the height. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_a16c2e82e2e4ac257dcd08acd29786590}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!image@{image}}
+\index{image@{image}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::image (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_a16c2e82e2e4ac257dcd08acd29786590}
+Send the camera image. 
+\begin{DoxyParams}{Parameters}
+{\em image} & The image received from the controller \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_a1b4b710da167b116ca9e986cd3ce3397}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!move\-\_\-button@{move\-\_\-button}}
+\index{move\-\_\-button@{move\-\_\-button}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{move\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::move\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_a1b4b710da167b116ca9e986cd3ce3397}
+Sent when the move button is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_a9a13410a3629fb6ca5cd119ccccb7c61}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!position@{position}}
+\index{position@{position}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::position (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_a9a13410a3629fb6ca5cd119ccccb7c61}
+Sent when the position changes. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller that moved. \\
+\hline
+{\em x} & X coordinate of the controller. \\
+\hline
+{\em y} & Y coordinate of the controller. \\
+\hline
+{\em z} & Z coordinate of the controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_ab3e95646bb01676f2033ea2fc398b821}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!run@{run}}
+\index{run@{run}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_p_s_move_controller_thread_ab3e95646bb01676f2033ea2fc398b821}
+Inherited method. Check the controller signals. \hypertarget{class_p_s_move_controller_thread_afc48b722755565b9eee295042c749471}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!select\-\_\-button@{select\-\_\-button}}
+\index{select\-\_\-button@{select\-\_\-button}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{select\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::select\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_afc48b722755565b9eee295042c749471}
+Sent when the select button is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_adba4bb0191944583061b07fd1134ca60}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!square\-\_\-button@{square\-\_\-button}}
+\index{square\-\_\-button@{square\-\_\-button}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{square\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::square\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_adba4bb0191944583061b07fd1134ca60}
+Sent when the square button is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_a6873796724207954595e7bc303f4600d}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!start\-\_\-button@{start\-\_\-button}}
+\index{start\-\_\-button@{start\-\_\-button}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{start\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::start\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_a6873796724207954595e7bc303f4600d}
+Sent when the start button is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_a28fa2a3f9460c464f4adeedd7ede23e8}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!triangle\-\_\-button@{triangle\-\_\-button}}
+\index{triangle\-\_\-button@{triangle\-\_\-button}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{triangle\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::triangle\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_a28fa2a3f9460c464f4adeedd7ede23e8}
+Sent when the triangle button is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_aaa3a2937d023c789c7a0008b1eef67d5}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!trigger\-\_\-pressed@{trigger\-\_\-pressed}}
+\index{trigger\-\_\-pressed@{trigger\-\_\-pressed}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{trigger\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::trigger\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{qreal}]{trigger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_aaa3a2937d023c789c7a0008b1eef67d5}
+Sent when the trigger is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+{\em trigger} & Value of the trigger. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_p_s_move_controller_thread_ac72baf21165fa2d16e2fa471d07184e2}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!update\-\_\-screen@{update\-\_\-screen}}
+\index{update\-\_\-screen@{update\-\_\-screen}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{update\-\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::update\-\_\-screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_p_s_move_controller_thread_ac72baf21165fa2d16e2fa471d07184e2}
+Send the signal to update the screen. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/psmove\-\_\-controller\-\_\-thread.\-h\item 
+src/psmove\-\_\-controller\-\_\-thread.\-cpp\end{DoxyCompactItemize}

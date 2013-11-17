@@ -1,0 +1,274 @@
+\hypertarget{class_base_menu}{\section{Base\-Menu Class Reference}
+\label{class_base_menu}\index{Base\-Menu@{Base\-Menu}}
+}
+
+
+\hyperlink{class_base_menu}{Base\-Menu} Class.  
+
+
+
+
+{\ttfamily \#include $<$base\-\_\-menu.\-h$>$}
+
+Inheritance diagram for Base\-Menu\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_base_menu}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_base_menu_aea2baf1bc987227878fd914d19fe3a14}{Base\-Menu} (Q\-String \hyperlink{class_game_state_ab30c2bb30e4236231ae97976576c130a}{name})
+\item 
+virtual void \hyperlink{class_base_menu_a4679a8f7c2872606910baa1b08fe0ba1}{update} ()
+\item 
+void \hyperlink{class_base_menu_ad75153fdfff53b0421beb9674c0237e3}{paint\-\_\-screen\-\_\-camera} (Q\-Widget $\ast$screen, Q\-Image $\ast$camera\-\_\-image)
+\item 
+void \hyperlink{class_base_menu_ae45dccc7c3b8da62b4cd0d5b6c211a12}{paint\-\_\-screen} (Q\-Widget $\ast$screen)
+\item 
+void \hyperlink{class_base_menu_a9c2bc1403e96c1bd411883a47e47155b}{position} (int id, int x, int y, int z)
+\item 
+virtual void \hyperlink{class_base_menu_a72bee3689ae1f2e4f92fc0dfa0fdffcf}{move\-\_\-button} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_ae19bd0ebccab280b44893e07c6d5c3d1}{square\-\_\-button} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a02c70880683c8f77490d52ce5703c4e6}{triangle\-\_\-button} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a0292d1dcfc61b624b22ef0ac6bfddeda}{circle\-\_\-button} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a809fbcd446fd3a4ac69dd9dfd696b9a9}{cross\-\_\-button} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a841913080aca368285ac14e903a9972a}{select\-\_\-button} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a8bb01ae970bb9376fe6a620169e193b3}{start\-\_\-button} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_adb277f30427d5811f86f8699b04c4abe}{trigger\-\_\-pressed} (int id, qreal trigger)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_base_menu_ab488e57ffca40b039cfebb4d544f1357}{Q\-Map$<$ Q\-String, \hyperlink{class_menu_button}{Menu\-Button} $\ast$ $>$ \hyperlink{class_base_menu_ab488e57ffca40b039cfebb4d544f1357}{buttons}}\label{class_base_menu_ab488e57ffca40b039cfebb4d544f1357}
+
+\begin{DoxyCompactList}\small\item\em Map with all the buttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_base_menu}{Base\-Menu} Class. 
+
+The base class to all the menus. \begin{DoxyAuthor}{Author}
+Alan Barroso 
+
+Ricardo Dall'Olio 
+
+Eduardo Cominetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_base_menu_aea2baf1bc987227878fd914d19fe3a14}{\index{Base\-Menu@{Base\-Menu}!Base\-Menu@{Base\-Menu}}
+\index{Base\-Menu@{Base\-Menu}!BaseMenu@{Base\-Menu}}
+\subsubsection[{Base\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Menu\-::\-Base\-Menu (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_base_menu_aea2baf1bc987227878fd914d19fe3a14}
+Simple constructor to the \hyperlink{class_base_menu}{Base\-Menu}. 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the menu \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_base_menu_a0292d1dcfc61b624b22ef0ac6bfddeda}{\index{Base\-Menu@{Base\-Menu}!circle\-\_\-button@{circle\-\_\-button}}
+\index{circle\-\_\-button@{circle\-\_\-button}!BaseMenu@{Base\-Menu}}
+\subsubsection[{circle\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::circle\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a0292d1dcfc61b624b22ef0ac6bfddeda}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_ad54b4f4c9aa22eb5c90186cdc789fb8a}{Game\-State\-::circle\-\_\-button()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_ad54b4f4c9aa22eb5c90186cdc789fb8a}{Game\-State}.
+
+
+
+Reimplemented in \hyperlink{class_single_player_menu_a99cd7d7a059520b9e2390565ba2184fd}{Single\-Player\-Menu}.
+
+\hypertarget{class_base_menu_a809fbcd446fd3a4ac69dd9dfd696b9a9}{\index{Base\-Menu@{Base\-Menu}!cross\-\_\-button@{cross\-\_\-button}}
+\index{cross\-\_\-button@{cross\-\_\-button}!BaseMenu@{Base\-Menu}}
+\subsubsection[{cross\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::cross\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a809fbcd446fd3a4ac69dd9dfd696b9a9}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a0cba4a658ac1e14f98381ba642f522a9}{Game\-State\-::cross\-\_\-button()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a0cba4a658ac1e14f98381ba642f522a9}{Game\-State}.
+
+\hypertarget{class_base_menu_a72bee3689ae1f2e4f92fc0dfa0fdffcf}{\index{Base\-Menu@{Base\-Menu}!move\-\_\-button@{move\-\_\-button}}
+\index{move\-\_\-button@{move\-\_\-button}!BaseMenu@{Base\-Menu}}
+\subsubsection[{move\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::move\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a72bee3689ae1f2e4f92fc0dfa0fdffcf}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a8ebda380d19b5800a056042e034639b9}{Game\-State\-::move\-\_\-button()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a8ebda380d19b5800a056042e034639b9}{Game\-State}.
+
+
+
+Reimplemented in \hyperlink{class_options_menu_a81bd7ebf73d664c307e7f070e6dc0e7a}{Options\-Menu}, \hyperlink{class_main_menu_a44b82a9130ddaa6e5237303290fc1b67}{Main\-Menu}, and \hyperlink{class_single_player_menu_a723231c6f869d10b6216129164f2010e}{Single\-Player\-Menu}.
+
+\hypertarget{class_base_menu_ae45dccc7c3b8da62b4cd0d5b6c211a12}{\index{Base\-Menu@{Base\-Menu}!paint\-\_\-screen@{paint\-\_\-screen}}
+\index{paint\-\_\-screen@{paint\-\_\-screen}!BaseMenu@{Base\-Menu}}
+\subsubsection[{paint\-\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::paint\-\_\-screen (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{screen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_ae45dccc7c3b8da62b4cd0d5b6c211a12}
+Paint the buttons on the screen. \begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a3ea5432d8db8538bc18ab4cf0fdfc871}{Game\-State\-::paint\-\_\-screen()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{class_game_state_a3ea5432d8db8538bc18ab4cf0fdfc871}{Game\-State}.
+
+\hypertarget{class_base_menu_ad75153fdfff53b0421beb9674c0237e3}{\index{Base\-Menu@{Base\-Menu}!paint\-\_\-screen\-\_\-camera@{paint\-\_\-screen\-\_\-camera}}
+\index{paint\-\_\-screen\-\_\-camera@{paint\-\_\-screen\-\_\-camera}!BaseMenu@{Base\-Menu}}
+\subsubsection[{paint\-\_\-screen\-\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::paint\-\_\-screen\-\_\-camera (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{screen, }
+\item[{Q\-Image $\ast$}]{camera\-\_\-image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_ad75153fdfff53b0421beb9674c0237e3}
+Paint the screen black and white. \begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_aac32d423dd6ebe9c1dbbf4c02b1b8d61}{Game\-State\-::paint\-\_\-screen\-\_\-camera()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{class_game_state_aac32d423dd6ebe9c1dbbf4c02b1b8d61}{Game\-State}.
+
+\hypertarget{class_base_menu_a9c2bc1403e96c1bd411883a47e47155b}{\index{Base\-Menu@{Base\-Menu}!position@{position}}
+\index{position@{position}!BaseMenu@{Base\-Menu}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::position (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a9c2bc1403e96c1bd411883a47e47155b}
+Updates the cursor position. \begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_ac8f14bed66fc7a5931663ea934f75d42}{Game\-State\-::position()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_ac8f14bed66fc7a5931663ea934f75d42}{Game\-State}.
+
+\hypertarget{class_base_menu_a841913080aca368285ac14e903a9972a}{\index{Base\-Menu@{Base\-Menu}!select\-\_\-button@{select\-\_\-button}}
+\index{select\-\_\-button@{select\-\_\-button}!BaseMenu@{Base\-Menu}}
+\subsubsection[{select\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::select\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a841913080aca368285ac14e903a9972a}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a4a3f908cb9f002cfdc1b46b404cfe972}{Game\-State\-::select\-\_\-button()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a4a3f908cb9f002cfdc1b46b404cfe972}{Game\-State}.
+
+\hypertarget{class_base_menu_ae19bd0ebccab280b44893e07c6d5c3d1}{\index{Base\-Menu@{Base\-Menu}!square\-\_\-button@{square\-\_\-button}}
+\index{square\-\_\-button@{square\-\_\-button}!BaseMenu@{Base\-Menu}}
+\subsubsection[{square\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::square\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_ae19bd0ebccab280b44893e07c6d5c3d1}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_ac34dff747a0fa09974e2996ab00fd946}{Game\-State\-::square\-\_\-button()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_ac34dff747a0fa09974e2996ab00fd946}{Game\-State}.
+
+\hypertarget{class_base_menu_a8bb01ae970bb9376fe6a620169e193b3}{\index{Base\-Menu@{Base\-Menu}!start\-\_\-button@{start\-\_\-button}}
+\index{start\-\_\-button@{start\-\_\-button}!BaseMenu@{Base\-Menu}}
+\subsubsection[{start\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::start\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a8bb01ae970bb9376fe6a620169e193b3}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_aa2708e6252ef0340930cf3234bdd51a1}{Game\-State\-::start\-\_\-button()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_aa2708e6252ef0340930cf3234bdd51a1}{Game\-State}.
+
+\hypertarget{class_base_menu_a02c70880683c8f77490d52ce5703c4e6}{\index{Base\-Menu@{Base\-Menu}!triangle\-\_\-button@{triangle\-\_\-button}}
+\index{triangle\-\_\-button@{triangle\-\_\-button}!BaseMenu@{Base\-Menu}}
+\subsubsection[{triangle\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::triangle\-\_\-button (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a02c70880683c8f77490d52ce5703c4e6}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a435a4bb7958616fd9fe2404b4576549e}{Game\-State\-::triangle\-\_\-button()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a435a4bb7958616fd9fe2404b4576549e}{Game\-State}.
+
+\hypertarget{class_base_menu_adb277f30427d5811f86f8699b04c4abe}{\index{Base\-Menu@{Base\-Menu}!trigger\-\_\-pressed@{trigger\-\_\-pressed}}
+\index{trigger\-\_\-pressed@{trigger\-\_\-pressed}!BaseMenu@{Base\-Menu}}
+\subsubsection[{trigger\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::trigger\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{qreal}]{trigger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_adb277f30427d5811f86f8699b04c4abe}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a71ce465f73537005a559b429289b9fdd}{Game\-State\-::trigger\-\_\-pressed()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a71ce465f73537005a559b429289b9fdd}{Game\-State}.
+
+\hypertarget{class_base_menu_a4679a8f7c2872606910baa1b08fe0ba1}{\index{Base\-Menu@{Base\-Menu}!update@{update}}
+\index{update@{update}!BaseMenu@{Base\-Menu}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a4679a8f7c2872606910baa1b08fe0ba1}
+Check if the cursor is over the buttons. 
+
+Implements \hyperlink{class_game_state_ab2864bfa04f92f6966861a1f2883bda0}{Game\-State}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/game\-\_\-manager/base\-\_\-menu.\-h\item 
+src/game\-\_\-manager/base\-\_\-menu.\-cpp\end{DoxyCompactItemize}

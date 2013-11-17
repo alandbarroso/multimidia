@@ -1,0 +1,106 @@
+\hypertarget{class_treasure_hunter_widget}{\section{Treasure\-Hunter\-Widget Class Reference}
+\label{class_treasure_hunter_widget}\index{Treasure\-Hunter\-Widget@{Treasure\-Hunter\-Widget}}
+}
+
+
+Thread\-Hunter\-Widget Class.  
+
+
+
+
+{\ttfamily \#include $<$treasure\-\_\-hunter\-\_\-widget.\-h$>$}
+
+Inheritance diagram for Treasure\-Hunter\-Widget\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_treasure_hunter_widget}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_treasure_hunter_widget_a1f770e67fe7b2af819a226f07a1858ab}{update\-\_\-screen} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_treasure_hunter_widget_aafd12f16d20308347b8a7249ce34eb7c}{Treasure\-Hunter\-Widget} (Q\-Widget $\ast$parent, int width, int height, \hyperlink{class_p_s_move_controller_thread}{P\-S\-Move\-Controller\-Thread} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_treasure_hunter_widget_a5b3fabbe6e3e50cda3ce8335bd8580e7}{paint\-Event} (Q\-Paint\-Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Paints the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Thread\-Hunter\-Widget Class. 
+
+Main screen of the game. \begin{DoxyAuthor}{Author}
+Alan Barroso 
+
+Ricardo Dall'Olio 
+
+Eduardo Cominetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_treasure_hunter_widget_aafd12f16d20308347b8a7249ce34eb7c}{\index{Treasure\-Hunter\-Widget@{Treasure\-Hunter\-Widget}!Treasure\-Hunter\-Widget@{Treasure\-Hunter\-Widget}}
+\index{Treasure\-Hunter\-Widget@{Treasure\-Hunter\-Widget}!TreasureHunterWidget@{Treasure\-Hunter\-Widget}}
+\subsubsection[{Treasure\-Hunter\-Widget}]{\setlength{\rightskip}{0pt plus 5cm}Treasure\-Hunter\-Widget\-::\-Treasure\-Hunter\-Widget (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{{\bf P\-S\-Move\-Controller\-Thread} $\ast$}]{controller}
+\end{DoxyParamCaption}
+)}}\label{class_treasure_hunter_widget_aafd12f16d20308347b8a7249ce34eb7c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent screen (Used to Q\-Widget constructor). \\
+\hline
+{\em width} & The width that the screen shall have. \\
+\hline
+{\em height} & The height that the screen shall have. \\
+\hline
+{\em controller} & The thread to be passed to the \hyperlink{class_game_manager_a20ffdea8c56aa5d364554aa04eace73b}{Game\-Manager\-::init()} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_treasure_hunter_widget_a5b3fabbe6e3e50cda3ce8335bd8580e7}{\index{Treasure\-Hunter\-Widget@{Treasure\-Hunter\-Widget}!paint\-Event@{paint\-Event}}
+\index{paint\-Event@{paint\-Event}!TreasureHunterWidget@{Treasure\-Hunter\-Widget}}
+\subsubsection[{paint\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Treasure\-Hunter\-Widget\-::paint\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Paint\-Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_treasure_hunter_widget_a5b3fabbe6e3e50cda3ce8335bd8580e7}
+
+
+Paints the screen. 
+
+Inherited method from Q\-Widget \hypertarget{class_treasure_hunter_widget_a1f770e67fe7b2af819a226f07a1858ab}{\index{Treasure\-Hunter\-Widget@{Treasure\-Hunter\-Widget}!update\-\_\-screen@{update\-\_\-screen}}
+\index{update\-\_\-screen@{update\-\_\-screen}!TreasureHunterWidget@{Treasure\-Hunter\-Widget}}
+\subsubsection[{update\-\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}void Treasure\-Hunter\-Widget\-::update\-\_\-screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_treasure_hunter_widget_a1f770e67fe7b2af819a226f07a1858ab}
+When a signal is received the screen is updated 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/treasure\-\_\-hunter\-\_\-widget.\-h\item 
+src/treasure\-\_\-hunter\-\_\-widget.\-cpp\end{DoxyCompactItemize}

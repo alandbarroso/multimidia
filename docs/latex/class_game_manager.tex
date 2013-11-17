@@ -1,0 +1,179 @@
+\hypertarget{class_game_manager}{\section{Game\-Manager Class Reference}
+\label{class_game_manager}\index{Game\-Manager@{Game\-Manager}}
+}
+
+
+\hyperlink{class_game_manager}{Game\-Manager} Class.  
+
+
+
+
+{\ttfamily \#include $<$game\-\_\-manager.\-h$>$}
+
+Inheritance diagram for Game\-Manager\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_game_manager_a60d891c730d679638699313b32554fc3}{change\-\_\-state} (\hyperlink{class_game_state}{Game\-State} $\ast$state)
+\item 
+void \hyperlink{class_game_manager_a95f0287ced8a2bc8d27fb5ec1a65eff2}{image} (void $\ast$image)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_game_manager_a20ffdea8c56aa5d364554aa04eace73b}{init} (int width, int height, \hyperlink{class_p_s_move_controller_thread}{P\-S\-Move\-Controller\-Thread} $\ast$psmove\-\_\-thread)
+\item 
+\hyperlink{class_game_manager_aaae63e38e358379c1fe507c5197a8435}{$\sim$\-Game\-Manager} ()
+\item 
+void \hyperlink{class_game_manager_a7ecc3a14cd9e92f50729b37d1364953f}{update} ()
+\item 
+void \hyperlink{class_game_manager_adc2d500cc9ec8eaad8b9414b8eeffc97}{paint\-\_\-screen} (Q\-Widget $\ast$screen)
+\item 
+int \hyperlink{class_game_manager_a2c3a78c8ea991f7bdc2e7e935c791a88}{get\-\_\-width} ()
+\item 
+int \hyperlink{class_game_manager_a610beadc7ccea38d546dd17278e05a76}{get\-\_\-height} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_game_manager}{Game\-Manager} $\ast$ \hyperlink{class_game_manager_a00509384dd65ab52c7f3d22d1c7d74f1}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_game_manager}{Game\-Manager} Class. 
+
+Singleton class that manage all the game states and options. \begin{DoxyAuthor}{Author}
+Alan Barroso 
+
+Ricardo Dall'Olio 
+
+Eduardo Cominetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_manager_aaae63e38e358379c1fe507c5197a8435}{\index{Game\-Manager@{Game\-Manager}!$\sim$\-Game\-Manager@{$\sim$\-Game\-Manager}}
+\index{$\sim$\-Game\-Manager@{$\sim$\-Game\-Manager}!GameManager@{Game\-Manager}}
+\subsubsection[{$\sim$\-Game\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Manager\-::$\sim$\-Game\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_aaae63e38e358379c1fe507c5197a8435}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_manager_a60d891c730d679638699313b32554fc3}{\index{Game\-Manager@{Game\-Manager}!change\-\_\-state@{change\-\_\-state}}
+\index{change\-\_\-state@{change\-\_\-state}!GameManager@{Game\-Manager}}
+\subsubsection[{change\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::change\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\-State} $\ast$}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a60d891c730d679638699313b32554fc3}
+Change to new state. 
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state to transit \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_manager_a610beadc7ccea38d546dd17278e05a76}{\index{Game\-Manager@{Game\-Manager}!get\-\_\-height@{get\-\_\-height}}
+\index{get\-\_\-height@{get\-\_\-height}!GameManager@{Game\-Manager}}
+\subsubsection[{get\-\_\-height}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Manager\-::get\-\_\-height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a610beadc7ccea38d546dd17278e05a76}
+\begin{DoxyReturn}{Returns}
+The game width 
+\end{DoxyReturn}
+\hypertarget{class_game_manager_a2c3a78c8ea991f7bdc2e7e935c791a88}{\index{Game\-Manager@{Game\-Manager}!get\-\_\-width@{get\-\_\-width}}
+\index{get\-\_\-width@{get\-\_\-width}!GameManager@{Game\-Manager}}
+\subsubsection[{get\-\_\-width}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Manager\-::get\-\_\-width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a2c3a78c8ea991f7bdc2e7e935c791a88}
+\begin{DoxyReturn}{Returns}
+The game width 
+\end{DoxyReturn}
+\hypertarget{class_game_manager_a00509384dd65ab52c7f3d22d1c7d74f1}{\index{Game\-Manager@{Game\-Manager}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!GameManager@{Game\-Manager}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Manager} $\ast$ Game\-Manager\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_game_manager_a00509384dd65ab52c7f3d22d1c7d74f1}
+Get the instance of \hyperlink{class_game_manager}{Game\-Manager}. \begin{DoxyReturn}{Returns}
+The only \hyperlink{class_game_manager}{Game\-Manager} instance existing in the game 
+\end{DoxyReturn}
+\hypertarget{class_game_manager_a95f0287ced8a2bc8d27fb5ec1a65eff2}{\index{Game\-Manager@{Game\-Manager}!image@{image}}
+\index{image@{image}!GameManager@{Game\-Manager}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::image (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a95f0287ced8a2bc8d27fb5ec1a65eff2}
+Receive the camera image. 
+\begin{DoxyParams}{Parameters}
+{\em image} & The image received from the controller \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_manager_a20ffdea8c56aa5d364554aa04eace73b}{\index{Game\-Manager@{Game\-Manager}!init@{init}}
+\index{init@{init}!GameManager@{Game\-Manager}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::init (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{{\bf P\-S\-Move\-Controller\-Thread} $\ast$}]{psmove\-\_\-thread}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a20ffdea8c56aa5d364554aa04eace73b}
+Set the initial variables. 
+\begin{DoxyParams}{Parameters}
+{\em width} & The screen width \\
+\hline
+{\em height} & The screen height \\
+\hline
+{\em psmove\-\_\-thread} & The psmove\-\_\-thread used \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_manager_adc2d500cc9ec8eaad8b9414b8eeffc97}{\index{Game\-Manager@{Game\-Manager}!paint\-\_\-screen@{paint\-\_\-screen}}
+\index{paint\-\_\-screen@{paint\-\_\-screen}!GameManager@{Game\-Manager}}
+\subsubsection[{paint\-\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::paint\-\_\-screen (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{screen}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_adc2d500cc9ec8eaad8b9414b8eeffc97}
+Called to paint the screen. 
+\begin{DoxyParams}{Parameters}
+{\em screen} & The screen to be painted \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_ab2864bfa04f92f6966861a1f2883bda0}{Game\-State\-::update()} 
+\end{DoxySeeAlso}
+\hypertarget{class_game_manager_a7ecc3a14cd9e92f50729b37d1364953f}{\index{Game\-Manager@{Game\-Manager}!update@{update}}
+\index{update@{update}!GameManager@{Game\-Manager}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a7ecc3a14cd9e92f50729b37d1364953f}
+Called to update the game state. \begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_ab2864bfa04f92f6966861a1f2883bda0}{Game\-State\-::update()} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/game\-\_\-manager/game\-\_\-manager.\-h\item 
+src/game\-\_\-manager/game\-\_\-manager.\-cpp\end{DoxyCompactItemize}
