@@ -3,19 +3,20 @@
 #include <QPainter>
 
 TreasureHunterWidget::TreasureHunterWidget(QWidget *parent, int width, int height, PSMoveControllerThread* controller)
-    : QWidget(parent),
-      gm(width, height, controller)
+    : QWidget(parent)
 {
     resize(width, height);
+
+    game_manager->init(width, height, controller);
 }
 
 void TreasureHunterWidget::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event);
 
-    gm.update();
+    game_manager->update();
 
-    gm.paint_screen(this);
+    game_manager->paint_screen(this);
 
 }
 

@@ -1,15 +1,15 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'treasure_hunter_widget.h'
+** Meta object code from reading C++ file 'calibration_state.h'
 **
-** Created: Sun Nov 17 03:13:03 2013
+** Created: Sun Nov 17 03:13:01 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../src/treasure_hunter_widget.h"
+#include "../../src/states/calibration_state.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'treasure_hunter_widget.h' doesn't include <QObject>."
+#error "The header file 'calibration_state.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
 #error "This file was generated using the moc from 4.8.4. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_TreasureHunterWidget[] = {
+static const uint qt_meta_data_CalibrationState[] = {
 
  // content:
        6,       // revision
@@ -31,57 +31,57 @@ static const uint qt_meta_data_TreasureHunterWidget[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      22,   21,   21,   21, 0x0a,
+      18,   17,   17,   17, 0x0a,
 
        0        // eod
 };
 
-static const char qt_meta_stringdata_TreasureHunterWidget[] = {
-    "TreasureHunterWidget\0\0update_screen()\0"
+static const char qt_meta_stringdata_CalibrationState[] = {
+    "CalibrationState\0\0calibration_finished()\0"
 };
 
-void TreasureHunterWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CalibrationState::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         Q_ASSERT(staticMetaObject.cast(_o));
-        TreasureHunterWidget *_t = static_cast<TreasureHunterWidget *>(_o);
+        CalibrationState *_t = static_cast<CalibrationState *>(_o);
         switch (_id) {
-        case 0: _t->update_screen(); break;
+        case 0: _t->calibration_finished(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-const QMetaObjectExtraData TreasureHunterWidget::staticMetaObjectExtraData = {
+const QMetaObjectExtraData CalibrationState::staticMetaObjectExtraData = {
     0,  qt_static_metacall 
 };
 
-const QMetaObject TreasureHunterWidget::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_TreasureHunterWidget,
-      qt_meta_data_TreasureHunterWidget, &staticMetaObjectExtraData }
+const QMetaObject CalibrationState::staticMetaObject = {
+    { &GameState::staticMetaObject, qt_meta_stringdata_CalibrationState,
+      qt_meta_data_CalibrationState, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &TreasureHunterWidget::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &CalibrationState::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *TreasureHunterWidget::metaObject() const
+const QMetaObject *CalibrationState::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *TreasureHunterWidget::qt_metacast(const char *_clname)
+void *CalibrationState::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_TreasureHunterWidget))
-        return static_cast<void*>(const_cast< TreasureHunterWidget*>(this));
-    return QWidget::qt_metacast(_clname);
+    if (!strcmp(_clname, qt_meta_stringdata_CalibrationState))
+        return static_cast<void*>(const_cast< CalibrationState*>(this));
+    return GameState::qt_metacast(_clname);
 }
 
-int TreasureHunterWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CalibrationState::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = GameState::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {

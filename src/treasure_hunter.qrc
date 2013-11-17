@@ -1,5 +1,7 @@
  <!DOCTYPE RCC><RCC version="1.0">
  <qresource>
+     <file>assets/calibrating_text.png</file>
+
      <file>assets/button_base.png</file>
      <file>assets/button_base_selected.png</file>
 

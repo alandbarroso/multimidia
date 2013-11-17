@@ -6,9 +6,9 @@
 
 #include "base_menu.h"
 
-BaseMenu::BaseMenu(int width, int height, QString name)
-	: GameState(width, height, name),
-	cursor(width, height)
+BaseMenu::BaseMenu(QString name)
+	: GameState(name),
+	cursor()
 {
 	for(int i = 0; i < 256; i++) color_table.push_back(qRgb(i,i,i));
 }
@@ -53,7 +53,9 @@ void BaseMenu::paint_screen(QWidget *screen)
 
 void BaseMenu::position(int id, int x, int y, int z)
 {
-	cursor.set_center(this->width - x, y);
+	int width = game_manager->get_width();
+	
+	cursor.set_center(width - x, y);
 }
 
 void BaseMenu::move_button(int id)

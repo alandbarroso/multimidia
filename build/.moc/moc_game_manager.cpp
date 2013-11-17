@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'game_manager.h'
 **
-** Created: Sat Nov 16 17:29:04 2013
+** Created: Sun Nov 17 03:13:03 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../src/game_manager.h"
+#include "../../src/game_manager/game_manager.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'game_manager.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63

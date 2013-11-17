@@ -5,11 +5,9 @@
 #include "game_state.h"
 
 
-// The number of the state
 int GameState::n = 0;
 
-// Simple constructor
-GameState::GameState(int width, int height)
+GameState::GameState()
 {
 	QString name = "State";
 
@@ -17,24 +15,21 @@ GameState::GameState(int width, int height)
 	n++;
 
 	set_name(name);
-
-	this->width = width;
-	this->height = height;
 }
 
-// Constructor with name
-GameState::GameState(int width, int height, QString name)
+GameState::GameState(QString name)
 {
 	set_name(name);
-
-	this->width = width;
-	this->height = height;
 }
 
-// Set the name of the state
 void GameState::set_name(QString name)
 {
 	this->name = name;
+}
+
+void GameState::calibration_finished()
+{
+
 }
 
 void GameState::position(int id, int x, int y, int z)

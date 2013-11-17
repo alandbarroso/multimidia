@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'psmove_controller_thread.h'
 **
-** Created: Sat Nov 16 17:29:02 2013
+** Created: Sun Nov 17 03:13:04 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,36 +23,37 @@ static const uint qt_meta_data_PSMoveControllerThread[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      11,       // signalCount
+      12,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
-      33,   24,   23,   23, 0x05,
-      62,   59,   23,   23, 0x05,
-      79,   59,   23,   23, 0x05,
-      98,   59,   23,   23, 0x05,
-     119,   59,   23,   23, 0x05,
-     138,   59,   23,   23, 0x05,
-     156,   59,   23,   23, 0x05,
-     175,   59,   23,   23, 0x05,
-     204,  193,   23,   23, 0x05,
-     237,  231,   23,   23, 0x05,
-     250,   23,   23,   23, 0x05,
+      24,   23,   23,   23, 0x05,
+      56,   47,   23,   23, 0x05,
+      85,   82,   23,   23, 0x05,
+     102,   82,   23,   23, 0x05,
+     121,   82,   23,   23, 0x05,
+     142,   82,   23,   23, 0x05,
+     161,   82,   23,   23, 0x05,
+     179,   82,   23,   23, 0x05,
+     198,   82,   23,   23, 0x05,
+     227,  216,   23,   23, 0x05,
+     260,  254,   23,   23, 0x05,
+     273,   23,   23,   23, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     266,   23,   23,   23, 0x0a,
+     289,   23,   23,   23, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_PSMoveControllerThread[] = {
-    "PSMoveControllerThread\0\0id,x,y,z\0"
-    "position(int,int,int,int)\0id\0"
-    "move_button(int)\0square_button(int)\0"
+    "PSMoveControllerThread\0\0calibration_finished()\0"
+    "id,x,y,z\0position(int,int,int,int)\0"
+    "id\0move_button(int)\0square_button(int)\0"
     "triangle_button(int)\0circle_button(int)\0"
     "cross_button(int)\0select_button(int)\0"
     "start_button(int)\0id,trigger\0"
@@ -66,18 +67,19 @@ void PSMoveControllerThread::qt_static_metacall(QObject *_o, QMetaObject::Call _
         Q_ASSERT(staticMetaObject.cast(_o));
         PSMoveControllerThread *_t = static_cast<PSMoveControllerThread *>(_o);
         switch (_id) {
-        case 0: _t->position((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
-        case 1: _t->move_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->square_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->triangle_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->circle_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 5: _t->cross_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 6: _t->select_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 7: _t->start_button((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 8: _t->trigger_pressed((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2]))); break;
-        case 9: _t->image((*reinterpret_cast< void*(*)>(_a[1]))); break;
-        case 10: _t->update_screen(); break;
-        case 11: _t->exit_signal(); break;
+        case 0: _t->calibration_finished(); break;
+        case 1: _t->position((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
+        case 2: _t->move_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: _t->square_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 4: _t->triangle_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 5: _t->circle_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 6: _t->cross_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 7: _t->select_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 8: _t->start_button((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: _t->trigger_pressed((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2]))); break;
+        case 10: _t->image((*reinterpret_cast< void*(*)>(_a[1]))); break;
+        case 11: _t->update_screen(); break;
+        case 12: _t->exit_signal(); break;
         default: ;
         }
     }
@@ -115,86 +117,92 @@ int PSMoveControllerThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 13;
     }
     return _id;
 }
 
 // SIGNAL 0
-void PSMoveControllerThread::position(int _t1, int _t2, int _t3, int _t4)
+void PSMoveControllerThread::calibration_finished()
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 
 // SIGNAL 1
-void PSMoveControllerThread::move_button(int _t1)
+void PSMoveControllerThread::position(int _t1, int _t2, int _t3, int _t4)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
-void PSMoveControllerThread::square_button(int _t1)
+void PSMoveControllerThread::move_button(int _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 
 // SIGNAL 3
-void PSMoveControllerThread::triangle_button(int _t1)
+void PSMoveControllerThread::square_button(int _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 
 // SIGNAL 4
-void PSMoveControllerThread::circle_button(int _t1)
+void PSMoveControllerThread::triangle_button(int _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 4, _a);
 }
 
 // SIGNAL 5
-void PSMoveControllerThread::cross_button(int _t1)
+void PSMoveControllerThread::circle_button(int _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 5, _a);
 }
 
 // SIGNAL 6
-void PSMoveControllerThread::select_button(int _t1)
+void PSMoveControllerThread::cross_button(int _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 6, _a);
 }
 
 // SIGNAL 7
-void PSMoveControllerThread::start_button(int _t1)
+void PSMoveControllerThread::select_button(int _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 7, _a);
 }
 
 // SIGNAL 8
-void PSMoveControllerThread::trigger_pressed(int _t1, qreal _t2)
+void PSMoveControllerThread::start_button(int _t1)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 8, _a);
 }
 
 // SIGNAL 9
-void PSMoveControllerThread::image(void * _t1)
+void PSMoveControllerThread::trigger_pressed(int _t1, qreal _t2)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
     QMetaObject::activate(this, &staticMetaObject, 9, _a);
 }
 
 // SIGNAL 10
+void PSMoveControllerThread::image(void * _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 10, _a);
+}
+
+// SIGNAL 11
 void PSMoveControllerThread::update_screen()
 {
-    QMetaObject::activate(this, &staticMetaObject, 10, 0);
+    QMetaObject::activate(this, &staticMetaObject, 11, 0);
 }
 QT_END_MOC_NAMESPACE

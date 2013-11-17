@@ -4,6 +4,10 @@
 #include "psmove_controller_thread.h"
 #include "game_manager.h"
 
+//! Main function
+/*!
+    Initiates all the objects and start the game
+*/
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);

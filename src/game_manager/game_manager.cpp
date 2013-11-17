@@ -8,9 +8,35 @@
 
 #include "game_manager.h"
 #include "game_state.h"
-#include "main_menu.h"
+#include "calibration_state.h"
 
-GameManager::GameManager(int width, int height, PSMoveControllerThread* psmove_thread)
+GameManager* game_manager = GameManager::getInstance();
+
+bool GameManager::instance_flag = false;
+
+GameManager* GameManager::single = NULL;
+
+GameManager* GameManager::getInstance()
+{
+	if(! instance_flag)
+	{
+		single = new GameManager();
+		instance_flag = true;
+		return single;
+	}
+	else
+	{
+		return single;
+	}
+}
+
+GameManager::GameManager()
+{
+	this->width = 800;
+	this->height = 600;
+}
+
+void GameManager::init(int width, int height, PSMoveControllerThread* psmove_thread)
 {
 	this->psmove_thread = psmove_thread;
 
@@ -23,7 +49,7 @@ GameManager::GameManager(int width, int height, PSMoveControllerThread* psmove_t
 	QObject::connect(psmove_thread, SIGNAL(image(void*)),
 				this, SLOT(image(void*)));
 
-	this->current_state = new MainMenu(width, height);
+	this->current_state = new CalibrationState();
 
 	connect_signals();
 }
@@ -39,6 +65,8 @@ GameManager::~GameManager()
 	{
 		delete camera_image;
 	}
+
+	instance_flag = false;
 }
 
 void GameManager::update()
@@ -73,6 +101,10 @@ void GameManager::connect_signals()
 	/* Change the states */
 	QObject::connect(current_state, SIGNAL(change_state(GameState*)),
 				this, SLOT(change_state(GameState*)));
+
+	/* End of calibration */
+	QObject::connect(psmove_thread, SIGNAL(calibration_finished()),
+				current_state, SLOT(calibration_finished()));
 
 	/* Buttons */
 	QObject::connect(psmove_thread, SIGNAL(position(int, int, int, int)),
@@ -133,4 +165,14 @@ void GameManager::image(void* image)
 		}
 		camera_image = new QImage((uchar*)img->imageData, img->width, img->height, img->widthStep, QImage::Format_RGB888);
 	}
+}
+
+int GameManager::get_width()
+{
+	return this->width;
+}
+
+int GameManager::get_height()
+{
+	return this->height;
 }

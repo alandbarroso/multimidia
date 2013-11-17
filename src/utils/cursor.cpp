@@ -4,9 +4,13 @@
 #include <QRectF>
 
 #include "cursor.h"
+#include "game_manager.h"
 
-Cursor::Cursor(int width, int height)
+Cursor::Cursor()
 {
+	int width = game_manager->get_width(); 
+	int height = game_manager->get_height();
+
 	QString file_name = ":/assets/cursor.png";
 
 	this->cursor = QImage(file_name);
@@ -21,8 +25,6 @@ Cursor::Cursor(int width, int height)
 	this->hit_box = QRectF(0, 0, scale_factor*this->cursor.width(), screen_height_scale*height);
 
 	this->set_center(initial_x, initial_y);
-
-	hovered = 0;
 }
 
 QImage Cursor::get_cursor()

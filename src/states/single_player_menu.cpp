@@ -4,12 +4,15 @@
 #include "main_menu.h"
 #include "single_player_menu.h"
 
-SinglePlayerMenu::SinglePlayerMenu(int width, int height)
-	: BaseMenu(width, height, "SinglePLayerMenu"),
+SinglePlayerMenu::SinglePlayerMenu()
+	: BaseMenu("SinglePLayerMenu"),
 	classic_mode_button(),
 	dynamic_mode_button(),
 	barrier_mode_button()
 {
+	int width = game_manager->get_width(); 
+	int height = game_manager->get_height();
+
 	qreal step = 0.15;
 	qreal first_button = 0.4;
 
@@ -40,7 +43,7 @@ void SinglePlayerMenu::move_button(int id)
 
 void SinglePlayerMenu::circle_button(int id)
 {
-	MainMenu *main_menu = new MainMenu(width, height);
+	MainMenu *main_menu = new MainMenu();
 
 	emit change_state(main_menu);
 

@@ -44,6 +44,8 @@ void PSMoveControllerThread::run()
         }
     }
 
+    emit calibration_finished();
+
     while (!quit) {
         int again;
 

@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-#include <QPainter>
-#include <QImage>
-
 #include "main_menu.h"
 #include "single_player_menu.h"
 
-MainMenu::MainMenu(int width, int height)
-	: BaseMenu(width, height, "Main Menu"),
+MainMenu::MainMenu()
+	: BaseMenu("Main Menu"),
 	singleplayer_button("button_single_player"),
 	multiplayer_button("button_multi_player"),
 	options_button("button_options"),
 	quit_button("button_quit")
 {
+	int width = game_manager->get_width(); 
+	int height = game_manager->get_height();
+
 	qreal step = 0.15;
 	qreal first_button = 0.4;
 
@@ -31,7 +31,7 @@ void MainMenu::move_button(int id)
 {
 	if(buttons["singleplayer"]->get_hovered())
 	{
-		SinglePlayerMenu *singleplayer = new SinglePlayerMenu(width, height);
+		SinglePlayerMenu *singleplayer = new SinglePlayerMenu();
 
 		emit change_state(singleplayer);
 
