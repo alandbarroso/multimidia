@@ -1,15 +1,15 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'base_menu.h'
+** Meta object code from reading C++ file 'single_classic_mode.h'
 **
-** Created: Fri Nov 22 07:20:16 2013
+** Created: Fri Nov 22 07:20:15 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../src/game_manager/base_menu.h"
+#include "../../src/states/single_classic_mode.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'base_menu.h' doesn't include <QObject>."
+#error "The header file 'single_classic_mode.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
 #error "This file was generated using the moc from 4.8.4. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -17,7 +17,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_BaseMenu[] = {
+static const uint qt_meta_data_SingleClassicMode[] = {
 
  // content:
        6,       // revision
@@ -33,11 +33,11 @@ static const uint qt_meta_data_BaseMenu[] = {
        0        // eod
 };
 
-static const char qt_meta_stringdata_BaseMenu[] = {
-    "BaseMenu\0"
+static const char qt_meta_stringdata_SingleClassicMode[] = {
+    "SingleClassicMode\0"
 };
 
-void BaseMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void SingleClassicMode::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -45,33 +45,33 @@ void BaseMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
     Q_UNUSED(_a);
 }
 
-const QMetaObjectExtraData BaseMenu::staticMetaObjectExtraData = {
+const QMetaObjectExtraData SingleClassicMode::staticMetaObjectExtraData = {
     0,  qt_static_metacall 
 };
 
-const QMetaObject BaseMenu::staticMetaObject = {
-    { &GameState::staticMetaObject, qt_meta_stringdata_BaseMenu,
-      qt_meta_data_BaseMenu, &staticMetaObjectExtraData }
+const QMetaObject SingleClassicMode::staticMetaObject = {
+    { &GameState::staticMetaObject, qt_meta_stringdata_SingleClassicMode,
+      qt_meta_data_SingleClassicMode, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &BaseMenu::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &SingleClassicMode::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *BaseMenu::metaObject() const
+const QMetaObject *SingleClassicMode::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *BaseMenu::qt_metacast(const char *_clname)
+void *SingleClassicMode::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_BaseMenu))
-        return static_cast<void*>(const_cast< BaseMenu*>(this));
+    if (!strcmp(_clname, qt_meta_stringdata_SingleClassicMode))
+        return static_cast<void*>(const_cast< SingleClassicMode*>(this));
     return GameState::qt_metacast(_clname);
 }
 
-int BaseMenu::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int SingleClassicMode::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = GameState::qt_metacall(_c, _id, _a);
     if (_id < 0)

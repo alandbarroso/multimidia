@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'psmove_controller_thread.h'
 **
-** Created: Thu Nov 21 00:36:48 2013
+** Created: Fri Nov 22 07:20:18 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
