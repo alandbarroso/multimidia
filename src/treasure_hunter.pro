@@ -22,6 +22,9 @@ HEADERS += single_player_menu.h
 SOURCES += calibration_state.cpp
 HEADERS += calibration_state.h
 
+SOURCES += options_menu.cpp
+HEADERS += options_menu.h
+
 DEPENDPATH += game_manager
 INCLUDEPATH += game_manager
 

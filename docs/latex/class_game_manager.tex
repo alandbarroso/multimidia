@@ -16,12 +16,44 @@ Inheritance diagram for Game\-Manager\-:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_game_manager}
 \end{center}
 \end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries State\-Type} \{ \\*
+{\bfseries D\-E\-F\-A\-U\-L\-T}, 
+{\bfseries C\-A\-L\-I\-B\-R\-A\-T\-I\-O\-N}, 
+{\bfseries M\-A\-I\-N\-\_\-\-M\-E\-N\-U}, 
+{\bfseries S\-I\-N\-G\-L\-E\-\_\-\-P\-L\-A\-Y\-E\-R\-\_\-\-M\-E\-N\-U}, 
+\\*
+{\bfseries O\-P\-T\-I\-O\-N\-S\-\_\-\-M\-E\-N\-U}
+ \}
+\item 
+enum {\bfseries Difficulty} \{ {\bfseries E\-A\-S\-Y}, 
+{\bfseries M\-E\-D\-I\-U\-M}, 
+{\bfseries H\-A\-R\-D}
+ \}
+\item 
+enum {\bfseries Handicap\-Mode\-Type} \{ {\bfseries N\-O\-\_\-\-H\-A\-N\-D\-I\-C\-A\-P}, 
+{\bfseries H\-A\-N\-D\-I\-C\-A\-P\-E\-D}
+ \}
+\item 
+enum {\bfseries Game\-\_\-\-Size} \{ {\bfseries M\-O\-D\-E\-\_\-2\-M}, 
+{\bfseries M\-O\-D\-E\-\_\-3\-M}, 
+{\bfseries M\-O\-D\-E\-\_\-4\-M}
+ \}
+\end{DoxyCompactItemize}
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_game_manager_a60d891c730d679638699313b32554fc3}{change\-\_\-state} (\hyperlink{class_game_state}{Game\-State} $\ast$state)
 \item 
 void \hyperlink{class_game_manager_a95f0287ced8a2bc8d27fb5ec1a65eff2}{image} (void $\ast$image)
+\item 
+void \hyperlink{class_game_manager_ae9c52fcc0f8b739437a552766d46ba17}{change\-\_\-difficulty} (Game\-Manager\-::\-Difficulty difficulty)
+\item 
+void \hyperlink{class_game_manager_a8a5d97b0e6ed557b7f69940bb0952512}{change\-\_\-handicap\-\_\-mode} (Game\-Manager\-::\-Handicap\-Mode\-Type handicap\-\_\-mode\-\_\-type)
+\item 
+void \hyperlink{class_game_manager_a3d3dc17dd64dc88b0dafde6242ff2a7f}{change\-\_\-game\-\_\-size} (Game\-Manager\-::\-Game\-\_\-\-Size game\-\_\-size)
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -37,6 +69,12 @@ void \hyperlink{class_game_manager_adc2d500cc9ec8eaad8b9414b8eeffc97}{paint\-\_\
 int \hyperlink{class_game_manager_a2c3a78c8ea991f7bdc2e7e935c791a88}{get\-\_\-width} ()
 \item 
 int \hyperlink{class_game_manager_a610beadc7ccea38d546dd17278e05a76}{get\-\_\-height} ()
+\item 
+Difficulty \hyperlink{class_game_manager_a67f07b08a9ecc6583af8c7d72682308a}{get\-\_\-game\-\_\-difficulty} ()
+\item 
+Handicap\-Mode\-Type \hyperlink{class_game_manager_a2b7b0e2c66eb7fcdfad952dffa108a3c}{get\-\_\-handicap\-\_\-mode\-\_\-type} ()
+\item 
+Game\-\_\-\-Size \hyperlink{class_game_manager_a3a2dcb0df5fd21caa872d68378311578}{get\-\_\-game\-\_\-size} ()
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -74,6 +112,42 @@ Eduardo Cominetti
 Destructor. 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_game_manager_ae9c52fcc0f8b739437a552766d46ba17}{\index{Game\-Manager@{Game\-Manager}!change\-\_\-difficulty@{change\-\_\-difficulty}}
+\index{change\-\_\-difficulty@{change\-\_\-difficulty}!GameManager@{Game\-Manager}}
+\subsubsection[{change\-\_\-difficulty}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::change\-\_\-difficulty (
+\begin{DoxyParamCaption}
+\item[{Game\-Manager\-::\-Difficulty}]{difficulty}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_ae9c52fcc0f8b739437a552766d46ba17}
+Change the difficulty of the game 
+\begin{DoxyParams}{Parameters}
+{\em difficulty} & The new difficulty \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_manager_a3d3dc17dd64dc88b0dafde6242ff2a7f}{\index{Game\-Manager@{Game\-Manager}!change\-\_\-game\-\_\-size@{change\-\_\-game\-\_\-size}}
+\index{change\-\_\-game\-\_\-size@{change\-\_\-game\-\_\-size}!GameManager@{Game\-Manager}}
+\subsubsection[{change\-\_\-game\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::change\-\_\-game\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{Game\-Manager\-::\-Game\-\_\-\-Size}]{game\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a3d3dc17dd64dc88b0dafde6242ff2a7f}
+Change the size of the game 
+\begin{DoxyParams}{Parameters}
+{\em game\-\_\-size} & The new size of the game \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_manager_a8a5d97b0e6ed557b7f69940bb0952512}{\index{Game\-Manager@{Game\-Manager}!change\-\_\-handicap\-\_\-mode@{change\-\_\-handicap\-\_\-mode}}
+\index{change\-\_\-handicap\-\_\-mode@{change\-\_\-handicap\-\_\-mode}!GameManager@{Game\-Manager}}
+\subsubsection[{change\-\_\-handicap\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::change\-\_\-handicap\-\_\-mode (
+\begin{DoxyParamCaption}
+\item[{Game\-Manager\-::\-Handicap\-Mode\-Type}]{handicap\-\_\-mode\-\_\-type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a8a5d97b0e6ed557b7f69940bb0952512}
+Change the mode of the game 
+\begin{DoxyParams}{Parameters}
+{\em handicap\-\_\-mode\-\_\-type} & The new handicap mode type \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_game_manager_a60d891c730d679638699313b32554fc3}{\index{Game\-Manager@{Game\-Manager}!change\-\_\-state@{change\-\_\-state}}
 \index{change\-\_\-state@{change\-\_\-state}!GameManager@{Game\-Manager}}
 \subsubsection[{change\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::change\-\_\-state (
@@ -86,6 +160,36 @@ Change to new state.
 {\em state} & The new state to transit \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_game_manager_a67f07b08a9ecc6583af8c7d72682308a}{\index{Game\-Manager@{Game\-Manager}!get\-\_\-game\-\_\-difficulty@{get\-\_\-game\-\_\-difficulty}}
+\index{get\-\_\-game\-\_\-difficulty@{get\-\_\-game\-\_\-difficulty}!GameManager@{Game\-Manager}}
+\subsubsection[{get\-\_\-game\-\_\-difficulty}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Manager\-::\-Difficulty Game\-Manager\-::get\-\_\-game\-\_\-difficulty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a67f07b08a9ecc6583af8c7d72682308a}
+\begin{DoxyReturn}{Returns}
+The current game difficulty 
+\end{DoxyReturn}
+\hypertarget{class_game_manager_a3a2dcb0df5fd21caa872d68378311578}{\index{Game\-Manager@{Game\-Manager}!get\-\_\-game\-\_\-size@{get\-\_\-game\-\_\-size}}
+\index{get\-\_\-game\-\_\-size@{get\-\_\-game\-\_\-size}!GameManager@{Game\-Manager}}
+\subsubsection[{get\-\_\-game\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Manager\-::\-Game\-\_\-\-Size Game\-Manager\-::get\-\_\-game\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a3a2dcb0df5fd21caa872d68378311578}
+\begin{DoxyReturn}{Returns}
+The current game size 
+\end{DoxyReturn}
+\hypertarget{class_game_manager_a2b7b0e2c66eb7fcdfad952dffa108a3c}{\index{Game\-Manager@{Game\-Manager}!get\-\_\-handicap\-\_\-mode\-\_\-type@{get\-\_\-handicap\-\_\-mode\-\_\-type}}
+\index{get\-\_\-handicap\-\_\-mode\-\_\-type@{get\-\_\-handicap\-\_\-mode\-\_\-type}!GameManager@{Game\-Manager}}
+\subsubsection[{get\-\_\-handicap\-\_\-mode\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Manager\-::\-Handicap\-Mode\-Type Game\-Manager\-::get\-\_\-handicap\-\_\-mode\-\_\-type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_manager_a2b7b0e2c66eb7fcdfad952dffa108a3c}
+\begin{DoxyReturn}{Returns}
+The current handicap mode 
+\end{DoxyReturn}
 \hypertarget{class_game_manager_a610beadc7ccea38d546dd17278e05a76}{\index{Game\-Manager@{Game\-Manager}!get\-\_\-height@{get\-\_\-height}}
 \index{get\-\_\-height@{get\-\_\-height}!GameManager@{Game\-Manager}}
 \subsubsection[{get\-\_\-height}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-Manager\-::get\-\_\-height (

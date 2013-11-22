@@ -3,8 +3,9 @@
 
 #include <QObject>
 
-#include "game_state.h"
 #include "psmove_controller_thread.h"
+
+class GameState;
 
 /************************************************
 *	Class										*
@@ -22,6 +23,39 @@
 class GameManager : public QObject
 {
 	Q_OBJECT
+public:
+	/************************************************
+	*	Enums										*
+	*************************************************/
+
+	enum StateType
+	{
+		DEFAULT,
+		CALIBRATION,
+		MAIN_MENU,
+		SINGLE_PLAYER_MENU,
+		OPTIONS_MENU
+	};
+
+	enum Difficulty
+	{
+		EASY,
+		MEDIUM,
+		HARD
+	};
+
+	enum HandicapModeType
+	{
+		NO_HANDICAP,
+		HANDICAPED
+	};
+
+	enum Game_Size
+	{
+		MODE_2M,
+		MODE_3M,
+		MODE_4M
+	};
 
 private:
 	/************************************************
@@ -61,6 +95,15 @@ private:
 		\sa PSMoveControllerThread
 	*/
 	QImage *camera_image;
+
+	//! The difficulty set for the game
+	Difficulty difficulty;
+
+	//! The mode set for the game
+	HandicapModeType handicap_mode_type;
+
+	//! The size set for the game
+	Game_Size game_size;
 
 	/************************************************
 	*	Methods										*
@@ -133,6 +176,21 @@ public:
 	*/
 	int get_height();
 
+	/*!
+		\return The current game difficulty
+	*/
+	Difficulty get_game_difficulty();
+
+	/*!
+		\return The current handicap mode
+	*/
+	HandicapModeType get_handicap_mode_type();
+
+	/*!
+		\return The current game size
+	*/
+	Game_Size get_game_size();
+
 public slots:
 	/************************************************
 	*	Slots										*
@@ -149,6 +207,24 @@ public slots:
 		\param	image 	The image received from the controller
 	*/
 	void image(void* image);
+
+	/*!
+		Change the difficulty of the game
+		\param	difficulty 	The new difficulty
+	*/
+	void change_difficulty(GameManager::Difficulty difficulty);
+
+	/*!
+		Change the mode of the game
+		\param	handicap_mode_type 	The new handicap mode type
+	*/
+	void change_handicap_mode(GameManager::HandicapModeType handicap_mode_type);
+
+	/*!
+		Change the size of the game
+		\param	game_size 	The new size of the game
+	*/
+	void change_game_size(GameManager::Game_Size game_size);
 };
 
 /************************************************

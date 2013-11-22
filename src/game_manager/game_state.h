@@ -5,6 +5,8 @@
 #include <QWidget>
 #include <QString>
 
+#include "game_manager.h"
+
 /************************************************
 *	Class										*
 *************************************************/
@@ -27,26 +29,23 @@ private:
 	*	Attributes									*
 	*************************************************/
 
-	//! The number of the state in the game.
-	static int n;
-
 	/************************************************
 	*	Methods										*
 	*************************************************/
 
 	/*!
-		Sets the name of the GameState.
-		\param 	name 	The name of the GameState.
+		Sets the type of the GameState.
+		\param 	type 	The type of the GameState.
 	*/
-	void set_name(QString name);
+	void set_type(GameManager::StateType type);
 
 protected:
 	/************************************************
 	*	Attributes									*
 	*************************************************/
 
-	//! The name of the state.
-	QString name;
+	//! The type of the state.
+	GameManager::StateType type;
 
 	/************************************************
 	*	Methods										*
@@ -63,12 +62,17 @@ public:
 
 	//! Simple constructor.
 	/*!
-		Initializes the name with StateN.
+		Initializes the type with DEFAULT.
 	*/
 	GameState();
 
-	//! Constructor passing the GameState name.
-	GameState(QString name);
+	//! Constructor passing the GameState type.
+	GameState(GameManager::StateType type);
+
+	/*!
+		\return The type of the state
+	*/
+	GameManager::StateType get_type();
 
 	//! Update the game logic.
 	/*! 
@@ -105,6 +109,15 @@ signals:
 	//! Send a exit signal to the application.
 	void exit_signal();
 
+	//! Signal to change the difficulty.
+	void change_difficulty(GameManager::Difficulty difficulty);
+
+	//! Signal to change the handicap mode.
+	void change_handicap_mode(GameManager::HandicapModeType handicap_mode_type);
+	
+	//! Signal to change the size of the game.
+	void change_game_size(GameManager::Game_Size game_size);
+
 public slots:
 	/************************************************
 	*	Slots										*
@@ -122,47 +135,137 @@ public slots:
 	*/
 	virtual void position(int id, int x, int y, int z);
 
+	/***************** Button Down *****************/
+
+	/*! 
+		Called when the move button goes down.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void move_button_down(int id);
+
+	/*! 
+		Called when the square button goes down.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void square_button_down(int id);
+
+	/*! 
+		Called when the triangle button goes down.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void triangle_button_down(int id);
+
+	/*! 
+		Called when the circle button goes down.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void circle_button_down(int id);
+
+	/*! 
+		Called when the cross button goes down.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void cross_button_down(int id);
+
+	/*! 
+		Called when the select button goes down.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void select_button_down(int id);
+
+	/*! 
+		Called when the start button goes down.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void start_button_down(int id);
+
+	/*************** Button Pressed ***************/
+
 	/*! 
 		Called when the move button is pressed.
 		\param 	id 	Id of the PSMove controller.
 	*/
-	virtual void move_button(int id);
+	virtual void move_button_pressed(int id);
 
 	/*! 
 		Called when the square button is pressed.
 		\param 	id 	Id of the PSMove controller.
 	*/
-	virtual void square_button(int id);
+	virtual void square_button_pressed(int id);
 
 	/*! 
 		Called when the triangle button is pressed.
 		\param 	id 	Id of the PSMove controller.
 	*/
-	virtual void triangle_button(int id);
+	virtual void triangle_button_pressed(int id);
 
 	/*! 
 		Called when the circle button is pressed.
 		\param 	id 	Id of the PSMove controller.
 	*/
-	virtual void circle_button(int id);
+	virtual void circle_button_pressed(int id);
 
 	/*! 
 		Called when the cross button is pressed.
 		\param 	id 	Id of the PSMove controller.
 	*/
-	virtual void cross_button(int id);
+	virtual void cross_button_pressed(int id);
 
 	/*! 
 		Called when the select button is pressed.
 		\param 	id 	Id of the PSMove controller.
 	*/
-	virtual void select_button(int id);
+	virtual void select_button_pressed(int id);
 
 	/*! 
 		Called when the start button is pressed.
 		\param 	id 	Id of the PSMove controller.
 	*/
-	virtual void start_button(int id);
+	virtual void start_button_pressed(int id);
+
+	/***************** Button Up *****************/
+
+	/*! 
+		Called when the move button goes up.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void move_button_up(int id);
+
+	/*! 
+		Called when the square button goes up.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void square_button_up(int id);
+
+	/*! 
+		Called when the triangle button goes up.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void triangle_button_up(int id);
+
+	/*! 
+		Called when the circle button goes up.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void circle_button_up(int id);
+
+	/*! 
+		Called when the cross button goes up.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void cross_button_up(int id);
+
+	/*! 
+		Called when the select button goes up.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void select_button_up(int id);
+
+	/*! 
+		Called when the start button goes up.
+		\param 	id 	Id of the PSMove controller.
+	*/
+	virtual void start_button_up(int id);
 
 	/*! 
 		Called when the trigger is pressed.

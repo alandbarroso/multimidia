@@ -6,7 +6,7 @@
 #include "main_menu.h"
 
 CalibrationState::CalibrationState()
-	: GameState("Calibration State")
+	: GameState(GameManager::CALIBRATION)
 {
 	int width = game_manager->get_width();
 	int height = game_manager->get_height();

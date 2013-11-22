@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'game_manager.h'
 **
-** Created: Sun Nov 17 03:13:03 2013
+** Created: Thu Nov 21 00:36:47 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_GameManager[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -33,13 +33,20 @@ static const uint qt_meta_data_GameManager[] = {
  // slots: signature, parameters, type, tag, flags
       19,   13,   12,   12, 0x0a,
       50,   44,   12,   12, 0x0a,
+      74,   63,   12,   12, 0x0a,
+     136,  117,   12,   12, 0x0a,
+     198,  188,   12,   12, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_GameManager[] = {
     "GameManager\0\0state\0change_state(GameState*)\0"
-    "image\0image(void*)\0"
+    "image\0image(void*)\0difficulty\0"
+    "change_difficulty(GameManager::Difficulty)\0"
+    "handicap_mode_type\0"
+    "change_handicap_mode(GameManager::HandicapModeType)\0"
+    "game_size\0change_game_size(GameManager::Game_Size)\0"
 };
 
 void GameManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -50,6 +57,9 @@ void GameManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         switch (_id) {
         case 0: _t->change_state((*reinterpret_cast< GameState*(*)>(_a[1]))); break;
         case 1: _t->image((*reinterpret_cast< void*(*)>(_a[1]))); break;
+        case 2: _t->change_difficulty((*reinterpret_cast< GameManager::Difficulty(*)>(_a[1]))); break;
+        case 3: _t->change_handicap_mode((*reinterpret_cast< GameManager::HandicapModeType(*)>(_a[1]))); break;
+        case 4: _t->change_game_size((*reinterpret_cast< GameManager::Game_Size(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -87,9 +97,9 @@ int GameManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 5;
     }
     return _id;
 }

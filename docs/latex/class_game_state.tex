@@ -24,19 +24,47 @@ Inheritance diagram for Game\-State\-:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em To be executed when calibration finishes. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_game_state_ac8f14bed66fc7a5931663ea934f75d42}{position} (int id, int x, int y, int z)
 \item 
-virtual void \hyperlink{class_game_state_a8ebda380d19b5800a056042e034639b9}{move\-\_\-button} (int id)
+virtual void \hyperlink{class_game_state_adb2e4994625b5d7bc6994ff36351f92a}{move\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_game_state_ac34dff747a0fa09974e2996ab00fd946}{square\-\_\-button} (int id)
+virtual void \hyperlink{class_game_state_a4c2eb5fabf420d0970b754867758470b}{square\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_game_state_a435a4bb7958616fd9fe2404b4576549e}{triangle\-\_\-button} (int id)
+virtual void \hyperlink{class_game_state_a6bff3607f73955e051aaa830353ec8e4}{triangle\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_game_state_ad54b4f4c9aa22eb5c90186cdc789fb8a}{circle\-\_\-button} (int id)
+virtual void \hyperlink{class_game_state_a2b127b1e5a6e9c11808bfda7b124b322}{circle\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_game_state_a0cba4a658ac1e14f98381ba642f522a9}{cross\-\_\-button} (int id)
+virtual void \hyperlink{class_game_state_a7fadb26ce5c2fce84f9a1ef7cb9ea924}{cross\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_game_state_a4a3f908cb9f002cfdc1b46b404cfe972}{select\-\_\-button} (int id)
+virtual void \hyperlink{class_game_state_aca8648bffd21910d90cdb22238cf451b}{select\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_game_state_aa2708e6252ef0340930cf3234bdd51a1}{start\-\_\-button} (int id)
+virtual void \hyperlink{class_game_state_a5cbb3463c0e886d0a88ec6d26f61fb85}{start\-\_\-button\-\_\-down} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a9aae252ce4557380f6a36fc07db82865}{move\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_game_state_ac563b15bc6d5111df054ceb1afbeb353}{square\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_game_state_af59c3923c4cb942c412d3c95a37182f4}{triangle\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a357c6dad0f25eb906fef35eb6ac5246d}{circle\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a84f167bef2d54500e48b793b6dd68ca2}{cross\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a0e98d61c64977dc40a2b1fa78d577d37}{select\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a1bfc60b9d4d13d685e0c6052e53a90e5}{start\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a317ed472fb48c3f23e5c62bc01300634}{move\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a9877350c777a2d4bef09a3d082e1a2e5}{square\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a63707d4c805887ad5543cdd8eb2ced48}{triangle\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a6f1138a791f40ffbc5e664270cb10738}{circle\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a11074db143ac9366ab77b046b4d7d880}{cross\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_game_state_a94aac39e551c83e59cac566cb02e0df2}{select\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_game_state_ae782ffae3708e9ff31306abce53ce8ea}{start\-\_\-button\-\_\-up} (int id)
 \item 
 virtual void \hyperlink{class_game_state_a71ce465f73537005a559b429289b9fdd}{trigger\-\_\-pressed} (int id, qreal trigger)
 \end{DoxyCompactItemize}
@@ -48,15 +76,26 @@ virtual void \hyperlink{class_game_state_a71ce465f73537005a559b429289b9fdd}{trig
 \begin{DoxyCompactList}\small\item\em Signal to change the \hyperlink{class_game_state}{Game\-State}. \end{DoxyCompactList}\item 
 \hypertarget{class_game_state_afd2827b7fa9f6d7fe5cdaeb991c510a9}{void \hyperlink{class_game_state_afd2827b7fa9f6d7fe5cdaeb991c510a9}{exit\-\_\-signal} ()}\label{class_game_state_afd2827b7fa9f6d7fe5cdaeb991c510a9}
 
-\begin{DoxyCompactList}\small\item\em Send a exit signal to the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Send a exit signal to the application. \end{DoxyCompactList}\item 
+\hypertarget{class_game_state_a1275534bce2a4699db2ca708c33b6588}{void \hyperlink{class_game_state_a1275534bce2a4699db2ca708c33b6588}{change\-\_\-difficulty} (Game\-Manager\-::\-Difficulty difficulty)}\label{class_game_state_a1275534bce2a4699db2ca708c33b6588}
+
+\begin{DoxyCompactList}\small\item\em Signal to change the difficulty. \end{DoxyCompactList}\item 
+\hypertarget{class_game_state_a6476b36b7d1cd6d5c1b586ecb8677c91}{void \hyperlink{class_game_state_a6476b36b7d1cd6d5c1b586ecb8677c91}{change\-\_\-handicap\-\_\-mode} (Game\-Manager\-::\-Handicap\-Mode\-Type handicap\-\_\-mode\-\_\-type)}\label{class_game_state_a6476b36b7d1cd6d5c1b586ecb8677c91}
+
+\begin{DoxyCompactList}\small\item\em Signal to change the handicap mode. \end{DoxyCompactList}\item 
+\hypertarget{class_game_state_ac66c8bcd0fd40ed2c0d190d4c5626823}{void \hyperlink{class_game_state_ac66c8bcd0fd40ed2c0d190d4c5626823}{change\-\_\-game\-\_\-size} (Game\-Manager\-::\-Game\-\_\-\-Size game\-\_\-size)}\label{class_game_state_ac66c8bcd0fd40ed2c0d190d4c5626823}
+
+\begin{DoxyCompactList}\small\item\em Signal to change the size of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_game_state_a4fa0a2bf50315c4a35a3890a0adcee5c}{Game\-State} ()
 \begin{DoxyCompactList}\small\item\em Simple constructor. \end{DoxyCompactList}\item 
-\hypertarget{class_game_state_ada7dbd11a28aa98aecf6914353245bff}{\hyperlink{class_game_state_ada7dbd11a28aa98aecf6914353245bff}{Game\-State} (Q\-String \hyperlink{class_game_state_ab30c2bb30e4236231ae97976576c130a}{name})}\label{class_game_state_ada7dbd11a28aa98aecf6914353245bff}
+\hypertarget{class_game_state_a428a39433507456ddd6304c07ec80075}{\hyperlink{class_game_state_a428a39433507456ddd6304c07ec80075}{Game\-State} (Game\-Manager\-::\-State\-Type \hyperlink{class_game_state_afc2d4395529e7ecba05379a8f5f224c5}{type})}\label{class_game_state_a428a39433507456ddd6304c07ec80075}
 
-\begin{DoxyCompactList}\small\item\em Constructor passing the \hyperlink{class_game_state}{Game\-State} name. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor passing the \hyperlink{class_game_state}{Game\-State} type. \end{DoxyCompactList}\item 
+Game\-Manager\-::\-State\-Type \hyperlink{class_game_state_ae04e587d59e6f2cba6dddd95faabc734}{get\-\_\-type} ()
+\item 
 virtual void \hyperlink{class_game_state_ab2864bfa04f92f6966861a1f2883bda0}{update} ()=0
 \begin{DoxyCompactList}\small\item\em Update the game logic. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_game_state_aac32d423dd6ebe9c1dbbf4c02b1b8d61}{paint\-\_\-screen\-\_\-camera} (Q\-Widget $\ast$screen, Q\-Image $\ast$camera\-\_\-image)=0
@@ -66,9 +105,9 @@ virtual void \hyperlink{class_game_state_a3ea5432d8db8538bc18ab4cf0fdfc871}{pain
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_state_ab30c2bb30e4236231ae97976576c130a}{Q\-String \hyperlink{class_game_state_ab30c2bb30e4236231ae97976576c130a}{name}}\label{class_game_state_ab30c2bb30e4236231ae97976576c130a}
+\hypertarget{class_game_state_afc2d4395529e7ecba05379a8f5f224c5}{Game\-Manager\-::\-State\-Type \hyperlink{class_game_state_afc2d4395529e7ecba05379a8f5f224c5}{type}}\label{class_game_state_afc2d4395529e7ecba05379a8f5f224c5}
 
-\begin{DoxyCompactList}\small\item\em The name of the state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The type of the state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -101,16 +140,32 @@ Eduardo Cominetti
 
 Simple constructor. 
 
-Initializes the name with State\-N. 
+Initializes the type with D\-E\-F\-A\-U\-L\-T. 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_game_state_ad54b4f4c9aa22eb5c90186cdc789fb8a}{\index{Game\-State@{Game\-State}!circle\-\_\-button@{circle\-\_\-button}}
-\index{circle\-\_\-button@{circle\-\_\-button}!GameState@{Game\-State}}
-\subsubsection[{circle\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::circle\-\_\-button (
+\hypertarget{class_game_state_a2b127b1e5a6e9c11808bfda7b124b322}{\index{Game\-State@{Game\-State}!circle\-\_\-button\-\_\-down@{circle\-\_\-button\-\_\-down}}
+\index{circle\-\_\-button\-\_\-down@{circle\-\_\-button\-\_\-down}!GameState@{Game\-State}}
+\subsubsection[{circle\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::circle\-\_\-button\-\_\-down (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_ad54b4f4c9aa22eb5c90186cdc789fb8a}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a2b127b1e5a6e9c11808bfda7b124b322}
+Called when the circle button goes down. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a272616b4c8caa96e086e727127a02aa2}{Base\-Menu}.
+
+\hypertarget{class_game_state_a357c6dad0f25eb906fef35eb6ac5246d}{\index{Game\-State@{Game\-State}!circle\-\_\-button\-\_\-pressed@{circle\-\_\-button\-\_\-pressed}}
+\index{circle\-\_\-button\-\_\-pressed@{circle\-\_\-button\-\_\-pressed}!GameState@{Game\-State}}
+\subsubsection[{circle\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::circle\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a357c6dad0f25eb906fef35eb6ac5246d}
 Called when the circle button is pressed. 
 \begin{DoxyParams}{Parameters}
 {\em id} & Id of the P\-S\-Move controller. \\
@@ -118,15 +173,47 @@ Called when the circle button is pressed.
 \end{DoxyParams}
 
 
-Reimplemented in \hyperlink{class_base_menu_a0292d1dcfc61b624b22ef0ac6bfddeda}{Base\-Menu}, and \hyperlink{class_single_player_menu_a99cd7d7a059520b9e2390565ba2184fd}{Single\-Player\-Menu}.
+Reimplemented in \hyperlink{class_base_menu_a2eedfd849fb5447cf10584abf4276feb}{Base\-Menu}.
 
-\hypertarget{class_game_state_a0cba4a658ac1e14f98381ba642f522a9}{\index{Game\-State@{Game\-State}!cross\-\_\-button@{cross\-\_\-button}}
-\index{cross\-\_\-button@{cross\-\_\-button}!GameState@{Game\-State}}
-\subsubsection[{cross\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::cross\-\_\-button (
+\hypertarget{class_game_state_a6f1138a791f40ffbc5e664270cb10738}{\index{Game\-State@{Game\-State}!circle\-\_\-button\-\_\-up@{circle\-\_\-button\-\_\-up}}
+\index{circle\-\_\-button\-\_\-up@{circle\-\_\-button\-\_\-up}!GameState@{Game\-State}}
+\subsubsection[{circle\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::circle\-\_\-button\-\_\-up (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a0cba4a658ac1e14f98381ba642f522a9}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a6f1138a791f40ffbc5e664270cb10738}
+Called when the circle button goes up. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a36ebfe4ba13a911e489961cdfc5950a6}{Base\-Menu}, and \hyperlink{class_main_menu_a935875722d11fd91253e755cdec8548b}{Main\-Menu}.
+
+\hypertarget{class_game_state_a7fadb26ce5c2fce84f9a1ef7cb9ea924}{\index{Game\-State@{Game\-State}!cross\-\_\-button\-\_\-down@{cross\-\_\-button\-\_\-down}}
+\index{cross\-\_\-button\-\_\-down@{cross\-\_\-button\-\_\-down}!GameState@{Game\-State}}
+\subsubsection[{cross\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::cross\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a7fadb26ce5c2fce84f9a1ef7cb9ea924}
+Called when the cross button goes down. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a5ef0f20274ea6470de07f15f34450f72}{Base\-Menu}.
+
+\hypertarget{class_game_state_a84f167bef2d54500e48b793b6dd68ca2}{\index{Game\-State@{Game\-State}!cross\-\_\-button\-\_\-pressed@{cross\-\_\-button\-\_\-pressed}}
+\index{cross\-\_\-button\-\_\-pressed@{cross\-\_\-button\-\_\-pressed}!GameState@{Game\-State}}
+\subsubsection[{cross\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::cross\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a84f167bef2d54500e48b793b6dd68ca2}
 Called when the cross button is pressed. 
 \begin{DoxyParams}{Parameters}
 {\em id} & Id of the P\-S\-Move controller. \\
@@ -134,15 +221,57 @@ Called when the cross button is pressed.
 \end{DoxyParams}
 
 
-Reimplemented in \hyperlink{class_base_menu_a809fbcd446fd3a4ac69dd9dfd696b9a9}{Base\-Menu}.
+Reimplemented in \hyperlink{class_base_menu_a7e505a84e4ddc33a06b9c3ea7caf04c5}{Base\-Menu}.
 
-\hypertarget{class_game_state_a8ebda380d19b5800a056042e034639b9}{\index{Game\-State@{Game\-State}!move\-\_\-button@{move\-\_\-button}}
-\index{move\-\_\-button@{move\-\_\-button}!GameState@{Game\-State}}
-\subsubsection[{move\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::move\-\_\-button (
+\hypertarget{class_game_state_a11074db143ac9366ab77b046b4d7d880}{\index{Game\-State@{Game\-State}!cross\-\_\-button\-\_\-up@{cross\-\_\-button\-\_\-up}}
+\index{cross\-\_\-button\-\_\-up@{cross\-\_\-button\-\_\-up}!GameState@{Game\-State}}
+\subsubsection[{cross\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::cross\-\_\-button\-\_\-up (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a8ebda380d19b5800a056042e034639b9}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a11074db143ac9366ab77b046b4d7d880}
+Called when the cross button goes up. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a76fe15e2856203059db24c9c56c1383a}{Base\-Menu}.
+
+\hypertarget{class_game_state_ae04e587d59e6f2cba6dddd95faabc734}{\index{Game\-State@{Game\-State}!get\-\_\-type@{get\-\_\-type}}
+\index{get\-\_\-type@{get\-\_\-type}!GameState@{Game\-State}}
+\subsubsection[{get\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Manager\-::\-State\-Type Game\-State\-::get\-\_\-type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_game_state_ae04e587d59e6f2cba6dddd95faabc734}
+\begin{DoxyReturn}{Returns}
+The type of the state 
+\end{DoxyReturn}
+\hypertarget{class_game_state_adb2e4994625b5d7bc6994ff36351f92a}{\index{Game\-State@{Game\-State}!move\-\_\-button\-\_\-down@{move\-\_\-button\-\_\-down}}
+\index{move\-\_\-button\-\_\-down@{move\-\_\-button\-\_\-down}!GameState@{Game\-State}}
+\subsubsection[{move\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::move\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_adb2e4994625b5d7bc6994ff36351f92a}
+Called when the move button goes down. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a8a1dbfb5c20ec003050e92e016bcde6a}{Base\-Menu}.
+
+\hypertarget{class_game_state_a9aae252ce4557380f6a36fc07db82865}{\index{Game\-State@{Game\-State}!move\-\_\-button\-\_\-pressed@{move\-\_\-button\-\_\-pressed}}
+\index{move\-\_\-button\-\_\-pressed@{move\-\_\-button\-\_\-pressed}!GameState@{Game\-State}}
+\subsubsection[{move\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::move\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a9aae252ce4557380f6a36fc07db82865}
 Called when the move button is pressed. 
 \begin{DoxyParams}{Parameters}
 {\em id} & Id of the P\-S\-Move controller. \\
@@ -150,7 +279,23 @@ Called when the move button is pressed.
 \end{DoxyParams}
 
 
-Reimplemented in \hyperlink{class_base_menu_a72bee3689ae1f2e4f92fc0dfa0fdffcf}{Base\-Menu}, \hyperlink{class_options_menu_a81bd7ebf73d664c307e7f070e6dc0e7a}{Options\-Menu}, \hyperlink{class_main_menu_a44b82a9130ddaa6e5237303290fc1b67}{Main\-Menu}, and \hyperlink{class_single_player_menu_a723231c6f869d10b6216129164f2010e}{Single\-Player\-Menu}.
+Reimplemented in \hyperlink{class_base_menu_a0a9ed550dbeb47f37528c0ab85790e68}{Base\-Menu}.
+
+\hypertarget{class_game_state_a317ed472fb48c3f23e5c62bc01300634}{\index{Game\-State@{Game\-State}!move\-\_\-button\-\_\-up@{move\-\_\-button\-\_\-up}}
+\index{move\-\_\-button\-\_\-up@{move\-\_\-button\-\_\-up}!GameState@{Game\-State}}
+\subsubsection[{move\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::move\-\_\-button\-\_\-up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a317ed472fb48c3f23e5c62bc01300634}
+Called when the move button goes up. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_aa73239e64789bf85c1d510abbae18189}{Base\-Menu}, \hyperlink{class_options_menu_a149a8b7cfaa4185f6007bb0db18e81a4}{Options\-Menu}, \hyperlink{class_main_menu_ac27ae7a7cf376c23a7f5f204c2243135}{Main\-Menu}, and \hyperlink{class_single_player_menu_a8a05cbb8626a73ea18fe32e2eb4ec61f}{Single\-Player\-Menu}.
 
 \hypertarget{class_game_state_a3ea5432d8db8538bc18ab4cf0fdfc871}{\index{Game\-State@{Game\-State}!paint\-\_\-screen@{paint\-\_\-screen}}
 \index{paint\-\_\-screen@{paint\-\_\-screen}!GameState@{Game\-State}}
@@ -226,13 +371,29 @@ Called when the position changes.
 
 Reimplemented in \hyperlink{class_base_menu_a9c2bc1403e96c1bd411883a47e47155b}{Base\-Menu}.
 
-\hypertarget{class_game_state_a4a3f908cb9f002cfdc1b46b404cfe972}{\index{Game\-State@{Game\-State}!select\-\_\-button@{select\-\_\-button}}
-\index{select\-\_\-button@{select\-\_\-button}!GameState@{Game\-State}}
-\subsubsection[{select\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::select\-\_\-button (
+\hypertarget{class_game_state_aca8648bffd21910d90cdb22238cf451b}{\index{Game\-State@{Game\-State}!select\-\_\-button\-\_\-down@{select\-\_\-button\-\_\-down}}
+\index{select\-\_\-button\-\_\-down@{select\-\_\-button\-\_\-down}!GameState@{Game\-State}}
+\subsubsection[{select\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::select\-\_\-button\-\_\-down (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a4a3f908cb9f002cfdc1b46b404cfe972}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_aca8648bffd21910d90cdb22238cf451b}
+Called when the select button goes down. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a2b0ee601bce564f9cd1870c704025677}{Base\-Menu}.
+
+\hypertarget{class_game_state_a0e98d61c64977dc40a2b1fa78d577d37}{\index{Game\-State@{Game\-State}!select\-\_\-button\-\_\-pressed@{select\-\_\-button\-\_\-pressed}}
+\index{select\-\_\-button\-\_\-pressed@{select\-\_\-button\-\_\-pressed}!GameState@{Game\-State}}
+\subsubsection[{select\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::select\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a0e98d61c64977dc40a2b1fa78d577d37}
 Called when the select button is pressed. 
 \begin{DoxyParams}{Parameters}
 {\em id} & Id of the P\-S\-Move controller. \\
@@ -240,15 +401,47 @@ Called when the select button is pressed.
 \end{DoxyParams}
 
 
-Reimplemented in \hyperlink{class_base_menu_a841913080aca368285ac14e903a9972a}{Base\-Menu}.
+Reimplemented in \hyperlink{class_base_menu_a0ad79ba5715550115cc49b7aa195d9b0}{Base\-Menu}.
 
-\hypertarget{class_game_state_ac34dff747a0fa09974e2996ab00fd946}{\index{Game\-State@{Game\-State}!square\-\_\-button@{square\-\_\-button}}
-\index{square\-\_\-button@{square\-\_\-button}!GameState@{Game\-State}}
-\subsubsection[{square\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::square\-\_\-button (
+\hypertarget{class_game_state_a94aac39e551c83e59cac566cb02e0df2}{\index{Game\-State@{Game\-State}!select\-\_\-button\-\_\-up@{select\-\_\-button\-\_\-up}}
+\index{select\-\_\-button\-\_\-up@{select\-\_\-button\-\_\-up}!GameState@{Game\-State}}
+\subsubsection[{select\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::select\-\_\-button\-\_\-up (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_ac34dff747a0fa09974e2996ab00fd946}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a94aac39e551c83e59cac566cb02e0df2}
+Called when the select button goes up. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_aea510dbeea4fc2859051603acf730d03}{Base\-Menu}.
+
+\hypertarget{class_game_state_a4c2eb5fabf420d0970b754867758470b}{\index{Game\-State@{Game\-State}!square\-\_\-button\-\_\-down@{square\-\_\-button\-\_\-down}}
+\index{square\-\_\-button\-\_\-down@{square\-\_\-button\-\_\-down}!GameState@{Game\-State}}
+\subsubsection[{square\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::square\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a4c2eb5fabf420d0970b754867758470b}
+Called when the square button goes down. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_adf4b11d9031d6ed0919fee1692bb1261}{Base\-Menu}.
+
+\hypertarget{class_game_state_ac563b15bc6d5111df054ceb1afbeb353}{\index{Game\-State@{Game\-State}!square\-\_\-button\-\_\-pressed@{square\-\_\-button\-\_\-pressed}}
+\index{square\-\_\-button\-\_\-pressed@{square\-\_\-button\-\_\-pressed}!GameState@{Game\-State}}
+\subsubsection[{square\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::square\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_ac563b15bc6d5111df054ceb1afbeb353}
 Called when the square button is pressed. 
 \begin{DoxyParams}{Parameters}
 {\em id} & Id of the P\-S\-Move controller. \\
@@ -256,15 +449,47 @@ Called when the square button is pressed.
 \end{DoxyParams}
 
 
-Reimplemented in \hyperlink{class_base_menu_ae19bd0ebccab280b44893e07c6d5c3d1}{Base\-Menu}.
+Reimplemented in \hyperlink{class_base_menu_aa8983e9c373ef131412d8fde71c735f8}{Base\-Menu}.
 
-\hypertarget{class_game_state_aa2708e6252ef0340930cf3234bdd51a1}{\index{Game\-State@{Game\-State}!start\-\_\-button@{start\-\_\-button}}
-\index{start\-\_\-button@{start\-\_\-button}!GameState@{Game\-State}}
-\subsubsection[{start\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::start\-\_\-button (
+\hypertarget{class_game_state_a9877350c777a2d4bef09a3d082e1a2e5}{\index{Game\-State@{Game\-State}!square\-\_\-button\-\_\-up@{square\-\_\-button\-\_\-up}}
+\index{square\-\_\-button\-\_\-up@{square\-\_\-button\-\_\-up}!GameState@{Game\-State}}
+\subsubsection[{square\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::square\-\_\-button\-\_\-up (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_aa2708e6252ef0340930cf3234bdd51a1}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a9877350c777a2d4bef09a3d082e1a2e5}
+Called when the square button goes up. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a12a4872dc160c013fa3499bf1f6549b8}{Base\-Menu}.
+
+\hypertarget{class_game_state_a5cbb3463c0e886d0a88ec6d26f61fb85}{\index{Game\-State@{Game\-State}!start\-\_\-button\-\_\-down@{start\-\_\-button\-\_\-down}}
+\index{start\-\_\-button\-\_\-down@{start\-\_\-button\-\_\-down}!GameState@{Game\-State}}
+\subsubsection[{start\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::start\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a5cbb3463c0e886d0a88ec6d26f61fb85}
+Called when the start button goes down. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a2e7b8a119848a67c9375cbefb7bdbc69}{Base\-Menu}.
+
+\hypertarget{class_game_state_a1bfc60b9d4d13d685e0c6052e53a90e5}{\index{Game\-State@{Game\-State}!start\-\_\-button\-\_\-pressed@{start\-\_\-button\-\_\-pressed}}
+\index{start\-\_\-button\-\_\-pressed@{start\-\_\-button\-\_\-pressed}!GameState@{Game\-State}}
+\subsubsection[{start\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::start\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a1bfc60b9d4d13d685e0c6052e53a90e5}
 Called when the start button is pressed. 
 \begin{DoxyParams}{Parameters}
 {\em id} & Id of the P\-S\-Move controller. \\
@@ -272,15 +497,47 @@ Called when the start button is pressed.
 \end{DoxyParams}
 
 
-Reimplemented in \hyperlink{class_base_menu_a8bb01ae970bb9376fe6a620169e193b3}{Base\-Menu}.
+Reimplemented in \hyperlink{class_base_menu_ac5353c43e94cf6bb5de620fe7632b20b}{Base\-Menu}.
 
-\hypertarget{class_game_state_a435a4bb7958616fd9fe2404b4576549e}{\index{Game\-State@{Game\-State}!triangle\-\_\-button@{triangle\-\_\-button}}
-\index{triangle\-\_\-button@{triangle\-\_\-button}!GameState@{Game\-State}}
-\subsubsection[{triangle\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::triangle\-\_\-button (
+\hypertarget{class_game_state_ae782ffae3708e9ff31306abce53ce8ea}{\index{Game\-State@{Game\-State}!start\-\_\-button\-\_\-up@{start\-\_\-button\-\_\-up}}
+\index{start\-\_\-button\-\_\-up@{start\-\_\-button\-\_\-up}!GameState@{Game\-State}}
+\subsubsection[{start\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::start\-\_\-button\-\_\-up (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a435a4bb7958616fd9fe2404b4576549e}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_ae782ffae3708e9ff31306abce53ce8ea}
+Called when the start button goes up. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_a8b847f9ed80538c5e96e868ed87ab3c7}{Base\-Menu}.
+
+\hypertarget{class_game_state_a6bff3607f73955e051aaa830353ec8e4}{\index{Game\-State@{Game\-State}!triangle\-\_\-button\-\_\-down@{triangle\-\_\-button\-\_\-down}}
+\index{triangle\-\_\-button\-\_\-down@{triangle\-\_\-button\-\_\-down}!GameState@{Game\-State}}
+\subsubsection[{triangle\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::triangle\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a6bff3607f73955e051aaa830353ec8e4}
+Called when the triangle button goes down. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_ac948643ada097b818c3f9b9e3249dc68}{Base\-Menu}.
+
+\hypertarget{class_game_state_af59c3923c4cb942c412d3c95a37182f4}{\index{Game\-State@{Game\-State}!triangle\-\_\-button\-\_\-pressed@{triangle\-\_\-button\-\_\-pressed}}
+\index{triangle\-\_\-button\-\_\-pressed@{triangle\-\_\-button\-\_\-pressed}!GameState@{Game\-State}}
+\subsubsection[{triangle\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::triangle\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_af59c3923c4cb942c412d3c95a37182f4}
 Called when the triangle button is pressed. 
 \begin{DoxyParams}{Parameters}
 {\em id} & Id of the P\-S\-Move controller. \\
@@ -288,7 +545,23 @@ Called when the triangle button is pressed.
 \end{DoxyParams}
 
 
-Reimplemented in \hyperlink{class_base_menu_a02c70880683c8f77490d52ce5703c4e6}{Base\-Menu}.
+Reimplemented in \hyperlink{class_base_menu_a2a96194274f8f38774ce9b4f57322f12}{Base\-Menu}.
+
+\hypertarget{class_game_state_a63707d4c805887ad5543cdd8eb2ced48}{\index{Game\-State@{Game\-State}!triangle\-\_\-button\-\_\-up@{triangle\-\_\-button\-\_\-up}}
+\index{triangle\-\_\-button\-\_\-up@{triangle\-\_\-button\-\_\-up}!GameState@{Game\-State}}
+\subsubsection[{triangle\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-State\-::triangle\-\_\-button\-\_\-up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_game_state_a63707d4c805887ad5543cdd8eb2ced48}
+Called when the triangle button goes up. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_base_menu_acb41522bb7a004a24df7ea3e115b2c72}{Base\-Menu}.
 
 \hypertarget{class_game_state_a71ce465f73537005a559b429289b9fdd}{\index{Game\-State@{Game\-State}!trigger\-\_\-pressed@{trigger\-\_\-pressed}}
 \index{trigger\-\_\-pressed@{trigger\-\_\-pressed}!GameState@{Game\-State}}
@@ -325,7 +598,7 @@ Virtual method, to be implemented by derived classes. \begin{DoxySeeAlso}{See Al
 \end{DoxySeeAlso}
 
 
-Implemented in \hyperlink{class_base_menu_a4679a8f7c2872606910baa1b08fe0ba1}{Base\-Menu}, and \hyperlink{class_calibration_state_ab7464c22c3f9f2a4bd3acef00b513649}{Calibration\-State}.
+Implemented in \hyperlink{class_options_menu_ad653e8ad74119e2fdac3fdcabcb8119f}{Options\-Menu}, \hyperlink{class_base_menu_a4679a8f7c2872606910baa1b08fe0ba1}{Base\-Menu}, and \hyperlink{class_calibration_state_ab7464c22c3f9f2a4bd3acef00b513649}{Calibration\-State}.
 
 
 

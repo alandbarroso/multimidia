@@ -5,9 +5,10 @@
 #include <QMapIterator>
 
 #include "base_menu.h"
+#include "main_menu.h"
 
-BaseMenu::BaseMenu(QString name)
-	: GameState(name),
+BaseMenu::BaseMenu(GameManager::StateType type)
+	: GameState(type),
 	cursor()
 {
 	for(int i = 0; i < 256; i++) color_table.push_back(qRgb(i,i,i));
@@ -58,37 +59,112 @@ void BaseMenu::position(int id, int x, int y, int z)
 	cursor.set_center(width - x, y);
 }
 
-void BaseMenu::move_button(int id)
+void BaseMenu::move_button_down(int id)
 {
 
 }
 
-void BaseMenu::square_button(int id)
+void BaseMenu::square_button_down(int id)
 {
 
 }
 
-void BaseMenu::triangle_button(int id)
+void BaseMenu::triangle_button_down(int id)
 {
 
 }
 
-void BaseMenu::circle_button(int id)
+void BaseMenu::circle_button_down(int id)
 {
 
 }
 
-void BaseMenu::cross_button(int id)
+void BaseMenu::cross_button_down(int id)
 {
 
 }
 
-void BaseMenu::select_button(int id)
+void BaseMenu::select_button_down(int id)
 {
 
 }
 
-void BaseMenu::start_button(int id)
+void BaseMenu::start_button_down(int id)
+{
+
+}
+
+void BaseMenu::move_button_pressed(int id)
+{
+
+}
+
+void BaseMenu::square_button_pressed(int id)
+{
+
+}
+
+void BaseMenu::triangle_button_pressed(int id)
+{
+
+}
+
+void BaseMenu::circle_button_pressed(int id)
+{
+
+}
+
+void BaseMenu::cross_button_pressed(int id)
+{
+
+}
+
+void BaseMenu::select_button_pressed(int id)
+{
+
+}
+
+void BaseMenu::start_button_pressed(int id)
+{
+
+}
+
+void BaseMenu::move_button_up(int id)
+{
+
+}
+
+void BaseMenu::square_button_up(int id)
+{
+
+}
+
+void BaseMenu::triangle_button_up(int id)
+{
+
+}
+
+void BaseMenu::circle_button_up(int id)
+{
+	MainMenu *main_menu = new MainMenu();
+
+	emit change_state(main_menu);
+
+	return;
+
+}
+
+void BaseMenu::cross_button_up(int id)
+{
+
+}
+
+void BaseMenu::select_button_up(int id)
+{
+
+}
+
+void BaseMenu::start_button_up(int id)
 {
 
 }

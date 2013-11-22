@@ -69,7 +69,7 @@ public:
 		Simple constructor to the BaseMenu.
 		\param 	name 	Name of the menu
 	*/
-	BaseMenu(QString name);
+	BaseMenu(GameManager::StateType type);
 
 	/*! 
 		Check if the cursor is over the buttons.
@@ -94,40 +94,114 @@ public:
 	*/
 	void position(int id, int x, int y, int z);
 
-	/*!
-		\sa GameState::move_button()
+	/*! 
+		\sa GameState.move_button_down()
 	*/
-	virtual void move_button(int id);
+	virtual void move_button_down(int id);
 
-	/*!
-		\sa GameState::square_button()
+	/*! 
+		\sa GameState.square_button_down()
 	*/
-	virtual void square_button(int id);
+	virtual void square_button_down(int id);
 
-	/*!
-		\sa GameState::triangle_button()
+	/*! 
+		\sa GameState.triangle_button_down()
 	*/
-	virtual void triangle_button(int id);
+	virtual void triangle_button_down(int id);
 
-	/*!
-		\sa GameState::circle_button()
+	/*! 
+		\sa GameState.circle_button_down()
 	*/
-	virtual void circle_button(int id);
+	virtual void circle_button_down(int id);
 
-	/*!
-		\sa GameState::cross_button()
+	/*! 
+		\sa GameState.cross_button_down()
 	*/
-	virtual void cross_button(int id);
+	virtual void cross_button_down(int id);
 
-	/*!
-		\sa GameState::select_button()
+	/*! 
+		\sa GameState.select_button_down()
 	*/
-	virtual void select_button(int id);
+	virtual void select_button_down(int id);
 
-	/*!
-		\sa GameState::start_button()
+	/*! 
+		\sa GameState.start_button_down()
 	*/
-	virtual void start_button(int id);
+	virtual void start_button_down(int id);
+
+	/*************** Button Pressed ***************/
+
+	/*! 
+		\sa GameState.move_button_pressed()
+	*/
+	virtual void move_button_pressed(int id);
+
+	/*! 
+		\sa GameState.square_button_pressed()
+	*/
+	virtual void square_button_pressed(int id);
+
+	/*! 
+		\sa GameState.triangle_button_pressed()
+	*/
+	virtual void triangle_button_pressed(int id);
+
+	/*! 
+		\sa GameState.circle_button_pressed()
+	*/
+	virtual void circle_button_pressed(int id);
+
+	/*! 
+		\sa GameState.cross_button_pressed()
+	*/
+	virtual void cross_button_pressed(int id);
+
+	/*! 
+		\sa GameState.select_button_pressed()
+	*/
+	virtual void select_button_pressed(int id);
+
+	/*! 
+		\sa GameState.start_button_pressed()
+	*/
+	virtual void start_button_pressed(int id);
+
+	/***************** Button Up *****************/
+
+	/*! 
+		\sa GameState.move_button_up()
+	*/
+	virtual void move_button_up(int id);
+
+	/*! 
+		\sa GameState.square_button_up()
+	*/
+	virtual void square_button_up(int id);
+
+	/*! 
+		\sa GameState.triangle_button_up()
+	*/
+	virtual void triangle_button_up(int id);
+
+	/*! 
+		\sa GameState.circle_button_up()
+	*/
+	virtual void circle_button_up(int id);
+
+	/*! 
+		\sa GameState.cross_button_up()
+	*/
+	virtual void cross_button_up(int id);
+
+	/*! 
+		\sa GameState.select_button_up()
+	*/
+	virtual void select_button_up(int id);
+
+	/*! 
+		\sa GameState.start_button_up()
+	*/
+	virtual void start_button_up(int id);
 
 	/*!
 		\sa GameState::trigger_pressed()

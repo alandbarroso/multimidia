@@ -62,9 +62,14 @@ public:
 	MainMenu();
 
 	/*!
+		Nullifies tha circle button action from the BaseMenu class
+	*/
+	void circle_button_up(int id);
+
+	/*!
 		Change the state of the game based on what button was hovered.
 	*/
-	void move_button(int id);
+	void move_button_up(int id);
 };
 
 #endif

@@ -103,6 +103,7 @@ $(document).ready(function(){initNavTree('class_game_manager.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -125,12 +126,45 @@ Inheritance diagram for GameManager:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:abab394e4309b54075f429414206e1cea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>StateType</b> { <br/>
+&#160;&#160;<b>DEFAULT</b>, 
+<b>CALIBRATION</b>, 
+<b>MAIN_MENU</b>, 
+<b>SINGLE_PLAYER_MENU</b>, 
+<br/>
+&#160;&#160;<b>OPTIONS_MENU</b>
+<br/>
+ }</td></tr>
+<tr class="separator:abab394e4309b54075f429414206e1cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622d6198217a616ad5c18c0fc1788576"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Difficulty</b> { <b>EASY</b>, 
+<b>MEDIUM</b>, 
+<b>HARD</b>
+ }</td></tr>
+<tr class="separator:a622d6198217a616ad5c18c0fc1788576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51346d126d14596f15dc13c9e2c407a8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>HandicapModeType</b> { <b>NO_HANDICAP</b>, 
+<b>HANDICAPED</b>
+ }</td></tr>
+<tr class="separator:a51346d126d14596f15dc13c9e2c407a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1fc687e081cf1fee9592c981d9bb51"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Game_Size</b> { <b>MODE_2M</b>, 
+<b>MODE_3M</b>, 
+<b>MODE_4M</b>
+ }</td></tr>
+<tr class="separator:abb1fc687e081cf1fee9592c981d9bb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:a60d891c730d679638699313b32554fc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a60d891c730d679638699313b32554fc3">change_state</a> (<a class="el" href="class_game_state.html">GameState</a> *state)</td></tr>
 <tr class="separator:a60d891c730d679638699313b32554fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95f0287ced8a2bc8d27fb5ec1a65eff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a95f0287ced8a2bc8d27fb5ec1a65eff2">image</a> (void *image)</td></tr>
 <tr class="separator:a95f0287ced8a2bc8d27fb5ec1a65eff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c52fcc0f8b739437a552766d46ba17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#ae9c52fcc0f8b739437a552766d46ba17">change_difficulty</a> (GameManager::Difficulty difficulty)</td></tr>
+<tr class="separator:ae9c52fcc0f8b739437a552766d46ba17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5d97b0e6ed557b7f69940bb0952512"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a8a5d97b0e6ed557b7f69940bb0952512">change_handicap_mode</a> (GameManager::HandicapModeType handicap_mode_type)</td></tr>
+<tr class="separator:a8a5d97b0e6ed557b7f69940bb0952512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3dc17dd64dc88b0dafde6242ff2a7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a3d3dc17dd64dc88b0dafde6242ff2a7f">change_game_size</a> (GameManager::Game_Size game_size)</td></tr>
+<tr class="separator:a3d3dc17dd64dc88b0dafde6242ff2a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -146,6 +180,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2c3a78c8ea991f7bdc2e7e935c791a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a610beadc7ccea38d546dd17278e05a76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a610beadc7ccea38d546dd17278e05a76">get_height</a> ()</td></tr>
 <tr class="separator:a610beadc7ccea38d546dd17278e05a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f07b08a9ecc6583af8c7d72682308a"><td class="memItemLeft" align="right" valign="top">Difficulty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a67f07b08a9ecc6583af8c7d72682308a">get_game_difficulty</a> ()</td></tr>
+<tr class="separator:a67f07b08a9ecc6583af8c7d72682308a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7b0e2c66eb7fcdfad952dffa108a3c"><td class="memItemLeft" align="right" valign="top">HandicapModeType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a2b7b0e2c66eb7fcdfad952dffa108a3c">get_handicap_mode_type</a> ()</td></tr>
+<tr class="separator:a2b7b0e2c66eb7fcdfad952dffa108a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2dcb0df5fd21caa872d68378311578"><td class="memItemLeft" align="right" valign="top">Game_Size&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a3a2dcb0df5fd21caa872d68378311578">get_game_size</a> ()</td></tr>
+<tr class="separator:a3a2dcb0df5fd21caa872d68378311578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -180,6 +220,99 @@ Eduardo Cominetti </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae9c52fcc0f8b739437a552766d46ba17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::change_difficulty </td>
+          <td>(</td>
+          <td class="paramtype">GameManager::Difficulty&#160;</td>
+          <td class="paramname"><em>difficulty</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Change the difficulty of the game </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">difficulty</td><td>The new difficulty </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3d3dc17dd64dc88b0dafde6242ff2a7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::change_game_size </td>
+          <td>(</td>
+          <td class="paramtype">GameManager::Game_Size&#160;</td>
+          <td class="paramname"><em>game_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Change the size of the game </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">game_size</td><td>The new size of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8a5d97b0e6ed557b7f69940bb0952512"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::change_handicap_mode </td>
+          <td>(</td>
+          <td class="paramtype">GameManager::HandicapModeType&#160;</td>
+          <td class="paramname"><em>handicap_mode_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Change the mode of the game </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handicap_mode_type</td><td>The new handicap mode type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a60d891c730d679638699313b32554fc3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -208,6 +341,54 @@ Eduardo Cominetti </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a67f07b08a9ecc6583af8c7d72682308a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameManager::Difficulty GameManager::get_game_difficulty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The current game difficulty </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a2dcb0df5fd21caa872d68378311578"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameManager::Game_Size GameManager::get_game_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The current game size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b7b0e2c66eb7fcdfad952dffa108a3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameManager::HandicapModeType GameManager::get_handicap_mode_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The current handicap mode </dd></dl>
 
 </div>
 </div>
@@ -391,7 +572,7 @@ Eduardo Cominetti </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_game_manager.html">GameManager</a></li>
-    <li class="footer">Generated on Sun Nov 17 2013 03:25:36 for Treasure Hunter by
+    <li class="footer">Generated on Fri Nov 22 2013 06:44:03 for Treasure Hunter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

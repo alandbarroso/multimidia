@@ -86,47 +86,139 @@ signals:
     */
     void position(int id, int x, int y, int z);
 
+    /***************** Button Down *****************/
+
+    /*! 
+        Sent when the move button goes down.
+        \param  id  Id of the PSMove controller.
+    */
+    void move_button_down(int id);
+
+    /*! 
+        Sent when the square button goes down.
+        \param  id  Id of the PSMove controller.
+    */
+    void square_button_down(int id);
+
+    /*! 
+        Sent when the triangle button goes down.
+        \param  id  Id of the PSMove controller.
+    */
+    void triangle_button_down(int id);
+
+    /*! 
+        Sent when the circle button goes down.
+        \param  id  Id of the PSMove controller.
+    */
+    void circle_button_down(int id);
+
+    /*! 
+        Sent when the cross button goes down.
+        \param  id  Id of the PSMove controller.
+    */
+    void cross_button_down(int id);
+
+    /*! 
+        Sent when the select button goes down.
+        \param  id  Id of the PSMove controller.
+    */
+    void select_button_down(int id);
+
+    /*! 
+        Sent when the start button goes down.
+        \param  id  Id of the PSMove controller.
+    */
+    void start_button_down(int id);
+
+    /*************** Button Pressed ***************/
+
     /*! 
         Sent when the move button is pressed.
         \param  id  Id of the PSMove controller.
     */
-    void move_button(int id);
+    void move_button_pressed(int id);
 
     /*! 
         Sent when the square button is pressed.
         \param  id  Id of the PSMove controller.
     */
-    void square_button(int id);
+    void square_button_pressed(int id);
 
     /*! 
         Sent when the triangle button is pressed.
         \param  id  Id of the PSMove controller.
     */
-    void triangle_button(int id);
+    void triangle_button_pressed(int id);
 
     /*! 
         Sent when the circle button is pressed.
         \param  id  Id of the PSMove controller.
     */
-    void circle_button(int id);
+    void circle_button_pressed(int id);
 
     /*! 
         Sent when the cross button is pressed.
         \param  id  Id of the PSMove controller.
     */
-    void cross_button(int id);
+    void cross_button_pressed(int id);
 
     /*! 
         Sent when the select button is pressed.
         \param  id  Id of the PSMove controller.
     */
-    void select_button(int id);
+    void select_button_pressed(int id);
 
     /*! 
         Sent when the start button is pressed.
         \param  id  Id of the PSMove controller.
     */
-    void start_button(int id);
+    void start_button_pressed(int id);
+
+    /***************** Button Up *****************/
+
+    /*! 
+        Sent when the move button goes up.
+        \param  id  Id of the PSMove controller.
+    */
+    void move_button_up(int id);
+
+    /*! 
+        Sent when the square button goes up.
+        \param  id  Id of the PSMove controller.
+    */
+    void square_button_up(int id);
+
+    /*! 
+        Sent when the triangle button goes up.
+        \param  id  Id of the PSMove controller.
+    */
+    void triangle_button_up(int id);
+
+    /*! 
+        Sent when the circle button goes up.
+        \param  id  Id of the PSMove controller.
+    */
+    void circle_button_up(int id);
+
+    /*! 
+        Sent when the cross button goes up.
+        \param  id  Id of the PSMove controller.
+    */
+    void cross_button_up(int id);
+
+    /*! 
+        Sent when the select button goes up.
+        \param  id  Id of the PSMove controller.
+    */
+    void select_button_up(int id);
+
+    /*! 
+        Sent when the start button goes up.
+        \param  id  Id of the PSMove controller.
+    */
+    void start_button_up(int id);
+
+    /****************** Trigger ******************/
 
     /*! 
         Sent when the trigger is pressed.
@@ -135,12 +227,15 @@ signals:
     */
     void trigger_pressed(int id, qreal trigger);
 
+    /****************** Image ******************/
+
     /*! 
         Send the camera image.
         \param  image   The image received from the controller
     */
     void image(void* image);
 
+    /****************** Update ******************/
     
     /*!
         Send the signal to update the screen.

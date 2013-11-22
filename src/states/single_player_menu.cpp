@@ -5,7 +5,7 @@
 #include "single_player_menu.h"
 
 SinglePlayerMenu::SinglePlayerMenu()
-	: BaseMenu("SinglePLayerMenu"),
+	: BaseMenu(GameManager::SINGLE_PLAYER_MENU),
 	classic_mode_button(),
 	dynamic_mode_button(),
 	barrier_mode_button()
@@ -25,7 +25,7 @@ SinglePlayerMenu::SinglePlayerMenu()
 	buttons["barrier_mode"] = &barrier_mode_button;	
 }
 
-void SinglePlayerMenu::move_button(int id)
+void SinglePlayerMenu::move_button_up(int id)
 {
 	if(classic_mode_button.get_hovered())
 	{
@@ -39,13 +39,4 @@ void SinglePlayerMenu::move_button(int id)
 	{
 		return;
 	}
-}
-
-void SinglePlayerMenu::circle_button(int id)
-{
-	MainMenu *main_menu = new MainMenu();
-
-	emit change_state(main_menu);
-
-	return;
 }

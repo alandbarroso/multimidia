@@ -4,27 +4,24 @@
 
 #include "game_state.h"
 
-
-int GameState::n = 0;
-
 GameState::GameState()
 {
-	QString name = "State";
-
-	name.append(n);
-	n++;
-
-	set_name(name);
+	set_type(GameManager::DEFAULT);
 }
 
-GameState::GameState(QString name)
+GameState::GameState(GameManager::StateType type)
 {
-	set_name(name);
+	set_type(type);
 }
 
-void GameState::set_name(QString name)
+void GameState::set_type(GameManager::StateType type)
 {
-	this->name = name;
+	this->type = type;
+}
+
+GameManager::StateType GameState::get_type()
+{
+	return this->type;
 }
 
 void GameState::calibration_finished()
@@ -37,37 +34,107 @@ void GameState::position(int id, int x, int y, int z)
 
 }
 
-void GameState::move_button(int id)
+void GameState::move_button_down(int id)
 {
 
 }
 
-void GameState::square_button(int id)
+void GameState::square_button_down(int id)
 {
 
 }
 
-void GameState::triangle_button(int id)
+void GameState::triangle_button_down(int id)
 {
 
 }
 
-void GameState::circle_button(int id)
+void GameState::circle_button_down(int id)
 {
 
 }
 
-void GameState::cross_button(int id)
+void GameState::cross_button_down(int id)
 {
 
 }
 
-void GameState::select_button(int id)
+void GameState::select_button_down(int id)
 {
 
 }
 
-void GameState::start_button(int id)
+void GameState::start_button_down(int id)
+{
+
+}
+
+void GameState::move_button_pressed(int id)
+{
+
+}
+
+void GameState::square_button_pressed(int id)
+{
+
+}
+
+void GameState::triangle_button_pressed(int id)
+{
+
+}
+
+void GameState::circle_button_pressed(int id)
+{
+
+}
+
+void GameState::cross_button_pressed(int id)
+{
+
+}
+
+void GameState::select_button_pressed(int id)
+{
+
+}
+
+void GameState::start_button_pressed(int id)
+{
+
+}
+
+void GameState::move_button_up(int id)
+{
+
+}
+
+void GameState::square_button_up(int id)
+{
+
+}
+
+void GameState::triangle_button_up(int id)
+{
+
+}
+
+void GameState::circle_button_up(int id)
+{
+
+}
+
+void GameState::cross_button_up(int id)
+{
+
+}
+
+void GameState::select_button_up(int id)
+{
+
+}
+
+void GameState::start_button_up(int id)
 {
 
 }

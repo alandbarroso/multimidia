@@ -30,6 +30,15 @@ void PSMoveControllerThread::run()
     int i;
     int count = psmove_count_connected();
 
+    /* Indicates if the button was pressed on the last turn */
+    int select_move = 0;
+    int select_square = 0;
+    int select_triangle = 0;
+    int select_circle = 0;
+    int select_cross = 0;
+    int select_pressed = 0;
+    int select_start = 0;
+
     PSMove **moves = (PSMove**)calloc(count, sizeof(PSMove*));
 
     for (i=0; i<count; i++) {
@@ -68,32 +77,130 @@ void PSMoveControllerThread::run()
                     break;
                 }
 
-                if (psmove_get_buttons(move) & Btn_SELECT) {
-                    emit select_button(i);
-                }
-
-                if (psmove_get_buttons(move) & Btn_START) {
-                    emit start_button(i);
-                }
-
                 if (psmove_get_buttons(move) & Btn_MOVE) {
-                    emit move_button(i);
-                }
+                    emit move_button_pressed(i);
 
-                if (psmove_get_buttons(move) & Btn_CROSS) {
-                    emit cross_button(i);
+                    if(!select_move)
+                    {
+                        emit move_button_down(i);
+                        select_move = 1;
+                    }
+                }
+                else
+                {
+                    if(select_move)
+                    {
+                        emit move_button_up(i);
+                        select_move = 0;
+                    }
                 }
 
                 if (psmove_get_buttons(move) & Btn_SQUARE) {
-                    emit square_button(i);
+                    emit square_button_pressed(i);
+
+                    if(!select_square)
+                    {
+                        emit square_button_down(i);
+                        select_square = 1;
+                    }
+                }
+                else
+                {
+                    if(select_square)
+                    {
+                        emit square_button_up(i);
+                        select_square = 0;
+                    }
                 }
 
                 if (psmove_get_buttons(move) & Btn_TRIANGLE) {
-                    emit triangle_button(i);
+                    emit triangle_button_pressed(i);
+
+                    if(!select_triangle)
+                    {
+                        emit triangle_button_down(i);
+                        select_triangle = 1;
+                    }
+                }
+                else
+                {
+                    if(select_triangle)
+                    {
+                        emit triangle_button_up(i);
+                        select_triangle = 0;
+                    }
                 }
 
                 if (psmove_get_buttons(move) & Btn_CIRCLE) {
-                    emit circle_button(i);
+                    emit circle_button_pressed(i);
+
+                    if(!select_circle)
+                    {
+                        emit circle_button_down(i);
+                        select_circle = 1;
+                    }
+                }
+                else
+                {
+                    if(select_circle)
+                    {
+                        emit circle_button_up(i);
+                        select_circle = 0;
+                    }
+                }
+
+                if (psmove_get_buttons(move) & Btn_CROSS) {
+                    emit cross_button_pressed(i);
+
+                    if(!select_cross)
+                    {
+                        emit cross_button_down(i);
+                        select_cross = 1;
+                    }
+                }
+                else
+                {
+                    if(select_cross)
+                    {
+                        emit cross_button_up(i);
+                        select_cross = 0;
+                    }
+                }
+
+                if (psmove_get_buttons(move) & Btn_SELECT) {
+                    emit select_button_pressed(i);
+
+                    if(!select_pressed)
+                    {
+                        emit select_button_down(i);
+                        select_pressed = 1;
+                    }
+                }
+                else
+                {
+                    if(select_pressed)
+                    {
+                        emit select_button_up(i);
+                        select_pressed = 0;
+                    }
+                }
+
+                if (psmove_get_buttons(move) & Btn_START) {
+                    emit start_button_pressed(i);
+
+                    if(!select_start)
+                    {
+                        emit start_button_down(i);
+                        select_start = 1;
+                    }
+                }
+                else
+                {
+                    if(select_start)
+                    {
+                        emit start_button_up(i);
+                        select_start = 0;
+                    }
                 }
 
                 float x, y, radius;

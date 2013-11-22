@@ -1,5 +1,6 @@
 var class_main_menu =
 [
     [ "MainMenu", "class_main_menu.html#a53eecf9d5ffd094f54ac4193e7e57eaf", null ],
-    [ "move_button", "class_main_menu.html#a44b82a9130ddaa6e5237303290fc1b67", null ]
+    [ "circle_button_up", "class_main_menu.html#a935875722d11fd91253e755cdec8548b", null ],
+    [ "move_button_up", "class_main_menu.html#ac27ae7a7cf376c23a7f5f204c2243135", null ]
 ];

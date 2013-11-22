@@ -7,7 +7,6 @@
 #include "opencv2/core/core_c.h"
 
 #include "game_manager.h"
-#include "game_state.h"
 #include "calibration_state.h"
 
 GameManager* game_manager = GameManager::getInstance();
@@ -34,6 +33,10 @@ GameManager::GameManager()
 {
 	this->width = 800;
 	this->height = 600;
+
+	this->difficulty = MEDIUM;
+	this->handicap_mode_type = NO_HANDICAP;
+	this->game_size = MODE_3M;
 }
 
 void GameManager::init(int width, int height, PSMoveControllerThread* psmove_thread)
@@ -102,34 +105,90 @@ void GameManager::connect_signals()
 	QObject::connect(current_state, SIGNAL(change_state(GameState*)),
 				this, SLOT(change_state(GameState*)));
 
+	/* Change difficulty */
+	QObject::connect(current_state, SIGNAL(change_difficulty(GameManager::Difficulty)),
+				this, SLOT(change_difficulty(GameManager::Difficulty)));
+
+	/* Change handicap mode */
+	QObject::connect(current_state, SIGNAL(change_handicap_mode(GameManager::HandicapModeType)),
+				this, SLOT(change_handicap_mode(GameManager::HandicapModeType)));
+
+	/* Change difficulty */
+	QObject::connect(current_state, SIGNAL(change_game_size(GameManager::Game_Size)),
+				this, SLOT(change_game_size(GameManager::Game_Size)));
+
 	/* End of calibration */
 	QObject::connect(psmove_thread, SIGNAL(calibration_finished()),
 				current_state, SLOT(calibration_finished()));
 
-	/* Buttons */
 	QObject::connect(psmove_thread, SIGNAL(position(int, int, int, int)),
 				current_state, SLOT(position(int, int, int, int)));
 
-	QObject::connect(psmove_thread, SIGNAL(move_button(int)),
-				current_state, SLOT(move_button(int)));
+	/* Buttons up */
+	QObject::connect(psmove_thread, SIGNAL(move_button_down(int)),
+				current_state, SLOT(move_button_down(int)));
 
-	QObject::connect(psmove_thread, SIGNAL(square_button(int)),
-				current_state, SLOT(square_button(int)));
+	QObject::connect(psmove_thread, SIGNAL(square_button_down(int)),
+				current_state, SLOT(square_button_down(int)));
 
-	QObject::connect(psmove_thread, SIGNAL(triangle_button(int)),
-				current_state, SLOT(triangle_button(int)));
+	QObject::connect(psmove_thread, SIGNAL(triangle_button_down(int)),
+				current_state, SLOT(triangle_button_down(int)));
 
-	QObject::connect(psmove_thread, SIGNAL(circle_button(int)),
-				current_state, SLOT(circle_button(int)));
+	QObject::connect(psmove_thread, SIGNAL(circle_button_down(int)),
+				current_state, SLOT(circle_button_down(int)));
 
-	QObject::connect(psmove_thread, SIGNAL(cross_button(int)),
-				current_state, SLOT(cross_button(int)));
+	QObject::connect(psmove_thread, SIGNAL(cross_button_down(int)),
+				current_state, SLOT(cross_button_down(int)));
 
-	QObject::connect(psmove_thread, SIGNAL(select_button(int)),
-				current_state, SLOT(select_button(int)));
+	QObject::connect(psmove_thread, SIGNAL(select_button_down(int)),
+				current_state, SLOT(select_button_down(int)));
 
-	QObject::connect(psmove_thread, SIGNAL(start_button(int)),
-				current_state, SLOT(start_button(int)));
+	QObject::connect(psmove_thread, SIGNAL(start_button_down(int)),
+				current_state, SLOT(start_button_down(int)));
+
+	/* Buttons pressed */
+	QObject::connect(psmove_thread, SIGNAL(move_button_pressed(int)),
+				current_state, SLOT(move_button_pressed(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(square_button_pressed(int)),
+				current_state, SLOT(square_button_pressed(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(triangle_button_pressed(int)),
+				current_state, SLOT(triangle_button_pressed(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(circle_button_pressed(int)),
+				current_state, SLOT(circle_button_pressed(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(cross_button_pressed(int)),
+				current_state, SLOT(cross_button_pressed(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(select_button_pressed(int)),
+				current_state, SLOT(select_button_pressed(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(start_button_pressed(int)),
+				current_state, SLOT(start_button_pressed(int)));
+
+	/* Buttons down */
+	QObject::connect(psmove_thread, SIGNAL(move_button_up(int)),
+				current_state, SLOT(move_button_up(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(square_button_up(int)),
+				current_state, SLOT(square_button_up(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(triangle_button_up(int)),
+				current_state, SLOT(triangle_button_up(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(circle_button_up(int)),
+				current_state, SLOT(circle_button_up(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(cross_button_up(int)),
+				current_state, SLOT(cross_button_up(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(select_button_up(int)),
+				current_state, SLOT(select_button_up(int)));
+
+	QObject::connect(psmove_thread, SIGNAL(start_button_up(int)),
+				current_state, SLOT(start_button_up(int)));
 
 	QObject::connect(psmove_thread, SIGNAL(trigger_pressed(int, qreal)),
 				current_state, SLOT(trigger_pressed(int, qreal)));
@@ -175,4 +234,34 @@ int GameManager::get_width()
 int GameManager::get_height()
 {
 	return this->height;
+}
+
+GameManager::Difficulty GameManager::get_game_difficulty()
+{
+	return this->difficulty;
+}
+
+void GameManager::change_difficulty(GameManager::Difficulty difficulty)
+{
+	this->difficulty = difficulty;
+}
+
+GameManager::HandicapModeType GameManager::get_handicap_mode_type()
+{
+	return this->handicap_mode_type;
+}
+
+void GameManager::change_handicap_mode(GameManager::HandicapModeType handicap_mode_type)
+{
+	this->handicap_mode_type = handicap_mode_type;
+}
+
+GameManager::Game_Size GameManager::get_game_size()
+{
+	return this->game_size;
+}
+
+void GameManager::change_game_size(GameManager::Game_Size game_size)
+{
+	this->game_size = game_size;
 }

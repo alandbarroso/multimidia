@@ -48,9 +48,33 @@ private:
 	//! 4m size option MenuButton.
 	MenuButton size_4m_button;
 
+	//! Mapping the difficulty buttons with the current difficulty.
+	QMap<GameManager::Difficulty, MenuButton*> difficulty_buttons;
+
+	//! Mapping the handicap buttons with the current mode.
+	QMap<GameManager::HandicapModeType, MenuButton*> handicap_buttons;
+
+	//! Mapping the size buttons with the current mode.
+	QMap<GameManager::Game_Size, MenuButton*> size_buttons;
+
 	/************************************************
 	*	Methods										*
 	*************************************************/
+
+	/*!
+		\return 	If easy, returns medium. If medium, returns hard. If hard, returns easy.
+	*/
+	GameManager::Difficulty get_next_difficulty(GameManager::Difficulty difficulty);
+
+	/*!
+		\return 	If no handicap, returns handicap. If handicap, returns no handicap.
+	*/
+	GameManager::HandicapModeType get_next_handicap_mode(GameManager::HandicapModeType handicap_mode);
+
+	/*!
+		\return 	If 2m, returns 3m. If 3m, returns 4m. If 4m, returns 2m
+	*/
+	GameManager::Game_Size get_next_game_size(GameManager::Game_Size game_size);
 
 public:
 	/************************************************
@@ -67,9 +91,14 @@ public:
 	OptionsMenu();
 
 	/*!
+		Calls the super function and then update the buttons that shall be painted
+	*/
+	void update();
+
+	/*!
 		Change the state of the game based on what button was hovered.
 	*/
-	void move_button(int id);
+	void move_button_up(int id);
 };
 
 #endif

@@ -2,9 +2,10 @@
 
 #include "main_menu.h"
 #include "single_player_menu.h"
+#include "options_menu.h"
 
 MainMenu::MainMenu()
-	: BaseMenu("Main Menu"),
+	: BaseMenu(GameManager::MAIN_MENU),
 	singleplayer_button("button_single_player"),
 	multiplayer_button("button_multi_player"),
 	options_button("button_options"),
@@ -27,7 +28,7 @@ MainMenu::MainMenu()
 	buttons["quit"] = &quit_button;
 }
 
-void MainMenu::move_button(int id)
+void MainMenu::move_button_up(int id)
 {
 	if(buttons["singleplayer"]->get_hovered())
 	{
@@ -43,6 +44,10 @@ void MainMenu::move_button(int id)
 	}
 	else if(buttons["options"]->get_hovered())
 	{
+		OptionsMenu *options = new OptionsMenu();
+
+		emit change_state(options);
+
 		return;
 	}
 	else if(buttons["quit"]->get_hovered())
@@ -51,4 +56,9 @@ void MainMenu::move_button(int id)
 
 		return;
 	}
+}
+
+void MainMenu::circle_button_up(int id)
+{
+	
 }

@@ -19,7 +19,7 @@ Inheritance diagram for Base\-Menu\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_base_menu_aea2baf1bc987227878fd914d19fe3a14}{Base\-Menu} (Q\-String \hyperlink{class_game_state_ab30c2bb30e4236231ae97976576c130a}{name})
+\hyperlink{class_base_menu_a4b6db156f76cc8ed156dfce7baf941e4}{Base\-Menu} (Game\-Manager\-::\-State\-Type \hyperlink{class_game_state_afc2d4395529e7ecba05379a8f5f224c5}{type})
 \item 
 virtual void \hyperlink{class_base_menu_a4679a8f7c2872606910baa1b08fe0ba1}{update} ()
 \item 
@@ -29,19 +29,47 @@ void \hyperlink{class_base_menu_ae45dccc7c3b8da62b4cd0d5b6c211a12}{paint\-\_\-sc
 \item 
 void \hyperlink{class_base_menu_a9c2bc1403e96c1bd411883a47e47155b}{position} (int id, int x, int y, int z)
 \item 
-virtual void \hyperlink{class_base_menu_a72bee3689ae1f2e4f92fc0dfa0fdffcf}{move\-\_\-button} (int id)
+virtual void \hyperlink{class_base_menu_a8a1dbfb5c20ec003050e92e016bcde6a}{move\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_base_menu_ae19bd0ebccab280b44893e07c6d5c3d1}{square\-\_\-button} (int id)
+virtual void \hyperlink{class_base_menu_adf4b11d9031d6ed0919fee1692bb1261}{square\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_base_menu_a02c70880683c8f77490d52ce5703c4e6}{triangle\-\_\-button} (int id)
+virtual void \hyperlink{class_base_menu_ac948643ada097b818c3f9b9e3249dc68}{triangle\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_base_menu_a0292d1dcfc61b624b22ef0ac6bfddeda}{circle\-\_\-button} (int id)
+virtual void \hyperlink{class_base_menu_a272616b4c8caa96e086e727127a02aa2}{circle\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_base_menu_a809fbcd446fd3a4ac69dd9dfd696b9a9}{cross\-\_\-button} (int id)
+virtual void \hyperlink{class_base_menu_a5ef0f20274ea6470de07f15f34450f72}{cross\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_base_menu_a841913080aca368285ac14e903a9972a}{select\-\_\-button} (int id)
+virtual void \hyperlink{class_base_menu_a2b0ee601bce564f9cd1870c704025677}{select\-\_\-button\-\_\-down} (int id)
 \item 
-virtual void \hyperlink{class_base_menu_a8bb01ae970bb9376fe6a620169e193b3}{start\-\_\-button} (int id)
+virtual void \hyperlink{class_base_menu_a2e7b8a119848a67c9375cbefb7bdbc69}{start\-\_\-button\-\_\-down} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a0a9ed550dbeb47f37528c0ab85790e68}{move\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_aa8983e9c373ef131412d8fde71c735f8}{square\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a2a96194274f8f38774ce9b4f57322f12}{triangle\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a2eedfd849fb5447cf10584abf4276feb}{circle\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a7e505a84e4ddc33a06b9c3ea7caf04c5}{cross\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a0ad79ba5715550115cc49b7aa195d9b0}{select\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_ac5353c43e94cf6bb5de620fe7632b20b}{start\-\_\-button\-\_\-pressed} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_aa73239e64789bf85c1d510abbae18189}{move\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a12a4872dc160c013fa3499bf1f6549b8}{square\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_acb41522bb7a004a24df7ea3e115b2c72}{triangle\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a36ebfe4ba13a911e489961cdfc5950a6}{circle\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a76fe15e2856203059db24c9c56c1383a}{cross\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_aea510dbeea4fc2859051603acf730d03}{select\-\_\-button\-\_\-up} (int id)
+\item 
+virtual void \hyperlink{class_base_menu_a8b847f9ed80538c5e96e868ed87ab3c7}{start\-\_\-button\-\_\-up} (int id)
 \item 
 virtual void \hyperlink{class_base_menu_adb277f30427d5811f86f8699b04c4abe}{trigger\-\_\-pressed} (int id, qreal trigger)
 \end{DoxyCompactItemize}
@@ -73,13 +101,13 @@ Eduardo Cominetti
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_base_menu_aea2baf1bc987227878fd914d19fe3a14}{\index{Base\-Menu@{Base\-Menu}!Base\-Menu@{Base\-Menu}}
+\hypertarget{class_base_menu_a4b6db156f76cc8ed156dfce7baf941e4}{\index{Base\-Menu@{Base\-Menu}!Base\-Menu@{Base\-Menu}}
 \index{Base\-Menu@{Base\-Menu}!BaseMenu@{Base\-Menu}}
 \subsubsection[{Base\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Menu\-::\-Base\-Menu (
 \begin{DoxyParamCaption}
-\item[{Q\-String}]{name}
+\item[{Game\-Manager\-::\-State\-Type}]{type}
 \end{DoxyParamCaption}
-)}}\label{class_base_menu_aea2baf1bc987227878fd914d19fe3a14}
+)}}\label{class_base_menu_a4b6db156f76cc8ed156dfce7baf941e4}
 Simple constructor to the \hyperlink{class_base_menu}{Base\-Menu}. 
 \begin{DoxyParams}{Parameters}
 {\em name} & Name of the menu \\
@@ -88,55 +116,139 @@ Simple constructor to the \hyperlink{class_base_menu}{Base\-Menu}.
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_base_menu_a0292d1dcfc61b624b22ef0ac6bfddeda}{\index{Base\-Menu@{Base\-Menu}!circle\-\_\-button@{circle\-\_\-button}}
-\index{circle\-\_\-button@{circle\-\_\-button}!BaseMenu@{Base\-Menu}}
-\subsubsection[{circle\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::circle\-\_\-button (
+\hypertarget{class_base_menu_a272616b4c8caa96e086e727127a02aa2}{\index{Base\-Menu@{Base\-Menu}!circle\-\_\-button\-\_\-down@{circle\-\_\-button\-\_\-down}}
+\index{circle\-\_\-button\-\_\-down@{circle\-\_\-button\-\_\-down}!BaseMenu@{Base\-Menu}}
+\subsubsection[{circle\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::circle\-\_\-button\-\_\-down (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a0292d1dcfc61b624b22ef0ac6bfddeda}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a272616b4c8caa96e086e727127a02aa2}
 \begin{DoxySeeAlso}{See Also}
-\hyperlink{class_game_state_ad54b4f4c9aa22eb5c90186cdc789fb8a}{Game\-State\-::circle\-\_\-button()} 
+\hyperlink{class_game_state_a2b127b1e5a6e9c11808bfda7b124b322}{Game\-State.\-circle\-\_\-button\-\_\-down()} 
 \end{DoxySeeAlso}
 
 
-Reimplemented from \hyperlink{class_game_state_ad54b4f4c9aa22eb5c90186cdc789fb8a}{Game\-State}.
+Reimplemented from \hyperlink{class_game_state_a2b127b1e5a6e9c11808bfda7b124b322}{Game\-State}.
 
-
-
-Reimplemented in \hyperlink{class_single_player_menu_a99cd7d7a059520b9e2390565ba2184fd}{Single\-Player\-Menu}.
-
-\hypertarget{class_base_menu_a809fbcd446fd3a4ac69dd9dfd696b9a9}{\index{Base\-Menu@{Base\-Menu}!cross\-\_\-button@{cross\-\_\-button}}
-\index{cross\-\_\-button@{cross\-\_\-button}!BaseMenu@{Base\-Menu}}
-\subsubsection[{cross\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::cross\-\_\-button (
+\hypertarget{class_base_menu_a2eedfd849fb5447cf10584abf4276feb}{\index{Base\-Menu@{Base\-Menu}!circle\-\_\-button\-\_\-pressed@{circle\-\_\-button\-\_\-pressed}}
+\index{circle\-\_\-button\-\_\-pressed@{circle\-\_\-button\-\_\-pressed}!BaseMenu@{Base\-Menu}}
+\subsubsection[{circle\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::circle\-\_\-button\-\_\-pressed (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a809fbcd446fd3a4ac69dd9dfd696b9a9}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a2eedfd849fb5447cf10584abf4276feb}
 \begin{DoxySeeAlso}{See Also}
-\hyperlink{class_game_state_a0cba4a658ac1e14f98381ba642f522a9}{Game\-State\-::cross\-\_\-button()} 
+\hyperlink{class_game_state_a357c6dad0f25eb906fef35eb6ac5246d}{Game\-State.\-circle\-\_\-button\-\_\-pressed()} 
 \end{DoxySeeAlso}
 
 
-Reimplemented from \hyperlink{class_game_state_a0cba4a658ac1e14f98381ba642f522a9}{Game\-State}.
+Reimplemented from \hyperlink{class_game_state_a357c6dad0f25eb906fef35eb6ac5246d}{Game\-State}.
 
-\hypertarget{class_base_menu_a72bee3689ae1f2e4f92fc0dfa0fdffcf}{\index{Base\-Menu@{Base\-Menu}!move\-\_\-button@{move\-\_\-button}}
-\index{move\-\_\-button@{move\-\_\-button}!BaseMenu@{Base\-Menu}}
-\subsubsection[{move\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::move\-\_\-button (
+\hypertarget{class_base_menu_a36ebfe4ba13a911e489961cdfc5950a6}{\index{Base\-Menu@{Base\-Menu}!circle\-\_\-button\-\_\-up@{circle\-\_\-button\-\_\-up}}
+\index{circle\-\_\-button\-\_\-up@{circle\-\_\-button\-\_\-up}!BaseMenu@{Base\-Menu}}
+\subsubsection[{circle\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::circle\-\_\-button\-\_\-up (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a72bee3689ae1f2e4f92fc0dfa0fdffcf}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a36ebfe4ba13a911e489961cdfc5950a6}
 \begin{DoxySeeAlso}{See Also}
-\hyperlink{class_game_state_a8ebda380d19b5800a056042e034639b9}{Game\-State\-::move\-\_\-button()} 
+\hyperlink{class_game_state_a6f1138a791f40ffbc5e664270cb10738}{Game\-State.\-circle\-\_\-button\-\_\-up()} 
 \end{DoxySeeAlso}
 
 
-Reimplemented from \hyperlink{class_game_state_a8ebda380d19b5800a056042e034639b9}{Game\-State}.
+Reimplemented from \hyperlink{class_game_state_a6f1138a791f40ffbc5e664270cb10738}{Game\-State}.
 
 
 
-Reimplemented in \hyperlink{class_options_menu_a81bd7ebf73d664c307e7f070e6dc0e7a}{Options\-Menu}, \hyperlink{class_main_menu_a44b82a9130ddaa6e5237303290fc1b67}{Main\-Menu}, and \hyperlink{class_single_player_menu_a723231c6f869d10b6216129164f2010e}{Single\-Player\-Menu}.
+Reimplemented in \hyperlink{class_main_menu_a935875722d11fd91253e755cdec8548b}{Main\-Menu}.
+
+\hypertarget{class_base_menu_a5ef0f20274ea6470de07f15f34450f72}{\index{Base\-Menu@{Base\-Menu}!cross\-\_\-button\-\_\-down@{cross\-\_\-button\-\_\-down}}
+\index{cross\-\_\-button\-\_\-down@{cross\-\_\-button\-\_\-down}!BaseMenu@{Base\-Menu}}
+\subsubsection[{cross\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::cross\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a5ef0f20274ea6470de07f15f34450f72}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a7fadb26ce5c2fce84f9a1ef7cb9ea924}{Game\-State.\-cross\-\_\-button\-\_\-down()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a7fadb26ce5c2fce84f9a1ef7cb9ea924}{Game\-State}.
+
+\hypertarget{class_base_menu_a7e505a84e4ddc33a06b9c3ea7caf04c5}{\index{Base\-Menu@{Base\-Menu}!cross\-\_\-button\-\_\-pressed@{cross\-\_\-button\-\_\-pressed}}
+\index{cross\-\_\-button\-\_\-pressed@{cross\-\_\-button\-\_\-pressed}!BaseMenu@{Base\-Menu}}
+\subsubsection[{cross\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::cross\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a7e505a84e4ddc33a06b9c3ea7caf04c5}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a84f167bef2d54500e48b793b6dd68ca2}{Game\-State.\-cross\-\_\-button\-\_\-pressed()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a84f167bef2d54500e48b793b6dd68ca2}{Game\-State}.
+
+\hypertarget{class_base_menu_a76fe15e2856203059db24c9c56c1383a}{\index{Base\-Menu@{Base\-Menu}!cross\-\_\-button\-\_\-up@{cross\-\_\-button\-\_\-up}}
+\index{cross\-\_\-button\-\_\-up@{cross\-\_\-button\-\_\-up}!BaseMenu@{Base\-Menu}}
+\subsubsection[{cross\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::cross\-\_\-button\-\_\-up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a76fe15e2856203059db24c9c56c1383a}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a11074db143ac9366ab77b046b4d7d880}{Game\-State.\-cross\-\_\-button\-\_\-up()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a11074db143ac9366ab77b046b4d7d880}{Game\-State}.
+
+\hypertarget{class_base_menu_a8a1dbfb5c20ec003050e92e016bcde6a}{\index{Base\-Menu@{Base\-Menu}!move\-\_\-button\-\_\-down@{move\-\_\-button\-\_\-down}}
+\index{move\-\_\-button\-\_\-down@{move\-\_\-button\-\_\-down}!BaseMenu@{Base\-Menu}}
+\subsubsection[{move\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::move\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a8a1dbfb5c20ec003050e92e016bcde6a}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_adb2e4994625b5d7bc6994ff36351f92a}{Game\-State.\-move\-\_\-button\-\_\-down()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_adb2e4994625b5d7bc6994ff36351f92a}{Game\-State}.
+
+\hypertarget{class_base_menu_a0a9ed550dbeb47f37528c0ab85790e68}{\index{Base\-Menu@{Base\-Menu}!move\-\_\-button\-\_\-pressed@{move\-\_\-button\-\_\-pressed}}
+\index{move\-\_\-button\-\_\-pressed@{move\-\_\-button\-\_\-pressed}!BaseMenu@{Base\-Menu}}
+\subsubsection[{move\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::move\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a0a9ed550dbeb47f37528c0ab85790e68}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a9aae252ce4557380f6a36fc07db82865}{Game\-State.\-move\-\_\-button\-\_\-pressed()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a9aae252ce4557380f6a36fc07db82865}{Game\-State}.
+
+\hypertarget{class_base_menu_aa73239e64789bf85c1d510abbae18189}{\index{Base\-Menu@{Base\-Menu}!move\-\_\-button\-\_\-up@{move\-\_\-button\-\_\-up}}
+\index{move\-\_\-button\-\_\-up@{move\-\_\-button\-\_\-up}!BaseMenu@{Base\-Menu}}
+\subsubsection[{move\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::move\-\_\-button\-\_\-up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_aa73239e64789bf85c1d510abbae18189}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a317ed472fb48c3f23e5c62bc01300634}{Game\-State.\-move\-\_\-button\-\_\-up()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a317ed472fb48c3f23e5c62bc01300634}{Game\-State}.
+
+
+
+Reimplemented in \hyperlink{class_options_menu_a149a8b7cfaa4185f6007bb0db18e81a4}{Options\-Menu}, \hyperlink{class_main_menu_ac27ae7a7cf376c23a7f5f204c2243135}{Main\-Menu}, and \hyperlink{class_single_player_menu_a8a05cbb8626a73ea18fe32e2eb4ec61f}{Single\-Player\-Menu}.
 
 \hypertarget{class_base_menu_ae45dccc7c3b8da62b4cd0d5b6c211a12}{\index{Base\-Menu@{Base\-Menu}!paint\-\_\-screen@{paint\-\_\-screen}}
 \index{paint\-\_\-screen@{paint\-\_\-screen}!BaseMenu@{Base\-Menu}}
@@ -184,61 +296,173 @@ Updates the cursor position. \begin{DoxySeeAlso}{See Also}
 
 Reimplemented from \hyperlink{class_game_state_ac8f14bed66fc7a5931663ea934f75d42}{Game\-State}.
 
-\hypertarget{class_base_menu_a841913080aca368285ac14e903a9972a}{\index{Base\-Menu@{Base\-Menu}!select\-\_\-button@{select\-\_\-button}}
-\index{select\-\_\-button@{select\-\_\-button}!BaseMenu@{Base\-Menu}}
-\subsubsection[{select\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::select\-\_\-button (
+\hypertarget{class_base_menu_a2b0ee601bce564f9cd1870c704025677}{\index{Base\-Menu@{Base\-Menu}!select\-\_\-button\-\_\-down@{select\-\_\-button\-\_\-down}}
+\index{select\-\_\-button\-\_\-down@{select\-\_\-button\-\_\-down}!BaseMenu@{Base\-Menu}}
+\subsubsection[{select\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::select\-\_\-button\-\_\-down (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a841913080aca368285ac14e903a9972a}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a2b0ee601bce564f9cd1870c704025677}
 \begin{DoxySeeAlso}{See Also}
-\hyperlink{class_game_state_a4a3f908cb9f002cfdc1b46b404cfe972}{Game\-State\-::select\-\_\-button()} 
+\hyperlink{class_game_state_aca8648bffd21910d90cdb22238cf451b}{Game\-State.\-select\-\_\-button\-\_\-down()} 
 \end{DoxySeeAlso}
 
 
-Reimplemented from \hyperlink{class_game_state_a4a3f908cb9f002cfdc1b46b404cfe972}{Game\-State}.
+Reimplemented from \hyperlink{class_game_state_aca8648bffd21910d90cdb22238cf451b}{Game\-State}.
 
-\hypertarget{class_base_menu_ae19bd0ebccab280b44893e07c6d5c3d1}{\index{Base\-Menu@{Base\-Menu}!square\-\_\-button@{square\-\_\-button}}
-\index{square\-\_\-button@{square\-\_\-button}!BaseMenu@{Base\-Menu}}
-\subsubsection[{square\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::square\-\_\-button (
+\hypertarget{class_base_menu_a0ad79ba5715550115cc49b7aa195d9b0}{\index{Base\-Menu@{Base\-Menu}!select\-\_\-button\-\_\-pressed@{select\-\_\-button\-\_\-pressed}}
+\index{select\-\_\-button\-\_\-pressed@{select\-\_\-button\-\_\-pressed}!BaseMenu@{Base\-Menu}}
+\subsubsection[{select\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::select\-\_\-button\-\_\-pressed (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_ae19bd0ebccab280b44893e07c6d5c3d1}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a0ad79ba5715550115cc49b7aa195d9b0}
 \begin{DoxySeeAlso}{See Also}
-\hyperlink{class_game_state_ac34dff747a0fa09974e2996ab00fd946}{Game\-State\-::square\-\_\-button()} 
+\hyperlink{class_game_state_a0e98d61c64977dc40a2b1fa78d577d37}{Game\-State.\-select\-\_\-button\-\_\-pressed()} 
 \end{DoxySeeAlso}
 
 
-Reimplemented from \hyperlink{class_game_state_ac34dff747a0fa09974e2996ab00fd946}{Game\-State}.
+Reimplemented from \hyperlink{class_game_state_a0e98d61c64977dc40a2b1fa78d577d37}{Game\-State}.
 
-\hypertarget{class_base_menu_a8bb01ae970bb9376fe6a620169e193b3}{\index{Base\-Menu@{Base\-Menu}!start\-\_\-button@{start\-\_\-button}}
-\index{start\-\_\-button@{start\-\_\-button}!BaseMenu@{Base\-Menu}}
-\subsubsection[{start\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::start\-\_\-button (
+\hypertarget{class_base_menu_aea510dbeea4fc2859051603acf730d03}{\index{Base\-Menu@{Base\-Menu}!select\-\_\-button\-\_\-up@{select\-\_\-button\-\_\-up}}
+\index{select\-\_\-button\-\_\-up@{select\-\_\-button\-\_\-up}!BaseMenu@{Base\-Menu}}
+\subsubsection[{select\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::select\-\_\-button\-\_\-up (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a8bb01ae970bb9376fe6a620169e193b3}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_aea510dbeea4fc2859051603acf730d03}
 \begin{DoxySeeAlso}{See Also}
-\hyperlink{class_game_state_aa2708e6252ef0340930cf3234bdd51a1}{Game\-State\-::start\-\_\-button()} 
+\hyperlink{class_game_state_a94aac39e551c83e59cac566cb02e0df2}{Game\-State.\-select\-\_\-button\-\_\-up()} 
 \end{DoxySeeAlso}
 
 
-Reimplemented from \hyperlink{class_game_state_aa2708e6252ef0340930cf3234bdd51a1}{Game\-State}.
+Reimplemented from \hyperlink{class_game_state_a94aac39e551c83e59cac566cb02e0df2}{Game\-State}.
 
-\hypertarget{class_base_menu_a02c70880683c8f77490d52ce5703c4e6}{\index{Base\-Menu@{Base\-Menu}!triangle\-\_\-button@{triangle\-\_\-button}}
-\index{triangle\-\_\-button@{triangle\-\_\-button}!BaseMenu@{Base\-Menu}}
-\subsubsection[{triangle\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::triangle\-\_\-button (
+\hypertarget{class_base_menu_adf4b11d9031d6ed0919fee1692bb1261}{\index{Base\-Menu@{Base\-Menu}!square\-\_\-button\-\_\-down@{square\-\_\-button\-\_\-down}}
+\index{square\-\_\-button\-\_\-down@{square\-\_\-button\-\_\-down}!BaseMenu@{Base\-Menu}}
+\subsubsection[{square\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::square\-\_\-button\-\_\-down (
 \begin{DoxyParamCaption}
 \item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a02c70880683c8f77490d52ce5703c4e6}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_adf4b11d9031d6ed0919fee1692bb1261}
 \begin{DoxySeeAlso}{See Also}
-\hyperlink{class_game_state_a435a4bb7958616fd9fe2404b4576549e}{Game\-State\-::triangle\-\_\-button()} 
+\hyperlink{class_game_state_a4c2eb5fabf420d0970b754867758470b}{Game\-State.\-square\-\_\-button\-\_\-down()} 
 \end{DoxySeeAlso}
 
 
-Reimplemented from \hyperlink{class_game_state_a435a4bb7958616fd9fe2404b4576549e}{Game\-State}.
+Reimplemented from \hyperlink{class_game_state_a4c2eb5fabf420d0970b754867758470b}{Game\-State}.
+
+\hypertarget{class_base_menu_aa8983e9c373ef131412d8fde71c735f8}{\index{Base\-Menu@{Base\-Menu}!square\-\_\-button\-\_\-pressed@{square\-\_\-button\-\_\-pressed}}
+\index{square\-\_\-button\-\_\-pressed@{square\-\_\-button\-\_\-pressed}!BaseMenu@{Base\-Menu}}
+\subsubsection[{square\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::square\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_aa8983e9c373ef131412d8fde71c735f8}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_ac563b15bc6d5111df054ceb1afbeb353}{Game\-State.\-square\-\_\-button\-\_\-pressed()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_ac563b15bc6d5111df054ceb1afbeb353}{Game\-State}.
+
+\hypertarget{class_base_menu_a12a4872dc160c013fa3499bf1f6549b8}{\index{Base\-Menu@{Base\-Menu}!square\-\_\-button\-\_\-up@{square\-\_\-button\-\_\-up}}
+\index{square\-\_\-button\-\_\-up@{square\-\_\-button\-\_\-up}!BaseMenu@{Base\-Menu}}
+\subsubsection[{square\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::square\-\_\-button\-\_\-up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a12a4872dc160c013fa3499bf1f6549b8}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a9877350c777a2d4bef09a3d082e1a2e5}{Game\-State.\-square\-\_\-button\-\_\-up()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a9877350c777a2d4bef09a3d082e1a2e5}{Game\-State}.
+
+\hypertarget{class_base_menu_a2e7b8a119848a67c9375cbefb7bdbc69}{\index{Base\-Menu@{Base\-Menu}!start\-\_\-button\-\_\-down@{start\-\_\-button\-\_\-down}}
+\index{start\-\_\-button\-\_\-down@{start\-\_\-button\-\_\-down}!BaseMenu@{Base\-Menu}}
+\subsubsection[{start\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::start\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a2e7b8a119848a67c9375cbefb7bdbc69}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a5cbb3463c0e886d0a88ec6d26f61fb85}{Game\-State.\-start\-\_\-button\-\_\-down()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a5cbb3463c0e886d0a88ec6d26f61fb85}{Game\-State}.
+
+\hypertarget{class_base_menu_ac5353c43e94cf6bb5de620fe7632b20b}{\index{Base\-Menu@{Base\-Menu}!start\-\_\-button\-\_\-pressed@{start\-\_\-button\-\_\-pressed}}
+\index{start\-\_\-button\-\_\-pressed@{start\-\_\-button\-\_\-pressed}!BaseMenu@{Base\-Menu}}
+\subsubsection[{start\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::start\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_ac5353c43e94cf6bb5de620fe7632b20b}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a1bfc60b9d4d13d685e0c6052e53a90e5}{Game\-State.\-start\-\_\-button\-\_\-pressed()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a1bfc60b9d4d13d685e0c6052e53a90e5}{Game\-State}.
+
+\hypertarget{class_base_menu_a8b847f9ed80538c5e96e868ed87ab3c7}{\index{Base\-Menu@{Base\-Menu}!start\-\_\-button\-\_\-up@{start\-\_\-button\-\_\-up}}
+\index{start\-\_\-button\-\_\-up@{start\-\_\-button\-\_\-up}!BaseMenu@{Base\-Menu}}
+\subsubsection[{start\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::start\-\_\-button\-\_\-up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a8b847f9ed80538c5e96e868ed87ab3c7}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_ae782ffae3708e9ff31306abce53ce8ea}{Game\-State.\-start\-\_\-button\-\_\-up()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_ae782ffae3708e9ff31306abce53ce8ea}{Game\-State}.
+
+\hypertarget{class_base_menu_ac948643ada097b818c3f9b9e3249dc68}{\index{Base\-Menu@{Base\-Menu}!triangle\-\_\-button\-\_\-down@{triangle\-\_\-button\-\_\-down}}
+\index{triangle\-\_\-button\-\_\-down@{triangle\-\_\-button\-\_\-down}!BaseMenu@{Base\-Menu}}
+\subsubsection[{triangle\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::triangle\-\_\-button\-\_\-down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_ac948643ada097b818c3f9b9e3249dc68}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a6bff3607f73955e051aaa830353ec8e4}{Game\-State.\-triangle\-\_\-button\-\_\-down()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a6bff3607f73955e051aaa830353ec8e4}{Game\-State}.
+
+\hypertarget{class_base_menu_a2a96194274f8f38774ce9b4f57322f12}{\index{Base\-Menu@{Base\-Menu}!triangle\-\_\-button\-\_\-pressed@{triangle\-\_\-button\-\_\-pressed}}
+\index{triangle\-\_\-button\-\_\-pressed@{triangle\-\_\-button\-\_\-pressed}!BaseMenu@{Base\-Menu}}
+\subsubsection[{triangle\-\_\-button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::triangle\-\_\-button\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_a2a96194274f8f38774ce9b4f57322f12}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_af59c3923c4cb942c412d3c95a37182f4}{Game\-State.\-triangle\-\_\-button\-\_\-pressed()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_af59c3923c4cb942c412d3c95a37182f4}{Game\-State}.
+
+\hypertarget{class_base_menu_acb41522bb7a004a24df7ea3e115b2c72}{\index{Base\-Menu@{Base\-Menu}!triangle\-\_\-button\-\_\-up@{triangle\-\_\-button\-\_\-up}}
+\index{triangle\-\_\-button\-\_\-up@{triangle\-\_\-button\-\_\-up}!BaseMenu@{Base\-Menu}}
+\subsubsection[{triangle\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Menu\-::triangle\-\_\-button\-\_\-up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_base_menu_acb41522bb7a004a24df7ea3e115b2c72}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_game_state_a63707d4c805887ad5543cdd8eb2ced48}{Game\-State.\-triangle\-\_\-button\-\_\-up()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_game_state_a63707d4c805887ad5543cdd8eb2ced48}{Game\-State}.
 
 \hypertarget{class_base_menu_adb277f30427d5811f86f8699b04c4abe}{\index{Base\-Menu@{Base\-Menu}!trigger\-\_\-pressed@{trigger\-\_\-pressed}}
 \index{trigger\-\_\-pressed@{trigger\-\_\-pressed}!BaseMenu@{Base\-Menu}}
@@ -265,6 +489,10 @@ Reimplemented from \hyperlink{class_game_state_a71ce465f73537005a559b429289b9fdd
 Check if the cursor is over the buttons. 
 
 Implements \hyperlink{class_game_state_ab2864bfa04f92f6966861a1f2883bda0}{Game\-State}.
+
+
+
+Reimplemented in \hyperlink{class_options_menu_ad653e8ad74119e2fdac3fdcabcb8119f}{Options\-Menu}.
 
 
 

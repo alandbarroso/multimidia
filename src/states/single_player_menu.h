@@ -58,12 +58,7 @@ public:
 	/*!
 		Change the state of the game based on what button was hovered.
 	*/
-	void move_button(int id);
-
-	/*!
-		Go back to the last screen.
-	*/
-	void circle_button(int id);
+	void move_button_up(int id);
 };
 
 #endif
