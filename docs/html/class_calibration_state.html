@@ -203,6 +203,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a428a39433507456ddd6304c07ec80075 inherit pub_methods_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae04e587d59e6f2cba6dddd95faabc734 inherit pub_methods_class_game_state"><td class="memItemLeft" align="right" valign="top">GameManager::StateType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ae04e587d59e6f2cba6dddd95faabc734">get_type</a> ()</td></tr>
 <tr class="separator:ae04e587d59e6f2cba6dddd95faabc734 inherit pub_methods_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa850839f1d8c80b185c3ba944a2c95fd inherit pub_methods_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa850839f1d8c80b185c3ba944a2c95fd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#aa850839f1d8c80b185c3ba944a2c95fd">init</a> ()</td></tr>
+<tr class="memdesc:aa850839f1d8c80b185c3ba944a2c95fd inherit pub_methods_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the necessary configurations after being connected. <br/></td></tr>
+<tr class="separator:aa850839f1d8c80b185c3ba944a2c95fd inherit pub_methods_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -227,6 +231,57 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ac66c8bcd0fd40ed2c0d190d4c5626823">change_game_size</a> (GameManager::Game_Size game_size)</td></tr>
 <tr class="memdesc:ac66c8bcd0fd40ed2c0d190d4c5626823 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to change the size of the game. <br/></td></tr>
 <tr class="separator:ac66c8bcd0fd40ed2c0d190d4c5626823 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c9fa47ca5260198124e65d1bf68758 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57c9fa47ca5260198124e65d1bf68758"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a57c9fa47ca5260198124e65d1bf68758">set_change_color</a> (int change)</td></tr>
+<tr class="memdesc:a57c9fa47ca5260198124e65d1bf68758 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to set the color change. <br/></td></tr>
+<tr class="separator:a57c9fa47ca5260198124e65d1bf68758 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13d5de469eddc9c1cdd85cd40c01389 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae13d5de469eddc9c1cdd85cd40c01389"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ae13d5de469eddc9c1cdd85cd40c01389">set_color</a> (int r, int g, int b)</td></tr>
+<tr class="memdesc:ae13d5de469eddc9c1cdd85cd40c01389 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to set the color of the LEDs. <br/></td></tr>
+<tr class="separator:ae13d5de469eddc9c1cdd85cd40c01389 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd8fa69120b4866bd86ab19f599adefc inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd8fa69120b4866bd86ab19f599adefc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#afd8fa69120b4866bd86ab19f599adefc">set_change_vibration</a> (int change)</td></tr>
+<tr class="memdesc:afd8fa69120b4866bd86ab19f599adefc inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to set the vibration change. <br/></td></tr>
+<tr class="separator:afd8fa69120b4866bd86ab19f599adefc inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bfcb26c3a55a626d3d893b3dca3c16 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3bfcb26c3a55a626d3d893b3dca3c16"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ad3bfcb26c3a55a626d3d893b3dca3c16">set_vibration</a> (int intensity)</td></tr>
+<tr class="memdesc:ad3bfcb26c3a55a626d3d893b3dca3c16 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to set intensity of the vibrations. <br/></td></tr>
+<tr class="separator:ad3bfcb26c3a55a626d3d893b3dca3c16 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5e4f6fe450ae08cd59128af99683c5 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d5e4f6fe450ae08cd59128af99683c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a5d5e4f6fe450ae08cd59128af99683c5">play_music</a> ()</td></tr>
+<tr class="memdesc:a5d5e4f6fe450ae08cd59128af99683c5 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to play music. <br/></td></tr>
+<tr class="separator:a5d5e4f6fe450ae08cd59128af99683c5 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c36bb4564fab5d057f7aa6c78983492 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c36bb4564fab5d057f7aa6c78983492"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a9c36bb4564fab5d057f7aa6c78983492">stop_music</a> ()</td></tr>
+<tr class="memdesc:a9c36bb4564fab5d057f7aa6c78983492 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to stop music. <br/></td></tr>
+<tr class="separator:a9c36bb4564fab5d057f7aa6c78983492 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8627fb9e37a4303b0bb15314e355de inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b8627fb9e37a4303b0bb15314e355de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a0b8627fb9e37a4303b0bb15314e355de">repeat_music</a> ()</td></tr>
+<tr class="memdesc:a0b8627fb9e37a4303b0bb15314e355de inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeats the music. <br/></td></tr>
+<tr class="separator:a0b8627fb9e37a4303b0bb15314e355de inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b34c8cbd60e8f466a1e0a20b021a85a inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b34c8cbd60e8f466a1e0a20b021a85a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a5b34c8cbd60e8f466a1e0a20b021a85a">play_beep</a> ()</td></tr>
+<tr class="memdesc:a5b34c8cbd60e8f466a1e0a20b021a85a inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays beep. <br/></td></tr>
+<tr class="separator:a5b34c8cbd60e8f466a1e0a20b021a85a inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184b4dfd1ddf2454a882bf1566f74d11 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a184b4dfd1ddf2454a882bf1566f74d11"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a184b4dfd1ddf2454a882bf1566f74d11">play_winning</a> ()</td></tr>
+<tr class="memdesc:a184b4dfd1ddf2454a882bf1566f74d11 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays winning sound - when found. <br/></td></tr>
+<tr class="separator:a184b4dfd1ddf2454a882bf1566f74d11 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54cbdd220dbbbc0a1e60f7cd3abab00d inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54cbdd220dbbbc0a1e60f7cd3abab00d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a54cbdd220dbbbc0a1e60f7cd3abab00d">play_cheering</a> ()</td></tr>
+<tr class="memdesc:a54cbdd220dbbbc0a1e60f7cd3abab00d inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays cheering sound - when ended. <br/></td></tr>
+<tr class="separator:a54cbdd220dbbbc0a1e60f7cd3abab00d inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405343ad0fe2b6a376ce23b3e87c1840 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a405343ad0fe2b6a376ce23b3e87c1840"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a405343ad0fe2b6a376ce23b3e87c1840">play_damage</a> ()</td></tr>
+<tr class="memdesc:a405343ad0fe2b6a376ce23b3e87c1840 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays damage sound. <br/></td></tr>
+<tr class="separator:a405343ad0fe2b6a376ce23b3e87c1840 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a994e352fb5b95a3b05a0b1ebbe7b32 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a994e352fb5b95a3b05a0b1ebbe7b32"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>play_time_attack</b> ()</td></tr>
+<tr class="separator:a1a994e352fb5b95a3b05a0b1ebbe7b32 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8c0d7ab3a8bbb9be5daddf8a9154e5 inherit signals_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d8c0d7ab3a8bbb9be5daddf8a9154e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a2d8c0d7ab3a8bbb9be5daddf8a9154e5">change_sound_volume</a> (qreal volume)</td></tr>
+<tr class="memdesc:a2d8c0d7ab3a8bbb9be5daddf8a9154e5 inherit signals_class_game_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the sound volume. <br/></td></tr>
+<tr class="separator:a2d8c0d7ab3a8bbb9be5daddf8a9154e5 inherit signals_class_game_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_game_state"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_game_state')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_game_state.html">GameState</a></td></tr>
 <tr class="memitem:afc2d4395529e7ecba05379a8f5f224c5 inherit pro_attribs_class_game_state"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc2d4395529e7ecba05379a8f5f224c5"></a>
 GameManager::StateType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#afc2d4395529e7ecba05379a8f5f224c5">type</a></td></tr>
@@ -361,7 +416,7 @@ Eduardo Cominetti </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_calibration_state.html">CalibrationState</a></li>
-    <li class="footer">Generated on Fri Nov 22 2013 06:44:03 for Treasure Hunter by
+    <li class="footer">Generated on Fri Dec 6 2013 10:56:48 for Treasure Hunter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

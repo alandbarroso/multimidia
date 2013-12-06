@@ -1,0 +1,132 @@
+\hypertarget{class_congratulations}{\section{Congratulations Class Reference}
+\label{class_congratulations}\index{Congratulations@{Congratulations}}
+}
+
+
+\hyperlink{class_congratulations}{Congratulations} Class.  
+
+
+
+
+{\ttfamily \#include $<$congratulations.\-h$>$}
+
+Inheritance diagram for Congratulations\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_congratulations}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_congratulations_a0a00d803843dff911c2e5c97f87d18ce}{Congratulations} (int points)
+\item 
+void \hyperlink{class_congratulations_a6c734c4ef2643aa508a268c9fc212cc7}{init} ()
+\item 
+void \hyperlink{class_congratulations_a2dc0a7638d81154f64776b4f964a6a5b}{update} ()
+\item 
+void \hyperlink{class_congratulations_a417ebf58b174b09ba82b6e0ce7fa0605}{paint\-\_\-screen\-\_\-camera} (Q\-Widget $\ast$screen, Q\-Image $\ast$camera\-\_\-image)
+\item 
+void \hyperlink{class_congratulations_a0a50bb9e925839c339015766ff24539c}{paint\-\_\-screen} (Q\-Widget $\ast$screen)
+\item 
+void \hyperlink{class_congratulations_ac8c8ec11538dacf2485d8f487a5c83dd}{move\-\_\-button\-\_\-up} (int id)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_congratulations}{Congratulations} Class. 
+
+The congratulations screen, showing the number of points the player got. \begin{DoxyAuthor}{Author}
+Alan Barroso 
+
+Ricardo Dall'Olio 
+
+Eduardo Cominetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_congratulations_a0a00d803843dff911c2e5c97f87d18ce}{\index{Congratulations@{Congratulations}!Congratulations@{Congratulations}}
+\index{Congratulations@{Congratulations}!Congratulations@{Congratulations}}
+\subsubsection[{Congratulations}]{\setlength{\rightskip}{0pt plus 5cm}Congratulations\-::\-Congratulations (
+\begin{DoxyParamCaption}
+\item[{int}]{points}
+\end{DoxyParamCaption}
+)}}\label{class_congratulations_a0a00d803843dff911c2e5c97f87d18ce}
+Basic constructor, initiates the images. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_congratulations_a6c734c4ef2643aa508a268c9fc212cc7}{\index{Congratulations@{Congratulations}!init@{init}}
+\index{init@{init}!Congratulations@{Congratulations}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Congratulations\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_congratulations_a6c734c4ef2643aa508a268c9fc212cc7}
+Initial configuration. 
+
+Reimplemented from \hyperlink{class_game_state_aa850839f1d8c80b185c3ba944a2c95fd}{Game\-State}.
+
+\hypertarget{class_congratulations_ac8c8ec11538dacf2485d8f487a5c83dd}{\index{Congratulations@{Congratulations}!move\-\_\-button\-\_\-up@{move\-\_\-button\-\_\-up}}
+\index{move\-\_\-button\-\_\-up@{move\-\_\-button\-\_\-up}!Congratulations@{Congratulations}}
+\subsubsection[{move\-\_\-button\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void Congratulations\-::move\-\_\-button\-\_\-up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_congratulations_ac8c8ec11538dacf2485d8f487a5c83dd}
+Called when the move button goes up. 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the P\-S\-Move controller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_state_a317ed472fb48c3f23e5c62bc01300634}{Game\-State}.
+
+\hypertarget{class_congratulations_a0a50bb9e925839c339015766ff24539c}{\index{Congratulations@{Congratulations}!paint\-\_\-screen@{paint\-\_\-screen}}
+\index{paint\-\_\-screen@{paint\-\_\-screen}!Congratulations@{Congratulations}}
+\subsubsection[{paint\-\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}void Congratulations\-::paint\-\_\-screen (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{screen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_congratulations_a0a50bb9e925839c339015766ff24539c}
+Paints nothing 
+
+Implements \hyperlink{class_game_state_a3ea5432d8db8538bc18ab4cf0fdfc871}{Game\-State}.
+
+\hypertarget{class_congratulations_a417ebf58b174b09ba82b6e0ce7fa0605}{\index{Congratulations@{Congratulations}!paint\-\_\-screen\-\_\-camera@{paint\-\_\-screen\-\_\-camera}}
+\index{paint\-\_\-screen\-\_\-camera@{paint\-\_\-screen\-\_\-camera}!Congratulations@{Congratulations}}
+\subsubsection[{paint\-\_\-screen\-\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}void Congratulations\-::paint\-\_\-screen\-\_\-camera (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{screen, }
+\item[{Q\-Image $\ast$}]{camera\-\_\-image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_congratulations_a417ebf58b174b09ba82b6e0ce7fa0605}
+Paints the camera image. 
+
+Implements \hyperlink{class_game_state_aac32d423dd6ebe9c1dbbf4c02b1b8d61}{Game\-State}.
+
+\hypertarget{class_congratulations_a2dc0a7638d81154f64776b4f964a6a5b}{\index{Congratulations@{Congratulations}!update@{update}}
+\index{update@{update}!Congratulations@{Congratulations}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Congratulations\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_congratulations_a2dc0a7638d81154f64776b4f964a6a5b}
+Prints the distance from the screen. 
+
+Implements \hyperlink{class_game_state_ab2864bfa04f92f6966861a1f2883bda0}{Game\-State}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/states/congratulations.\-h\item 
+src/states/congratulations.\-cpp\end{DoxyCompactItemize}

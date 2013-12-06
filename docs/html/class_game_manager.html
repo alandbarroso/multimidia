@@ -134,7 +134,10 @@ Public Types</h2></td></tr>
 <b>MAIN_MENU</b>, 
 <b>SINGLE_PLAYER_MENU</b>, 
 <br/>
-&#160;&#160;<b>OPTIONS_MENU</b>
+&#160;&#160;<b>OPTIONS_MENU</b>, 
+<b>SINGLE_CLASSIC_MODE</b>, 
+<b>SINGEL_TIME_ATTACK</b>, 
+<b>CONGRATULATIONS</b>
 <br/>
  }</td></tr>
 <tr class="separator:abab394e4309b54075f429414206e1cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +168,24 @@ Public Slots</h2></td></tr>
 <tr class="separator:a8a5d97b0e6ed557b7f69940bb0952512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d3dc17dd64dc88b0dafde6242ff2a7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a3d3dc17dd64dc88b0dafde6242ff2a7f">change_game_size</a> (GameManager::Game_Size game_size)</td></tr>
 <tr class="separator:a3d3dc17dd64dc88b0dafde6242ff2a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67acf06c1d17c7d619e7f3b5f66aa94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#aa67acf06c1d17c7d619e7f3b5f66aa94">play_music</a> ()</td></tr>
+<tr class="separator:aa67acf06c1d17c7d619e7f3b5f66aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2882956f8a8e5d37757a4507920400"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a1e2882956f8a8e5d37757a4507920400">stop_music</a> ()</td></tr>
+<tr class="separator:a1e2882956f8a8e5d37757a4507920400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98d663d42b1d38797b083b6b3933df1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#ab98d663d42b1d38797b083b6b3933df1">repeat_music</a> ()</td></tr>
+<tr class="separator:ab98d663d42b1d38797b083b6b3933df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a390ee9cdb8edd93762700a1833776"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a80a390ee9cdb8edd93762700a1833776">play_beep</a> ()</td></tr>
+<tr class="separator:a80a390ee9cdb8edd93762700a1833776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be5977321be835e23bef58bdfe168f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a0be5977321be835e23bef58bdfe168f7">play_winning</a> ()</td></tr>
+<tr class="separator:a0be5977321be835e23bef58bdfe168f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbbdd9d7c28c56e3ba23a12a086c93ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#abbbdd9d7c28c56e3ba23a12a086c93ef">play_cheering</a> ()</td></tr>
+<tr class="separator:abbbdd9d7c28c56e3ba23a12a086c93ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca31624d3696c340dfdcd3ce05d6c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a6ca31624d3696c340dfdcd3ce05d6c62">play_damage</a> ()</td></tr>
+<tr class="separator:a6ca31624d3696c340dfdcd3ce05d6c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109f726ba3615064cab23747e8770951"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a109f726ba3615064cab23747e8770951">play_time_attack</a> ()</td></tr>
+<tr class="separator:a109f726ba3615064cab23747e8770951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43614bc8737a3b12e7b0c189bf6dd5ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a43614bc8737a3b12e7b0c189bf6dd5ab">change_sound_volume</a> (qreal volume)</td></tr>
+<tr class="separator:a43614bc8737a3b12e7b0c189bf6dd5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -307,6 +328,37 @@ Eduardo Cominetti </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handicap_mode_type</td><td>The new handicap mode type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a43614bc8737a3b12e7b0c189bf6dd5ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::change_sound_volume </td>
+          <td>(</td>
+          <td class="paramtype">qreal&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Change the sound volume </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>The sound volume to be set </td></tr>
   </table>
   </dd>
 </dl>
@@ -545,6 +597,198 @@ Eduardo Cominetti </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a80a390ee9cdb8edd93762700a1833776"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::play_beep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Plays beep </p>
+
+</div>
+</div>
+<a class="anchor" id="abbbdd9d7c28c56e3ba23a12a086c93ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::play_cheering </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Plays cheering sound - when ended </p>
+
+</div>
+</div>
+<a class="anchor" id="a6ca31624d3696c340dfdcd3ce05d6c62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::play_damage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Plays damage sound </p>
+
+</div>
+</div>
+<a class="anchor" id="aa67acf06c1d17c7d619e7f3b5f66aa94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::play_music </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Request to play music </p>
+
+</div>
+</div>
+<a class="anchor" id="a109f726ba3615064cab23747e8770951"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::play_time_attack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Plays damage sound </p>
+
+</div>
+</div>
+<a class="anchor" id="a0be5977321be835e23bef58bdfe168f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::play_winning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Plays winning sound - when found </p>
+
+</div>
+</div>
+<a class="anchor" id="ab98d663d42b1d38797b083b6b3933df1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::repeat_music </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Repeats the music </p>
+
+</div>
+</div>
+<a class="anchor" id="a1e2882956f8a8e5d37757a4507920400"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager::stop_music </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Request to stop music </p>
+
+</div>
+</div>
 <a class="anchor" id="a7ecc3a14cd9e92f50729b37d1364953f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -572,7 +816,7 @@ Eduardo Cominetti </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_game_manager.html">GameManager</a></li>
-    <li class="footer">Generated on Fri Nov 22 2013 06:44:03 for Treasure Hunter by
+    <li class="footer">Generated on Fri Dec 6 2013 10:56:48 for Treasure Hunter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

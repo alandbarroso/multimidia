@@ -1,0 +1,153 @@
+\hypertarget{class_single_classic_mode}{\section{Single\-Classic\-Mode Class Reference}
+\label{class_single_classic_mode}\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}}
+}
+
+
+\hyperlink{class_single_classic_mode}{Single\-Classic\-Mode} Class.  
+
+
+
+
+{\ttfamily \#include $<$single\-\_\-classic\-\_\-mode.\-h$>$}
+
+Inheritance diagram for Single\-Classic\-Mode\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_single_classic_mode}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_single_classic_mode_aed6758fe59d390ec1a369fa9c756ffae}{Single\-Classic\-Mode} ()
+\item 
+\hyperlink{class_single_classic_mode_abb017549903fd5036a4015b415b2f0e3}{$\sim$\-Single\-Classic\-Mode} ()
+\item 
+void \hyperlink{class_single_classic_mode_a0ac6b1068b03a5c232175e3e5f411adc}{init} ()
+\item 
+void \hyperlink{class_single_classic_mode_adf46353472b81fe44128c0621de623df}{update} ()
+\item 
+void \hyperlink{class_single_classic_mode_a4cef5b1a056fa81a061a03b4041391fc}{paint\-\_\-screen\-\_\-camera} (Q\-Widget $\ast$screen, Q\-Image $\ast$camera\-\_\-image)
+\item 
+void \hyperlink{class_single_classic_mode_ab5ab513f84edbe6f54406fcd24bcf987}{paint\-\_\-screen} (Q\-Widget $\ast$screen)
+\item 
+void \hyperlink{class_single_classic_mode_a137bc2caf153ec10402b210ac0b2ca63}{position} (int id, int x, int y, int z)
+\item 
+void \hyperlink{class_single_classic_mode_a6d56390553ecec6f38548c181dd40848}{trigger\-\_\-pressed} (int id, qreal trigger)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_single_classic_mode}{Single\-Classic\-Mode} Class. 
+
+Initial state. Asks the user to wait while the controller is being calibrated. \begin{DoxyAuthor}{Author}
+Alan Barroso 
+
+Ricardo Dall'Olio 
+
+Eduardo Cominetti 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_single_classic_mode_aed6758fe59d390ec1a369fa9c756ffae}{\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!Single\-Classic\-Mode@{Single\-Classic\-Mode}}
+\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!SingleClassicMode@{Single\-Classic\-Mode}}
+\subsubsection[{Single\-Classic\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}Single\-Classic\-Mode\-::\-Single\-Classic\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_single_classic_mode_aed6758fe59d390ec1a369fa9c756ffae}
+Basic constructor, initiates the images. \hypertarget{class_single_classic_mode_abb017549903fd5036a4015b415b2f0e3}{\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!$\sim$\-Single\-Classic\-Mode@{$\sim$\-Single\-Classic\-Mode}}
+\index{$\sim$\-Single\-Classic\-Mode@{$\sim$\-Single\-Classic\-Mode}!SingleClassicMode@{Single\-Classic\-Mode}}
+\subsubsection[{$\sim$\-Single\-Classic\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}Single\-Classic\-Mode\-::$\sim$\-Single\-Classic\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_single_classic_mode_abb017549903fd5036a4015b415b2f0e3}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_single_classic_mode_a0ac6b1068b03a5c232175e3e5f411adc}{\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!init@{init}}
+\index{init@{init}!SingleClassicMode@{Single\-Classic\-Mode}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Single\-Classic\-Mode\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_single_classic_mode_a0ac6b1068b03a5c232175e3e5f411adc}
+Initial configuration. 
+
+Reimplemented from \hyperlink{class_game_state_aa850839f1d8c80b185c3ba944a2c95fd}{Game\-State}.
+
+\hypertarget{class_single_classic_mode_ab5ab513f84edbe6f54406fcd24bcf987}{\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!paint\-\_\-screen@{paint\-\_\-screen}}
+\index{paint\-\_\-screen@{paint\-\_\-screen}!SingleClassicMode@{Single\-Classic\-Mode}}
+\subsubsection[{paint\-\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}void Single\-Classic\-Mode\-::paint\-\_\-screen (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{screen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_single_classic_mode_ab5ab513f84edbe6f54406fcd24bcf987}
+Paints nothing 
+
+Implements \hyperlink{class_game_state_a3ea5432d8db8538bc18ab4cf0fdfc871}{Game\-State}.
+
+\hypertarget{class_single_classic_mode_a4cef5b1a056fa81a061a03b4041391fc}{\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!paint\-\_\-screen\-\_\-camera@{paint\-\_\-screen\-\_\-camera}}
+\index{paint\-\_\-screen\-\_\-camera@{paint\-\_\-screen\-\_\-camera}!SingleClassicMode@{Single\-Classic\-Mode}}
+\subsubsection[{paint\-\_\-screen\-\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}void Single\-Classic\-Mode\-::paint\-\_\-screen\-\_\-camera (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{screen, }
+\item[{Q\-Image $\ast$}]{camera\-\_\-image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_single_classic_mode_a4cef5b1a056fa81a061a03b4041391fc}
+Paints the camera image. 
+
+Implements \hyperlink{class_game_state_aac32d423dd6ebe9c1dbbf4c02b1b8d61}{Game\-State}.
+
+\hypertarget{class_single_classic_mode_a137bc2caf153ec10402b210ac0b2ca63}{\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!position@{position}}
+\index{position@{position}!SingleClassicMode@{Single\-Classic\-Mode}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}void Single\-Classic\-Mode\-::position (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_single_classic_mode_a137bc2caf153ec10402b210ac0b2ca63}
+Updates the player position. 
+
+Reimplemented from \hyperlink{class_game_state_ac8f14bed66fc7a5931663ea934f75d42}{Game\-State}.
+
+\hypertarget{class_single_classic_mode_a6d56390553ecec6f38548c181dd40848}{\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!trigger\-\_\-pressed@{trigger\-\_\-pressed}}
+\index{trigger\-\_\-pressed@{trigger\-\_\-pressed}!SingleClassicMode@{Single\-Classic\-Mode}}
+\subsubsection[{trigger\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Single\-Classic\-Mode\-::trigger\-\_\-pressed (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{qreal}]{trigger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_single_classic_mode_a6d56390553ecec6f38548c181dd40848}
+Send signal to the controller to change the L\-E\-D color 
+
+Reimplemented from \hyperlink{class_game_state_a71ce465f73537005a559b429289b9fdd}{Game\-State}.
+
+\hypertarget{class_single_classic_mode_adf46353472b81fe44128c0621de623df}{\index{Single\-Classic\-Mode@{Single\-Classic\-Mode}!update@{update}}
+\index{update@{update}!SingleClassicMode@{Single\-Classic\-Mode}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Single\-Classic\-Mode\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_single_classic_mode_adf46353472b81fe44128c0621de623df}
+Prints the distance from the screen. 
+
+Implements \hyperlink{class_game_state_ab2864bfa04f92f6966861a1f2883bda0}{Game\-State}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/states/single\-\_\-classic\-\_\-mode.\-h\item 
+src/states/single\-\_\-classic\-\_\-mode.\-cpp\end{DoxyCompactItemize}

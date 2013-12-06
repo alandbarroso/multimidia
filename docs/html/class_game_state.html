@@ -123,11 +123,14 @@ Inheritance diagram for GameState:</div>
  <div class="center">
   <img src="class_game_state.png" usemap="#GameState_map" alt=""/>
   <map id="GameState_map" name="GameState_map">
-<area href="class_base_menu.html" title="BaseMenu Class." alt="BaseMenu" shape="rect" coords="126,112,242,136"/>
-<area href="class_calibration_state.html" title="CalibrationState Class." alt="CalibrationState" shape="rect" coords="252,112,368,136"/>
-<area href="class_main_menu.html" title="MainMenu Class." alt="MainMenu" shape="rect" coords="0,168,116,192"/>
-<area href="class_options_menu.html" title="OptionsMenu Class." alt="OptionsMenu" shape="rect" coords="126,168,242,192"/>
-<area href="class_single_player_menu.html" title="SinglePlayerMenu Class." alt="SinglePlayerMenu" shape="rect" coords="252,168,368,192"/>
+<area href="class_base_menu.html" title="BaseMenu Class." alt="BaseMenu" shape="rect" coords="130,112,250,136"/>
+<area href="class_calibration_state.html" title="CalibrationState Class." alt="CalibrationState" shape="rect" coords="260,112,380,136"/>
+<area href="class_congratulations.html" title="Congratulations Class." alt="Congratulations" shape="rect" coords="390,112,510,136"/>
+<area href="class_single_classic_mode.html" title="SingleClassicMode Class." alt="SingleClassicMode" shape="rect" coords="520,112,640,136"/>
+<area href="class_single_time_attack.html" title="SingleTimeAttack Class." alt="SingleTimeAttack" shape="rect" coords="650,112,770,136"/>
+<area href="class_main_menu.html" title="MainMenu Class." alt="MainMenu" shape="rect" coords="0,168,120,192"/>
+<area href="class_options_menu.html" title="OptionsMenu Class." alt="OptionsMenu" shape="rect" coords="130,168,250,192"/>
+<area href="class_single_player_menu.html" title="SinglePlayerMenu Class." alt="SinglePlayerMenu" shape="rect" coords="260,168,380,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -206,6 +209,57 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ac66c8bcd0fd40ed2c0d190d4c5626823">change_game_size</a> (GameManager::Game_Size game_size)</td></tr>
 <tr class="memdesc:ac66c8bcd0fd40ed2c0d190d4c5626823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to change the size of the game. <br/></td></tr>
 <tr class="separator:ac66c8bcd0fd40ed2c0d190d4c5626823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c9fa47ca5260198124e65d1bf68758"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57c9fa47ca5260198124e65d1bf68758"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a57c9fa47ca5260198124e65d1bf68758">set_change_color</a> (int change)</td></tr>
+<tr class="memdesc:a57c9fa47ca5260198124e65d1bf68758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to set the color change. <br/></td></tr>
+<tr class="separator:a57c9fa47ca5260198124e65d1bf68758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13d5de469eddc9c1cdd85cd40c01389"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae13d5de469eddc9c1cdd85cd40c01389"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ae13d5de469eddc9c1cdd85cd40c01389">set_color</a> (int r, int g, int b)</td></tr>
+<tr class="memdesc:ae13d5de469eddc9c1cdd85cd40c01389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to set the color of the LEDs. <br/></td></tr>
+<tr class="separator:ae13d5de469eddc9c1cdd85cd40c01389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd8fa69120b4866bd86ab19f599adefc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd8fa69120b4866bd86ab19f599adefc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#afd8fa69120b4866bd86ab19f599adefc">set_change_vibration</a> (int change)</td></tr>
+<tr class="memdesc:afd8fa69120b4866bd86ab19f599adefc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to set the vibration change. <br/></td></tr>
+<tr class="separator:afd8fa69120b4866bd86ab19f599adefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bfcb26c3a55a626d3d893b3dca3c16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3bfcb26c3a55a626d3d893b3dca3c16"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ad3bfcb26c3a55a626d3d893b3dca3c16">set_vibration</a> (int intensity)</td></tr>
+<tr class="memdesc:ad3bfcb26c3a55a626d3d893b3dca3c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to set intensity of the vibrations. <br/></td></tr>
+<tr class="separator:ad3bfcb26c3a55a626d3d893b3dca3c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5e4f6fe450ae08cd59128af99683c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d5e4f6fe450ae08cd59128af99683c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a5d5e4f6fe450ae08cd59128af99683c5">play_music</a> ()</td></tr>
+<tr class="memdesc:a5d5e4f6fe450ae08cd59128af99683c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to play music. <br/></td></tr>
+<tr class="separator:a5d5e4f6fe450ae08cd59128af99683c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c36bb4564fab5d057f7aa6c78983492"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c36bb4564fab5d057f7aa6c78983492"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a9c36bb4564fab5d057f7aa6c78983492">stop_music</a> ()</td></tr>
+<tr class="memdesc:a9c36bb4564fab5d057f7aa6c78983492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to stop music. <br/></td></tr>
+<tr class="separator:a9c36bb4564fab5d057f7aa6c78983492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8627fb9e37a4303b0bb15314e355de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b8627fb9e37a4303b0bb15314e355de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a0b8627fb9e37a4303b0bb15314e355de">repeat_music</a> ()</td></tr>
+<tr class="memdesc:a0b8627fb9e37a4303b0bb15314e355de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeats the music. <br/></td></tr>
+<tr class="separator:a0b8627fb9e37a4303b0bb15314e355de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b34c8cbd60e8f466a1e0a20b021a85a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b34c8cbd60e8f466a1e0a20b021a85a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a5b34c8cbd60e8f466a1e0a20b021a85a">play_beep</a> ()</td></tr>
+<tr class="memdesc:a5b34c8cbd60e8f466a1e0a20b021a85a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays beep. <br/></td></tr>
+<tr class="separator:a5b34c8cbd60e8f466a1e0a20b021a85a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184b4dfd1ddf2454a882bf1566f74d11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a184b4dfd1ddf2454a882bf1566f74d11"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a184b4dfd1ddf2454a882bf1566f74d11">play_winning</a> ()</td></tr>
+<tr class="memdesc:a184b4dfd1ddf2454a882bf1566f74d11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays winning sound - when found. <br/></td></tr>
+<tr class="separator:a184b4dfd1ddf2454a882bf1566f74d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54cbdd220dbbbc0a1e60f7cd3abab00d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54cbdd220dbbbc0a1e60f7cd3abab00d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a54cbdd220dbbbc0a1e60f7cd3abab00d">play_cheering</a> ()</td></tr>
+<tr class="memdesc:a54cbdd220dbbbc0a1e60f7cd3abab00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays cheering sound - when ended. <br/></td></tr>
+<tr class="separator:a54cbdd220dbbbc0a1e60f7cd3abab00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405343ad0fe2b6a376ce23b3e87c1840"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a405343ad0fe2b6a376ce23b3e87c1840"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a405343ad0fe2b6a376ce23b3e87c1840">play_damage</a> ()</td></tr>
+<tr class="memdesc:a405343ad0fe2b6a376ce23b3e87c1840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays damage sound. <br/></td></tr>
+<tr class="separator:a405343ad0fe2b6a376ce23b3e87c1840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a994e352fb5b95a3b05a0b1ebbe7b32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a994e352fb5b95a3b05a0b1ebbe7b32"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>play_time_attack</b> ()</td></tr>
+<tr class="separator:a1a994e352fb5b95a3b05a0b1ebbe7b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8c0d7ab3a8bbb9be5daddf8a9154e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d8c0d7ab3a8bbb9be5daddf8a9154e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#a2d8c0d7ab3a8bbb9be5daddf8a9154e5">change_sound_volume</a> (qreal volume)</td></tr>
+<tr class="memdesc:a2d8c0d7ab3a8bbb9be5daddf8a9154e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the sound volume. <br/></td></tr>
+<tr class="separator:a2d8c0d7ab3a8bbb9be5daddf8a9154e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -218,6 +272,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a428a39433507456ddd6304c07ec80075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae04e587d59e6f2cba6dddd95faabc734"><td class="memItemLeft" align="right" valign="top">GameManager::StateType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ae04e587d59e6f2cba6dddd95faabc734">get_type</a> ()</td></tr>
 <tr class="separator:ae04e587d59e6f2cba6dddd95faabc734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa850839f1d8c80b185c3ba944a2c95fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa850839f1d8c80b185c3ba944a2c95fd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#aa850839f1d8c80b185c3ba944a2c95fd">init</a> ()</td></tr>
+<tr class="memdesc:aa850839f1d8c80b185c3ba944a2c95fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the necessary configurations after being connected. <br/></td></tr>
+<tr class="separator:aa850839f1d8c80b185c3ba944a2c95fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2864bfa04f92f6966861a1f2883bda0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_state.html#ab2864bfa04f92f6966861a1f2883bda0">update</a> ()=0</td></tr>
 <tr class="memdesc:ab2864bfa04f92f6966861a1f2883bda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the game logic.  <a href="#ab2864bfa04f92f6966861a1f2883bda0">More...</a><br/></td></tr>
 <tr class="separator:ab2864bfa04f92f6966861a1f2883bda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -574,7 +632,7 @@ Eduardo Cominetti </dd></dl>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_base_menu.html#aa73239e64789bf85c1d510abbae18189">BaseMenu</a>, <a class="el" href="class_options_menu.html#a149a8b7cfaa4185f6007bb0db18e81a4">OptionsMenu</a>, <a class="el" href="class_main_menu.html#ac27ae7a7cf376c23a7f5f204c2243135">MainMenu</a>, and <a class="el" href="class_single_player_menu.html#a8a05cbb8626a73ea18fe32e2eb4ec61f">SinglePlayerMenu</a>.</p>
+<p>Reimplemented in <a class="el" href="class_base_menu.html#aa73239e64789bf85c1d510abbae18189">BaseMenu</a>, <a class="el" href="class_options_menu.html#a149a8b7cfaa4185f6007bb0db18e81a4">OptionsMenu</a>, <a class="el" href="class_congratulations.html#ac8c8ec11538dacf2485d8f487a5c83dd">Congratulations</a>, <a class="el" href="class_main_menu.html#ac27ae7a7cf376c23a7f5f204c2243135">MainMenu</a>, and <a class="el" href="class_single_player_menu.html#a8a05cbb8626a73ea18fe32e2eb4ec61f">SinglePlayerMenu</a>.</p>
 
 </div>
 </div>
@@ -610,7 +668,7 @@ Eduardo Cominetti </dd></dl>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_game_manager.html#adc2d500cc9ec8eaad8b9414b8eeffc97">GameManager::paint_screen()</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="class_base_menu.html#ae45dccc7c3b8da62b4cd0d5b6c211a12">BaseMenu</a>, and <a class="el" href="class_calibration_state.html#a6752cfc1ac103f9c7f6e60185e3d23a2">CalibrationState</a>.</p>
+<p>Implemented in <a class="el" href="class_single_classic_mode.html#ab5ab513f84edbe6f54406fcd24bcf987">SingleClassicMode</a>, <a class="el" href="class_single_time_attack.html#aa4f8bb5ccef49a83f9c24953c4fe2d8b">SingleTimeAttack</a>, <a class="el" href="class_base_menu.html#ae45dccc7c3b8da62b4cd0d5b6c211a12">BaseMenu</a>, <a class="el" href="class_congratulations.html#a0a50bb9e925839c339015766ff24539c">Congratulations</a>, and <a class="el" href="class_calibration_state.html#a6752cfc1ac103f9c7f6e60185e3d23a2">CalibrationState</a>.</p>
 
 </div>
 </div>
@@ -657,7 +715,7 @@ Eduardo Cominetti </dd></dl>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_game_manager.html#adc2d500cc9ec8eaad8b9414b8eeffc97">GameManager::paint_screen()</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="class_base_menu.html#ad75153fdfff53b0421beb9674c0237e3">BaseMenu</a>, and <a class="el" href="class_calibration_state.html#a9fb1363a201716e66b5d61c041d37530">CalibrationState</a>.</p>
+<p>Implemented in <a class="el" href="class_single_classic_mode.html#a4cef5b1a056fa81a061a03b4041391fc">SingleClassicMode</a>, <a class="el" href="class_single_time_attack.html#acdd35eace2509b7ae507eb15059682b5">SingleTimeAttack</a>, <a class="el" href="class_base_menu.html#ad75153fdfff53b0421beb9674c0237e3">BaseMenu</a>, <a class="el" href="class_congratulations.html#a417ebf58b174b09ba82b6e0ce7fa0605">Congratulations</a>, and <a class="el" href="class_calibration_state.html#a9fb1363a201716e66b5d61c041d37530">CalibrationState</a>.</p>
 
 </div>
 </div>
@@ -715,7 +773,7 @@ Eduardo Cominetti </dd></dl>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_base_menu.html#a9c2bc1403e96c1bd411883a47e47155b">BaseMenu</a>.</p>
+<p>Reimplemented in <a class="el" href="class_single_classic_mode.html#a137bc2caf153ec10402b210ac0b2ca63">SingleClassicMode</a>, <a class="el" href="class_single_time_attack.html#a2c5d2f9a6f16f11e00bbdd674562048f">SingleTimeAttack</a>, and <a class="el" href="class_base_menu.html#a9c2bc1403e96c1bd411883a47e47155b">BaseMenu</a>.</p>
 
 </div>
 </div>
@@ -1155,7 +1213,7 @@ Eduardo Cominetti </dd></dl>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_base_menu.html#adb277f30427d5811f86f8699b04c4abe">BaseMenu</a>.</p>
+<p>Reimplemented in <a class="el" href="class_base_menu.html#adb277f30427d5811f86f8699b04c4abe">BaseMenu</a>, and <a class="el" href="class_single_classic_mode.html#a6d56390553ecec6f38548c181dd40848">SingleClassicMode</a>.</p>
 
 </div>
 </div>
@@ -1184,7 +1242,7 @@ Eduardo Cominetti </dd></dl>
 <p>Virtual method, to be implemented by derived classes. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_game_manager.html#a7ecc3a14cd9e92f50729b37d1364953f">GameManager::update()</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="class_options_menu.html#ad653e8ad74119e2fdac3fdcabcb8119f">OptionsMenu</a>, <a class="el" href="class_base_menu.html#a4679a8f7c2872606910baa1b08fe0ba1">BaseMenu</a>, and <a class="el" href="class_calibration_state.html#ab7464c22c3f9f2a4bd3acef00b513649">CalibrationState</a>.</p>
+<p>Implemented in <a class="el" href="class_single_classic_mode.html#adf46353472b81fe44128c0621de623df">SingleClassicMode</a>, <a class="el" href="class_single_time_attack.html#ab906c638bd4786669217deee446f3d4f">SingleTimeAttack</a>, <a class="el" href="class_options_menu.html#ad653e8ad74119e2fdac3fdcabcb8119f">OptionsMenu</a>, <a class="el" href="class_base_menu.html#a4679a8f7c2872606910baa1b08fe0ba1">BaseMenu</a>, <a class="el" href="class_congratulations.html#a2dc0a7638d81154f64776b4f964a6a5b">Congratulations</a>, and <a class="el" href="class_calibration_state.html#ab7464c22c3f9f2a4bd3acef00b513649">CalibrationState</a>.</p>
 
 </div>
 </div>
@@ -1198,7 +1256,7 @@ Eduardo Cominetti </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_game_state.html">GameState</a></li>
-    <li class="footer">Generated on Fri Nov 22 2013 06:44:03 for Treasure Hunter by
+    <li class="footer">Generated on Fri Dec 6 2013 10:56:48 for Treasure Hunter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

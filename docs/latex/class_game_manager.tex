@@ -25,7 +25,10 @@ enum {\bfseries State\-Type} \{ \\*
 {\bfseries M\-A\-I\-N\-\_\-\-M\-E\-N\-U}, 
 {\bfseries S\-I\-N\-G\-L\-E\-\_\-\-P\-L\-A\-Y\-E\-R\-\_\-\-M\-E\-N\-U}, 
 \\*
-{\bfseries O\-P\-T\-I\-O\-N\-S\-\_\-\-M\-E\-N\-U}
+{\bfseries O\-P\-T\-I\-O\-N\-S\-\_\-\-M\-E\-N\-U}, 
+{\bfseries S\-I\-N\-G\-L\-E\-\_\-\-C\-L\-A\-S\-S\-I\-C\-\_\-\-M\-O\-D\-E}, 
+{\bfseries S\-I\-N\-G\-E\-L\-\_\-\-T\-I\-M\-E\-\_\-\-A\-T\-T\-A\-C\-K}, 
+{\bfseries C\-O\-N\-G\-R\-A\-T\-U\-L\-A\-T\-I\-O\-N\-S}
  \}
 \item 
 enum {\bfseries Difficulty} \{ {\bfseries E\-A\-S\-Y}, 
@@ -54,6 +57,24 @@ void \hyperlink{class_game_manager_ae9c52fcc0f8b739437a552766d46ba17}{change\-\_
 void \hyperlink{class_game_manager_a8a5d97b0e6ed557b7f69940bb0952512}{change\-\_\-handicap\-\_\-mode} (Game\-Manager\-::\-Handicap\-Mode\-Type handicap\-\_\-mode\-\_\-type)
 \item 
 void \hyperlink{class_game_manager_a3d3dc17dd64dc88b0dafde6242ff2a7f}{change\-\_\-game\-\_\-size} (Game\-Manager\-::\-Game\-\_\-\-Size game\-\_\-size)
+\item 
+void \hyperlink{class_game_manager_aa67acf06c1d17c7d619e7f3b5f66aa94}{play\-\_\-music} ()
+\item 
+void \hyperlink{class_game_manager_a1e2882956f8a8e5d37757a4507920400}{stop\-\_\-music} ()
+\item 
+void \hyperlink{class_game_manager_ab98d663d42b1d38797b083b6b3933df1}{repeat\-\_\-music} ()
+\item 
+void \hyperlink{class_game_manager_a80a390ee9cdb8edd93762700a1833776}{play\-\_\-beep} ()
+\item 
+void \hyperlink{class_game_manager_a0be5977321be835e23bef58bdfe168f7}{play\-\_\-winning} ()
+\item 
+void \hyperlink{class_game_manager_abbbdd9d7c28c56e3ba23a12a086c93ef}{play\-\_\-cheering} ()
+\item 
+void \hyperlink{class_game_manager_a6ca31624d3696c340dfdcd3ce05d6c62}{play\-\_\-damage} ()
+\item 
+void \hyperlink{class_game_manager_a109f726ba3615064cab23747e8770951}{play\-\_\-time\-\_\-attack} ()
+\item 
+void \hyperlink{class_game_manager_a43614bc8737a3b12e7b0c189bf6dd5ab}{change\-\_\-sound\-\_\-volume} (qreal volume)
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -146,6 +167,18 @@ Change the size of the game
 Change the mode of the game 
 \begin{DoxyParams}{Parameters}
 {\em handicap\-\_\-mode\-\_\-type} & The new handicap mode type \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_manager_a43614bc8737a3b12e7b0c189bf6dd5ab}{\index{Game\-Manager@{Game\-Manager}!change\-\_\-sound\-\_\-volume@{change\-\_\-sound\-\_\-volume}}
+\index{change\-\_\-sound\-\_\-volume@{change\-\_\-sound\-\_\-volume}!GameManager@{Game\-Manager}}
+\subsubsection[{change\-\_\-sound\-\_\-volume}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::change\-\_\-sound\-\_\-volume (
+\begin{DoxyParamCaption}
+\item[{qreal}]{volume}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a43614bc8737a3b12e7b0c189bf6dd5ab}
+Change the sound volume 
+\begin{DoxyParams}{Parameters}
+{\em volume} & The sound volume to be set \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_game_manager_a60d891c730d679638699313b32554fc3}{\index{Game\-Manager@{Game\-Manager}!change\-\_\-state@{change\-\_\-state}}
@@ -265,7 +298,63 @@ Called to paint the screen.
 \begin{DoxySeeAlso}{See Also}
 \hyperlink{class_game_state_ab2864bfa04f92f6966861a1f2883bda0}{Game\-State\-::update()} 
 \end{DoxySeeAlso}
-\hypertarget{class_game_manager_a7ecc3a14cd9e92f50729b37d1364953f}{\index{Game\-Manager@{Game\-Manager}!update@{update}}
+\hypertarget{class_game_manager_a80a390ee9cdb8edd93762700a1833776}{\index{Game\-Manager@{Game\-Manager}!play\-\_\-beep@{play\-\_\-beep}}
+\index{play\-\_\-beep@{play\-\_\-beep}!GameManager@{Game\-Manager}}
+\subsubsection[{play\-\_\-beep}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::play\-\_\-beep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a80a390ee9cdb8edd93762700a1833776}
+Plays beep \hypertarget{class_game_manager_abbbdd9d7c28c56e3ba23a12a086c93ef}{\index{Game\-Manager@{Game\-Manager}!play\-\_\-cheering@{play\-\_\-cheering}}
+\index{play\-\_\-cheering@{play\-\_\-cheering}!GameManager@{Game\-Manager}}
+\subsubsection[{play\-\_\-cheering}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::play\-\_\-cheering (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_abbbdd9d7c28c56e3ba23a12a086c93ef}
+Plays cheering sound -\/ when ended \hypertarget{class_game_manager_a6ca31624d3696c340dfdcd3ce05d6c62}{\index{Game\-Manager@{Game\-Manager}!play\-\_\-damage@{play\-\_\-damage}}
+\index{play\-\_\-damage@{play\-\_\-damage}!GameManager@{Game\-Manager}}
+\subsubsection[{play\-\_\-damage}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::play\-\_\-damage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a6ca31624d3696c340dfdcd3ce05d6c62}
+Plays damage sound \hypertarget{class_game_manager_aa67acf06c1d17c7d619e7f3b5f66aa94}{\index{Game\-Manager@{Game\-Manager}!play\-\_\-music@{play\-\_\-music}}
+\index{play\-\_\-music@{play\-\_\-music}!GameManager@{Game\-Manager}}
+\subsubsection[{play\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::play\-\_\-music (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_aa67acf06c1d17c7d619e7f3b5f66aa94}
+Request to play music \hypertarget{class_game_manager_a109f726ba3615064cab23747e8770951}{\index{Game\-Manager@{Game\-Manager}!play\-\_\-time\-\_\-attack@{play\-\_\-time\-\_\-attack}}
+\index{play\-\_\-time\-\_\-attack@{play\-\_\-time\-\_\-attack}!GameManager@{Game\-Manager}}
+\subsubsection[{play\-\_\-time\-\_\-attack}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::play\-\_\-time\-\_\-attack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a109f726ba3615064cab23747e8770951}
+Plays damage sound \hypertarget{class_game_manager_a0be5977321be835e23bef58bdfe168f7}{\index{Game\-Manager@{Game\-Manager}!play\-\_\-winning@{play\-\_\-winning}}
+\index{play\-\_\-winning@{play\-\_\-winning}!GameManager@{Game\-Manager}}
+\subsubsection[{play\-\_\-winning}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::play\-\_\-winning (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a0be5977321be835e23bef58bdfe168f7}
+Plays winning sound -\/ when found \hypertarget{class_game_manager_ab98d663d42b1d38797b083b6b3933df1}{\index{Game\-Manager@{Game\-Manager}!repeat\-\_\-music@{repeat\-\_\-music}}
+\index{repeat\-\_\-music@{repeat\-\_\-music}!GameManager@{Game\-Manager}}
+\subsubsection[{repeat\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::repeat\-\_\-music (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_ab98d663d42b1d38797b083b6b3933df1}
+Repeats the music \hypertarget{class_game_manager_a1e2882956f8a8e5d37757a4507920400}{\index{Game\-Manager@{Game\-Manager}!stop\-\_\-music@{stop\-\_\-music}}
+\index{stop\-\_\-music@{stop\-\_\-music}!GameManager@{Game\-Manager}}
+\subsubsection[{stop\-\_\-music}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::stop\-\_\-music (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_game_manager_a1e2882956f8a8e5d37757a4507920400}
+Request to stop music \hypertarget{class_game_manager_a7ecc3a14cd9e92f50729b37d1364953f}{\index{Game\-Manager@{Game\-Manager}!update@{update}}
 \index{update@{update}!GameManager@{Game\-Manager}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-Manager\-::update (
 \begin{DoxyParamCaption}

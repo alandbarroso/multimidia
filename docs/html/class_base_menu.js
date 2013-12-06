@@ -7,6 +7,7 @@ var class_base_menu =
     [ "cross_button_down", "class_base_menu.html#a5ef0f20274ea6470de07f15f34450f72", null ],
     [ "cross_button_pressed", "class_base_menu.html#a7e505a84e4ddc33a06b9c3ea7caf04c5", null ],
     [ "cross_button_up", "class_base_menu.html#a76fe15e2856203059db24c9c56c1383a", null ],
+    [ "init", "class_base_menu.html#abd14378797eab8eba6530b1b5851e6a8", null ],
     [ "move_button_down", "class_base_menu.html#a8a1dbfb5c20ec003050e92e016bcde6a", null ],
     [ "move_button_pressed", "class_base_menu.html#a0a9ed550dbeb47f37528c0ab85790e68", null ],
     [ "move_button_up", "class_base_menu.html#aa73239e64789bf85c1d510abbae18189", null ],

@@ -103,6 +103,7 @@ $(document).ready(function(){initNavTree('class_p_s_move_controller_thread.html'
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -131,6 +132,14 @@ Public Slots</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_s_move_controller_thread.html#a03b2e15cad0f787ecf0a29684b74df3d">exit_signal</a> ()</td></tr>
 <tr class="memdesc:a03b2e15cad0f787ecf0a29684b74df3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">When received, make the application quit. <br/></td></tr>
 <tr class="separator:a03b2e15cad0f787ecf0a29684b74df3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1731a0a59fbb79f8eabd3ef8693702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_s_move_controller_thread.html#a7d1731a0a59fbb79f8eabd3ef8693702">set_change_color</a> (int change)</td></tr>
+<tr class="separator:a7d1731a0a59fbb79f8eabd3ef8693702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213c541792eeae10dff16d6e7161152a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_s_move_controller_thread.html#a213c541792eeae10dff16d6e7161152a">set_color</a> (int r, int g, int b)</td></tr>
+<tr class="separator:a213c541792eeae10dff16d6e7161152a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06841b7432b67cad1a2e1ad4c31bbce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_s_move_controller_thread.html#aa06841b7432b67cad1a2e1ad4c31bbce">set_change_vibration</a> (int change)</td></tr>
+<tr class="separator:aa06841b7432b67cad1a2e1ad4c31bbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cd30aaf909ed088744940de7413ebf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_s_move_controller_thread.html#ae9cd30aaf909ed088744940de7413ebf">set_vibration</a> (int intensity)</td></tr>
+<tr class="separator:ae9cd30aaf909ed088744940de7413ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -720,6 +729,122 @@ Eduardo Cominetti </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a7d1731a0a59fbb79f8eabd3ef8693702"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMoveControllerThread::set_change_color </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>change</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When called, set if the tracker should change color </p>
+
+</div>
+</div>
+<a class="anchor" id="aa06841b7432b67cad1a2e1ad4c31bbce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMoveControllerThread::set_change_vibration </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>change</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>When called, set if the tracker should vibrate </p>
+
+</div>
+</div>
+<a class="anchor" id="a213c541792eeae10dff16d6e7161152a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMoveControllerThread::set_color </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the color of that should be used </p>
+
+</div>
+</div>
+<a class="anchor" id="ae9cd30aaf909ed088744940de7413ebf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMoveControllerThread::set_vibration </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>intensity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the intension of the vibration </p>
+
+</div>
+</div>
 <a class="anchor" id="a3a2cb53014ee12bf72efed0dbd25553e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1075,7 +1200,7 @@ Eduardo Cominetti </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_p_s_move_controller_thread.html">PSMoveControllerThread</a></li>
-    <li class="footer">Generated on Fri Nov 22 2013 06:44:03 for Treasure Hunter by
+    <li class="footer">Generated on Fri Dec 6 2013 10:56:49 for Treasure Hunter by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

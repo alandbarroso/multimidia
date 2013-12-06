@@ -21,7 +21,15 @@ Inheritance diagram for P\-S\-Move\-Controller\-Thread\-:\begin{figure}[H]
 \item 
 \hypertarget{class_p_s_move_controller_thread_a03b2e15cad0f787ecf0a29684b74df3d}{void \hyperlink{class_p_s_move_controller_thread_a03b2e15cad0f787ecf0a29684b74df3d}{exit\-\_\-signal} ()}\label{class_p_s_move_controller_thread_a03b2e15cad0f787ecf0a29684b74df3d}
 
-\begin{DoxyCompactList}\small\item\em When received, make the application quit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em When received, make the application quit. \end{DoxyCompactList}\item 
+void \hyperlink{class_p_s_move_controller_thread_a7d1731a0a59fbb79f8eabd3ef8693702}{set\-\_\-change\-\_\-color} (int change)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_a213c541792eeae10dff16d6e7161152a}{set\-\_\-color} (int r, int g, int b)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_aa06841b7432b67cad1a2e1ad4c31bbce}{set\-\_\-change\-\_\-vibration} (int change)
+\item 
+void \hyperlink{class_p_s_move_controller_thread_ae9cd30aaf909ed088744940de7413ebf}{set\-\_\-vibration} (int intensity)
+\end{DoxyCompactItemize}
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
@@ -308,7 +316,37 @@ Sent when the select button goes up.
 {\em id} & Id of the P\-S\-Move controller. \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_p_s_move_controller_thread_a3a2cb53014ee12bf72efed0dbd25553e}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!square\-\_\-button\-\_\-down@{square\-\_\-button\-\_\-down}}
+\hypertarget{class_p_s_move_controller_thread_a7d1731a0a59fbb79f8eabd3ef8693702}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!set\-\_\-change\-\_\-color@{set\-\_\-change\-\_\-color}}
+\index{set\-\_\-change\-\_\-color@{set\-\_\-change\-\_\-color}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{set\-\_\-change\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::set\-\_\-change\-\_\-color (
+\begin{DoxyParamCaption}
+\item[{int}]{change}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_p_s_move_controller_thread_a7d1731a0a59fbb79f8eabd3ef8693702}
+When called, set if the tracker should change color \hypertarget{class_p_s_move_controller_thread_aa06841b7432b67cad1a2e1ad4c31bbce}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!set\-\_\-change\-\_\-vibration@{set\-\_\-change\-\_\-vibration}}
+\index{set\-\_\-change\-\_\-vibration@{set\-\_\-change\-\_\-vibration}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{set\-\_\-change\-\_\-vibration}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::set\-\_\-change\-\_\-vibration (
+\begin{DoxyParamCaption}
+\item[{int}]{change}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_p_s_move_controller_thread_aa06841b7432b67cad1a2e1ad4c31bbce}
+When called, set if the tracker should vibrate \hypertarget{class_p_s_move_controller_thread_a213c541792eeae10dff16d6e7161152a}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!set\-\_\-color@{set\-\_\-color}}
+\index{set\-\_\-color@{set\-\_\-color}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{set\-\_\-color}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::set\-\_\-color (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_p_s_move_controller_thread_a213c541792eeae10dff16d6e7161152a}
+Set the color of that should be used \hypertarget{class_p_s_move_controller_thread_ae9cd30aaf909ed088744940de7413ebf}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!set\-\_\-vibration@{set\-\_\-vibration}}
+\index{set\-\_\-vibration@{set\-\_\-vibration}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
+\subsubsection[{set\-\_\-vibration}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::set\-\_\-vibration (
+\begin{DoxyParamCaption}
+\item[{int}]{intensity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_p_s_move_controller_thread_ae9cd30aaf909ed088744940de7413ebf}
+Set the intension of the vibration \hypertarget{class_p_s_move_controller_thread_a3a2cb53014ee12bf72efed0dbd25553e}{\index{P\-S\-Move\-Controller\-Thread@{P\-S\-Move\-Controller\-Thread}!square\-\_\-button\-\_\-down@{square\-\_\-button\-\_\-down}}
 \index{square\-\_\-button\-\_\-down@{square\-\_\-button\-\_\-down}!PSMoveControllerThread@{P\-S\-Move\-Controller\-Thread}}
 \subsubsection[{square\-\_\-button\-\_\-down}]{\setlength{\rightskip}{0pt plus 5cm}void P\-S\-Move\-Controller\-Thread\-::square\-\_\-button\-\_\-down (
 \begin{DoxyParamCaption}

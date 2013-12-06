@@ -12,7 +12,10 @@ var hierarchy =
           [ "OptionsMenu", "class_options_menu.html", null ],
           [ "SinglePlayerMenu", "class_single_player_menu.html", null ]
         ] ],
-        [ "CalibrationState", "class_calibration_state.html", null ]
+        [ "CalibrationState", "class_calibration_state.html", null ],
+        [ "Congratulations", "class_congratulations.html", null ],
+        [ "SingleClassicMode", "class_single_classic_mode.html", null ],
+        [ "SingleTimeAttack", "class_single_time_attack.html", null ]
       ] ]
     ] ],
     [ "QThread", null, [
