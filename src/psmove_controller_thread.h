@@ -3,6 +3,7 @@
 
 #include <QApplication>
 #include <QThread>
+#include <QTime>
 
 #include <unistd.h>
 #include <stdio.h>
@@ -40,6 +41,31 @@ private:
 
     //! If true, the application should quit.
     int quit;
+
+    //! If true, the color should change.
+    int change_color;
+
+    //! If true, the controller should vibrate.
+    int change_vibration;
+
+    //! The color to blink.
+    struct color
+    {
+        int r;
+        int g;
+        int b;
+    } move_color;
+
+    //! The intensio of the vibration
+    int vibration_intensity;
+
+    //! Stores the last coordinates of the controller
+    struct coordinates
+    {
+        float x;
+        float y;
+        float z;
+    } last_position;
 
     /************************************************
     *   Methods                                     *
@@ -249,6 +275,26 @@ public slots:
 
     //! When received, make the application quit.
     void exit_signal();
+
+    /*!
+        When called, set if the tracker should change color
+    */
+    void set_change_color(int change);
+
+    /*!
+        Set the color of that should be used
+    */
+    void set_color(int r, int g, int b);
+
+    /*!
+        When called, set if the tracker should vibrate
+    */
+    void set_change_vibration(int change);
+
+    /*!
+        Set the intension of the vibration
+    */
+    void set_vibration(int intensity);
 };
 
 #endif

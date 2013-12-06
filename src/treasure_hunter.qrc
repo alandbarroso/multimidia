@@ -17,6 +17,27 @@
      <file>assets/button_single_player.png</file>
      <file>assets/button_single_player_selected.png</file>
 
+     <file>assets/button_classic_mode.png</file>
+     <file>assets/button_classic_mode_selected.png</file>
+
+     <file>assets/button_time_attack.png</file>
+     <file>assets/button_time_attack_selected.png</file>
+
+     <file>assets/congratulations.png</file>
+
      <file>assets/cursor.png</file>
+
+     <file>assets/alarm.mp3</file>
+
+     <file>assets/cheering.mp3</file>
+     <file>assets/winning.mp3</file>
+
+     <file>assets/damage.mp3</file>
+
+     <file>assets/win_music.wav</file>
+
+     <file>assets/time_attack.wav</file>
+
+     <file>assets/menu.wav</file>
  </qresource>
  </RCC>

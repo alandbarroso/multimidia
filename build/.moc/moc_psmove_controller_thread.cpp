@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'psmove_controller_thread.h'
 **
-** Created: Fri Nov 22 07:20:18 2013
+** Created: Thu Dec 5 21:14:44 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_PSMoveControllerThread[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      27,   14, // methods
+      31,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -60,6 +60,10 @@ static const uint qt_meta_data_PSMoveControllerThread[] = {
 
  // slots: signature, parameters, type, tag, flags
      663,   23,   23,   23, 0x0a,
+     684,  677,   23,   23, 0x0a,
+     712,  706,   23,   23, 0x0a,
+     735,  677,   23,   23, 0x0a,
+     771,  761,   23,   23, 0x0a,
 
        0        // eod
 };
@@ -84,7 +88,10 @@ static const char qt_meta_stringdata_PSMoveControllerThread[] = {
     "select_button_up(int)\0start_button_up(int)\0"
     "id,trigger\0trigger_pressed(int,qreal)\0"
     "image\0image(void*)\0update_screen()\0"
-    "exit_signal()\0"
+    "exit_signal()\0change\0set_change_color(int)\0"
+    "r,g,b\0set_color(int,int,int)\0"
+    "set_change_vibration(int)\0intensity\0"
+    "set_vibration(int)\0"
 };
 
 void PSMoveControllerThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -120,6 +127,10 @@ void PSMoveControllerThread::qt_static_metacall(QObject *_o, QMetaObject::Call _
         case 24: _t->image((*reinterpret_cast< void*(*)>(_a[1]))); break;
         case 25: _t->update_screen(); break;
         case 26: _t->exit_signal(); break;
+        case 27: _t->set_change_color((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 28: _t->set_color((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
+        case 29: _t->set_change_vibration((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 30: _t->set_vibration((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -157,9 +168,9 @@ int PSMoveControllerThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 27)
+        if (_id < 31)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 27;
+        _id -= 31;
     }
     return _id;
 }

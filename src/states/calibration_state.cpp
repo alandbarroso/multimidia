@@ -4,6 +4,9 @@
 
 #include "calibration_state.h"
 #include "main_menu.h"
+#include "single_classic_mode.h"
+#include "single_time_attack.h"
+#include "congratulations.h"
 
 CalibrationState::CalibrationState()
 	: GameState(GameManager::CALIBRATION)
@@ -21,6 +24,8 @@ CalibrationState::CalibrationState()
 	qreal scale_factor = screen_width_scale*width/this->calibrating_text.width();
 	this->target_rect = QRectF(0, 0, width*screen_width_scale, scale_factor*this->calibrating_text.height());
 	this->target_rect.moveCenter(QPoint(width/2, height/2));
+
+	printf("Calibration state initiated!\n");
 }
 
 void CalibrationState::update()
@@ -44,9 +49,9 @@ void CalibrationState::paint_screen(QWidget *screen)
 
 void CalibrationState::calibration_finished()
 {
-	MainMenu *main_menu = new MainMenu();
+	MainMenu *first_screen = new MainMenu();
 
-	emit change_state(main_menu);
+	emit change_state(first_screen);
 
 	return;
 }

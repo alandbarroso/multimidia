@@ -71,6 +71,9 @@ public:
 	*/
 	BaseMenu(GameManager::StateType type);
 
+	/* Starts the music menu */
+	void init();
+
 	/*! 
 		Check if the cursor is over the buttons.
 	*/

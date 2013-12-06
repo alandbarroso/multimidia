@@ -33,9 +33,7 @@ private:
 	//! Classic mode MenuButton.
 	MenuButton classic_mode_button;
 	//! Dynamic mode MenuButton.
-	MenuButton dynamic_mode_button;
-	//! Barrier mode MenuButton.
-	MenuButton barrier_mode_button;
+	MenuButton time_attack_button;
 
 	/************************************************
 	*	Methods										*

@@ -24,6 +24,11 @@ GameManager::StateType GameState::get_type()
 	return this->type;
 }
 
+void GameState::init()
+{
+
+}
+
 void GameState::calibration_finished()
 {
 

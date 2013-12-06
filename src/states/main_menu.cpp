@@ -23,9 +23,11 @@ MainMenu::MainMenu()
 	quit_button.set_center(width/2, (first_button + 3*step)*height);
 
 	buttons["singleplayer"] = &singleplayer_button;
-	buttons["multiplayer"] = &multiplayer_button;
-	buttons["options"] = &options_button;
+	// buttons["multiplayer"] = &multiplayer_button;
+	// buttons["options"] = &options_button;
 	buttons["quit"] = &quit_button;
+
+	printf("Main menu initiated!\n");
 }
 
 void MainMenu::move_button_up(int id)
@@ -38,7 +40,7 @@ void MainMenu::move_button_up(int id)
 
 		return;
 	}
-	else if(buttons["multiplayer"]->get_hovered())
+	/*else if(buttons["multiplayer"]->get_hovered())
 	{
 		return;
 	}
@@ -49,7 +51,7 @@ void MainMenu::move_button_up(int id)
 		emit change_state(options);
 
 		return;
-	}
+	}*/
 	else if(buttons["quit"]->get_hovered())
 	{
 		emit exit_signal();

@@ -3,6 +3,9 @@
 
 #include <QObject>
 
+#include <Phonon/MediaObject>
+#include <Phonon/AudioOutput>
+
 #include "psmove_controller_thread.h"
 
 class GameState;
@@ -34,7 +37,10 @@ public:
 		CALIBRATION,
 		MAIN_MENU,
 		SINGLE_PLAYER_MENU,
-		OPTIONS_MENU
+		OPTIONS_MENU,
+		SINGLE_CLASSIC_MODE,
+		SINGEL_TIME_ATTACK,
+		CONGRATULATIONS
 	};
 
 	enum Difficulty
@@ -104,6 +110,18 @@ private:
 
 	//! The size set for the game
 	Game_Size game_size;
+
+	//! Media object used to play sounds
+	Phonon::MediaObject *mediaObject;
+
+	//! Audio output
+	Phonon::AudioOutput *audioOutput;
+
+	//! If true, sets the music loop
+	int music_loop;
+
+	//! Sets the music that should loop
+	QString music_to_loop;
 
 	/************************************************
 	*	Methods										*
@@ -225,6 +243,52 @@ public slots:
 		\param	game_size 	The new size of the game
 	*/
 	void change_game_size(GameManager::Game_Size game_size);
+
+	/*!
+		Request to play music
+	*/
+	void play_music();
+
+	/*!
+		Request to stop music
+	*/
+	void stop_music();
+
+	/*!
+		Repeats the music
+	*/
+	void repeat_music();
+
+	/*!
+		Plays beep
+	*/
+	void play_beep();
+
+	/*!
+		Plays winning sound - when found
+	*/
+	void play_winning();
+
+	/*!
+		Plays cheering sound - when ended
+	*/
+	void play_cheering();
+
+	/*!
+		Plays damage sound
+	*/
+	void play_damage();
+
+	/*!
+		Plays damage sound
+	*/
+	void play_time_attack();
+
+	/*!
+		Change the sound volume
+		\param	volume 	The sound volume to be set
+	*/
+	void change_sound_volume(qreal volume);
 };
 
 /************************************************

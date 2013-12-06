@@ -14,6 +14,11 @@ BaseMenu::BaseMenu(GameManager::StateType type)
 	for(int i = 0; i < 256; i++) color_table.push_back(qRgb(i,i,i));
 }
 
+void BaseMenu::init()
+{
+	emit play_music();
+}
+
 void BaseMenu::update()
 {
 	QMapIterator<QString, MenuButton*> i(buttons);

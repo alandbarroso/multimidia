@@ -55,6 +55,15 @@ void GameManager::init(int width, int height, PSMoveControllerThread* psmove_thr
 	this->current_state = new CalibrationState();
 
 	connect_signals();
+
+	mediaObject = new Phonon::MediaObject(this);
+	audioOutput = new Phonon::AudioOutput(Phonon::GameCategory, this);
+
+	Phonon::createPath(mediaObject, audioOutput);
+
+	connect(mediaObject, SIGNAL(aboutToFinish()), SLOT(repeat_music()));
+
+	music_loop = 0;
 }
 
 GameManager::~GameManager()
@@ -97,6 +106,8 @@ void GameManager::change_state(GameState* state)
 	current_state = state;
 
 	connect_signals();
+
+	current_state->init();
 }
 
 void GameManager::connect_signals()
@@ -105,22 +116,26 @@ void GameManager::connect_signals()
 	QObject::connect(current_state, SIGNAL(change_state(GameState*)),
 				this, SLOT(change_state(GameState*)));
 
-	/* Change difficulty */
-	QObject::connect(current_state, SIGNAL(change_difficulty(GameManager::Difficulty)),
-				this, SLOT(change_difficulty(GameManager::Difficulty)));
+	if(current_state->get_type() == OPTIONS_MENU)
+	{
+		/* Change difficulty */
+		QObject::connect(current_state, SIGNAL(change_difficulty(GameManager::Difficulty)),
+					this, SLOT(change_difficulty(GameManager::Difficulty)));
+	
+		/* Change handicap mode */
+		QObject::connect(current_state, SIGNAL(change_handicap_mode(GameManager::HandicapModeType)),
+					this, SLOT(change_handicap_mode(GameManager::HandicapModeType)));
 
-	/* Change handicap mode */
-	QObject::connect(current_state, SIGNAL(change_handicap_mode(GameManager::HandicapModeType)),
-				this, SLOT(change_handicap_mode(GameManager::HandicapModeType)));
-
-	/* Change difficulty */
-	QObject::connect(current_state, SIGNAL(change_game_size(GameManager::Game_Size)),
-				this, SLOT(change_game_size(GameManager::Game_Size)));
-
+		/* Change difficulty */
+		QObject::connect(current_state, SIGNAL(change_game_size(GameManager::Game_Size)),
+					this, SLOT(change_game_size(GameManager::Game_Size)));
+	}
+	
 	/* End of calibration */
 	QObject::connect(psmove_thread, SIGNAL(calibration_finished()),
 				current_state, SLOT(calibration_finished()));
-
+	
+	/* Position */
 	QObject::connect(psmove_thread, SIGNAL(position(int, int, int, int)),
 				current_state, SLOT(position(int, int, int, int)));
 
@@ -190,12 +205,56 @@ void GameManager::connect_signals()
 	QObject::connect(psmove_thread, SIGNAL(start_button_up(int)),
 				current_state, SLOT(start_button_up(int)));
 
+	/* Trigger */
 	QObject::connect(psmove_thread, SIGNAL(trigger_pressed(int, qreal)),
 				current_state, SLOT(trigger_pressed(int, qreal)));
 
 	/* Exit signal */ 
 	QObject::connect(current_state, SIGNAL(exit_signal()),
 				psmove_thread, SLOT(exit_signal()));
+
+	/* Color changes signals */
+	QObject::connect(current_state, SIGNAL(set_change_color(int)),
+				psmove_thread, SLOT(set_change_color(int)));
+
+	QObject::connect(current_state, SIGNAL(set_color(int, int, int)),
+				psmove_thread, SLOT(set_color(int, int, int)));
+
+	/* Vibration changes signals */
+	QObject::connect(current_state, SIGNAL(set_change_vibration(int)),
+				psmove_thread, SLOT(set_change_vibration(int)));
+
+	QObject::connect(current_state, SIGNAL(set_vibration(int)),
+				psmove_thread, SLOT(set_vibration(int)));
+
+	/* Music signals */
+	QObject::connect(current_state, SIGNAL(play_music()),
+				this, SLOT(play_music()));
+
+	QObject::connect(current_state, SIGNAL(stop_music()),
+				this, SLOT(stop_music()));
+
+	QObject::connect(current_state, SIGNAL(repeat_music()),
+				this, SLOT(repeat_music()));
+
+	QObject::connect(current_state, SIGNAL(play_beep()),
+				this, SLOT(play_beep()));
+
+	QObject::connect(current_state, SIGNAL(play_winning()),
+				this, SLOT(play_winning()));
+
+	QObject::connect(current_state, SIGNAL(play_cheering()),
+				this, SLOT(play_cheering()));
+
+	QObject::connect(current_state, SIGNAL(play_damage()),
+				this, SLOT(play_damage()));
+
+	QObject::connect(current_state, SIGNAL(play_time_attack()),
+				this, SLOT(play_time_attack()));
+
+
+	QObject::connect(current_state, SIGNAL(change_sound_volume(qreal)),
+				this, SLOT(change_sound_volume(qreal)));
 }
 
 void GameManager::disconnect_signals()
@@ -264,4 +323,78 @@ GameManager::Game_Size GameManager::get_game_size()
 void GameManager::change_game_size(GameManager::Game_Size game_size)
 {
 	this->game_size = game_size;
+}
+
+void GameManager::play_music()
+{
+	music_to_loop = ":/assets/menu.wav";
+	mediaObject->setCurrentSource(music_to_loop);
+	mediaObject->play();
+
+	music_loop = 1;
+}
+
+void GameManager::stop_music()
+{
+	music_loop = 0;
+
+	mediaObject->clear();
+}
+
+void GameManager::repeat_music()
+{
+	if(music_loop)
+		mediaObject->enqueue(music_to_loop);
+}
+
+void GameManager::play_beep()
+{
+	music_to_loop = ":/assets/alarm.mp3";
+	mediaObject->setCurrentSource(music_to_loop);
+	mediaObject->play();
+
+	music_loop = 1;
+}
+
+void GameManager::play_winning()
+{
+	music_to_loop = ":/assets/winning.mp3";
+	mediaObject->setCurrentSource(music_to_loop);
+	mediaObject->play();
+
+	music_loop = 0;
+}
+
+void GameManager::play_cheering()
+{
+	QString cheering_sound = ":/assets/cheering.mp3";
+	music_to_loop = ":/assets/win_music.wav";
+	mediaObject->setCurrentSource(cheering_sound);
+	mediaObject->enqueue(music_to_loop);
+	mediaObject->play();
+
+	music_loop = 0;
+}
+
+void GameManager::play_damage()
+{
+	music_to_loop = ":/assets/damage.mp3";
+	mediaObject->setCurrentSource(music_to_loop);
+	mediaObject->play();
+
+	music_loop = 0;
+}
+
+void GameManager::play_time_attack()
+{
+	music_to_loop = ":/assets/time_attack.wav";
+	mediaObject->setCurrentSource(music_to_loop);
+	mediaObject->play();
+
+	music_loop = 1;
+}
+
+void GameManager::change_sound_volume(qreal volume)
+{
+	audioOutput->setVolume(volume);
 }

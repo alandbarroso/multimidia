@@ -44,7 +44,9 @@ OptionsMenu::OptionsMenu()
 
 	buttons["difficulty_buttons"] = difficulty_buttons[game_manager->get_game_difficulty()];
 	buttons["handicap_buttons"] = handicap_buttons[game_manager->get_handicap_mode_type()];
-	buttons["size_buttons"] = size_buttons[game_manager->get_game_size()];	
+	buttons["size_buttons"] = size_buttons[game_manager->get_game_size()];
+
+	printf("Option menu initiated!\n");
 }
 
 void OptionsMenu::update()

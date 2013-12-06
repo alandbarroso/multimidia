@@ -14,9 +14,15 @@
 
 PSMoveControllerThread::PSMoveControllerThread() : QThread() 
 {
-    quit = 0;
+    this->quit = 0;
 
-	tracker = psmove_tracker_new();
+    this->change_color = 0;
+
+    this->move_color.r = 255;
+    this->move_color.g = 255;
+    this->move_color.b = 255;
+
+	this->tracker = psmove_tracker_new();
 }
 
 void PSMoveControllerThread::get_size(int &width, int &height) 
@@ -39,6 +45,10 @@ void PSMoveControllerThread::run()
     int select_pressed = 0;
     int select_start = 0;
 
+    /* Timer to be used when changing colors */
+    QTime timer;
+    timer.start();
+
     PSMove **moves = (PSMove**)calloc(count, sizeof(PSMove*));
 
     for (i=0; i<count; i++) {
@@ -53,6 +63,7 @@ void PSMoveControllerThread::run()
         }
     }
 
+    printf("Calibration finished!!\n");
     emit calibration_finished();
 
     while (!quit) {
@@ -203,9 +214,36 @@ void PSMoveControllerThread::run()
                     }
                 }
 
-                float x, y, radius;
-                psmove_tracker_get_position(tracker, move, &x, &y, &radius);
-                emit position(i, x, y, 0);
+                emit trigger_pressed(i, (qreal) psmove_get_trigger(move));
+
+                if(change_color)
+                {
+                    psmove_set_leds(move, move_color.r, move_color.g, move_color.b);
+
+                    timer.restart();
+                }
+                else if(timer.elapsed() > 500)
+                {
+                    float x, y, z, radius;
+                    psmove_tracker_get_position(tracker, move, &x, &y, &radius);
+                    z = psmove_tracker_distance_from_radius(tracker, radius);
+                    emit position(i, x, y, z);
+
+                    last_position.x = x;
+                    last_position.y = y;
+                    last_position.z = z;
+                }
+
+                if(change_vibration)
+                {
+                    psmove_set_rumble(move, vibration_intensity);
+                }
+                else
+                {
+                    psmove_set_rumble(move, 0);
+                }
+
+                psmove_update_leds(move);
             }
         } while (again);
 
@@ -227,5 +265,27 @@ void PSMoveControllerThread::run()
 
 void PSMoveControllerThread::exit_signal()
 {
-    quit = 1;
+    this->quit = 1;
+}
+
+void PSMoveControllerThread::set_change_color(int change)
+{
+    this->change_color = change;
+}
+
+void PSMoveControllerThread::set_color(int r, int g, int b)
+{
+    this->move_color.r = r;
+    this->move_color.g = g;
+    this->move_color.b = b;
+}
+
+void PSMoveControllerThread::set_change_vibration(int change)
+{
+    this->change_vibration = change;
+}
+
+void PSMoveControllerThread::set_vibration(int intensity)
+{
+    this->vibration_intensity = intensity;
 }

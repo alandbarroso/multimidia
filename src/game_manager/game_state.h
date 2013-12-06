@@ -74,6 +74,9 @@ public:
 	*/
 	GameManager::StateType get_type();
 
+	//! Run the necessary configurations after being connected
+	virtual void init();
+
 	//! Update the game logic.
 	/*! 
 		Virtual method, to be implemented by derived classes.
@@ -117,6 +120,45 @@ signals:
 	
 	//! Signal to change the size of the game.
 	void change_game_size(GameManager::Game_Size game_size);
+
+	//! Signal to set the color change
+	void set_change_color(int change);
+
+	//! Signal to set the color of the LEDs
+	void set_color(int r, int g, int b);
+
+	//! Signal to set the vibration change
+	void set_change_vibration(int change);
+
+	//! Signal to set intensity of the vibrations
+	void set_vibration(int intensity);
+
+	//!	Request to play music
+	void play_music();
+
+	//!	Request to stop music
+	void stop_music();
+
+	//! Repeats the music
+	void repeat_music();
+
+	//! Plays beep
+	void play_beep();
+
+	//! Plays winning sound - when found
+	void play_winning();
+
+	//! Plays cheering sound - when ended
+	void play_cheering();
+
+	//! Plays damage sound
+	void play_damage();
+
+	void play_time_attack();
+
+
+	//! Change the sound volume
+	void change_sound_volume(qreal volume);
 
 public slots:
 	/************************************************

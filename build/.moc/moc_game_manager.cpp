@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'game_manager.h'
 **
-** Created: Fri Nov 22 07:20:17 2013
+** Created: Thu Dec 5 21:14:45 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_GameManager[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -36,6 +36,15 @@ static const uint qt_meta_data_GameManager[] = {
       74,   63,   12,   12, 0x0a,
      136,  117,   12,   12, 0x0a,
      198,  188,   12,   12, 0x0a,
+     239,   12,   12,   12, 0x0a,
+     252,   12,   12,   12, 0x0a,
+     265,   12,   12,   12, 0x0a,
+     280,   12,   12,   12, 0x0a,
+     292,   12,   12,   12, 0x0a,
+     307,   12,   12,   12, 0x0a,
+     323,   12,   12,   12, 0x0a,
+     337,   12,   12,   12, 0x0a,
+     363,  356,   12,   12, 0x0a,
 
        0        // eod
 };
@@ -47,6 +56,10 @@ static const char qt_meta_stringdata_GameManager[] = {
     "handicap_mode_type\0"
     "change_handicap_mode(GameManager::HandicapModeType)\0"
     "game_size\0change_game_size(GameManager::Game_Size)\0"
+    "play_music()\0stop_music()\0repeat_music()\0"
+    "play_beep()\0play_winning()\0play_cheering()\0"
+    "play_damage()\0play_time_attack()\0"
+    "volume\0change_sound_volume(qreal)\0"
 };
 
 void GameManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -60,6 +73,15 @@ void GameManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 2: _t->change_difficulty((*reinterpret_cast< GameManager::Difficulty(*)>(_a[1]))); break;
         case 3: _t->change_handicap_mode((*reinterpret_cast< GameManager::HandicapModeType(*)>(_a[1]))); break;
         case 4: _t->change_game_size((*reinterpret_cast< GameManager::Game_Size(*)>(_a[1]))); break;
+        case 5: _t->play_music(); break;
+        case 6: _t->stop_music(); break;
+        case 7: _t->repeat_music(); break;
+        case 8: _t->play_beep(); break;
+        case 9: _t->play_winning(); break;
+        case 10: _t->play_cheering(); break;
+        case 11: _t->play_damage(); break;
+        case 12: _t->play_time_attack(); break;
+        case 13: _t->change_sound_volume((*reinterpret_cast< qreal(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -97,9 +119,9 @@ int GameManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 14;
     }
     return _id;
 }
